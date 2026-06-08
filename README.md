@@ -1,4 +1,10 @@
-# SourceGit - Opensource Git GUI client.
+# SourceGit Plus - Opensource Git GUI client.
+
+## SourceGit Plus Features
+This is a custom fork of SourceGit with extra features and UX improvements:
+* **Drag-and-Drop Local Changes**: Drag and drop modified files and folders between **UNSTAGED** and **STAGED** panels to stage or unstage changes.
+* **Multi-Drag Support**: Multiple selected files remain visually highlighted during drag-and-drop and are moved together.
+
 
 [![stars](https://img.shields.io/github/stars/sourcegit-scm/sourcegit.svg)](https://github.com/sourcegit-scm/sourcegit/stargazers)
 [![forks](https://img.shields.io/github/forks/sourcegit-scm/sourcegit.svg)](https://github.com/sourcegit-scm/sourcegit/forks)
