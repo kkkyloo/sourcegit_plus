@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace SourceGit.Models
 {
@@ -27,6 +27,8 @@ namespace SourceGit.Models
         public bool HasWorktree => !IsCurrent && !string.IsNullOrEmpty(WorktreePath);
         public string FriendlyName => IsLocal ? Name : $"{Remote}/{Name}";
         public bool IsTrackStatusVisible => Ahead.Count > 0 || Behind.Count > 0;
+        public int AheadCount => Ahead.Count;
+        public int BehindCount => Behind.Count;
 
         public string TrackStatusDescription
         {

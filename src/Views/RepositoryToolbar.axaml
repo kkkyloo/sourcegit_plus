@@ -5,6 +5,7 @@
              xmlns:m="using:SourceGit.Models"
              xmlns:vm="using:SourceGit.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:c="using:SourceGit.Converters"
              x:Class="SourceGit.Views.RepositoryToolbar"
              x:DataType="vm:Repository">
   <Grid ColumnDefinitions="*,Auto,0,*">
@@ -38,7 +39,7 @@
         <Path Width="14" Height="14" Data="{StaticResource Icons.Fetch}"/>
       </Button>
 
-      <Button Classes="icon_button" Width="32" Margin="16,0,0,0" Tapped="Pull" IsVisible="{Binding !IsBare}" IsEnabled="{Binding !IsBare}">
+      <Button Classes="icon_button" MinWidth="32" Height="32" Padding="2,0" Margin="16,0,0,0" Tapped="Pull" IsVisible="{Binding !IsBare}" IsEnabled="{Binding !IsBare}">
         <ToolTip.Tip>
           <StackPanel Orientation="Vertical">
             <TextBlock Text="{DynamicResource Text.Pull}"/>
@@ -46,10 +47,26 @@
           </StackPanel>
         </ToolTip.Tip>
 
-        <Path Width="14" Height="14" Data="{StaticResource Icons.Pull}"/>
+        <StackPanel Orientation="Horizontal" Spacing="4">
+          <Path Width="14" Height="14" Data="{StaticResource Icons.Pull}"/>
+          <Border Background="{DynamicResource Brush.Badge}"
+                  CornerRadius="7"
+                  Padding="4,0"
+                  MinWidth="14"
+                  Height="14"
+                  VerticalAlignment="Center"
+                  IsVisible="{Binding CurrentBranch.BehindCount, Converter={x:Static c:IntConverters.IsGreaterThanZero}, FallbackValue=False}">
+            <TextBlock Text="{Binding CurrentBranch.BehindCount}"
+                       FontSize="9"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource Brush.BadgeFG}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+          </Border>
+        </StackPanel>
       </Button>
 
-      <Button Classes="icon_button" Width="32" Margin="16,0,0,0" Tapped="Push">
+      <Button Classes="icon_button" MinWidth="32" Height="32" Padding="2,0" Margin="16,0,0,0" Tapped="Push">
         <ToolTip.Tip>
           <StackPanel Orientation="Vertical">
             <TextBlock Text="{DynamicResource Text.Push}"/>
@@ -57,7 +74,23 @@
           </StackPanel>
         </ToolTip.Tip>
 
-        <Path Width="14" Height="14" Data="{StaticResource Icons.Push}"/>
+        <StackPanel Orientation="Horizontal" Spacing="4">
+          <Path Width="14" Height="14" Data="{StaticResource Icons.Push}"/>
+          <Border Background="{DynamicResource Brush.Badge}"
+                  CornerRadius="7"
+                  Padding="4,0"
+                  MinWidth="14"
+                  Height="14"
+                  VerticalAlignment="Center"
+                  IsVisible="{Binding CurrentBranch.AheadCount, Converter={x:Static c:IntConverters.IsGreaterThanZero}, FallbackValue=False}">
+            <TextBlock Text="{Binding CurrentBranch.AheadCount}"
+                       FontSize="9"
+                       FontWeight="Bold"
+                       Foreground="{DynamicResource Brush.BadgeFG}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+          </Border>
+        </StackPanel>
       </Button>
 
       <Button Classes="icon_button" Width="32" Margin="16,0,0,0" Tapped="StashAll" IsVisible="{Binding !IsBare}">
