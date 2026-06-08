@@ -511,5 +511,218 @@ namespace SourceGit.Views
         }
 
         private bool _disableSelectionChangingEvent = false;
+
+        private bool _pressedRow = false;
+        private Point _pressedRowPosition = new Point();
+        private bool _startDragRow = false;
+        private List<Models.Change> _dragChanges = null;
+        private Models.Change _pressedChangeForClick = null;
+        private readonly DataFormat<string> _dndFormat = DataFormat.CreateStringApplicationFormat("sourcegit-dnd-local-changes");
+
+        private void OnRowPointerPressed(object sender, PointerPressedEventArgs e)
+        {
+            if (e.GetCurrentPoint(sender as Visual).Properties.IsLeftButtonPressed && sender is Control control)
+            {
+                _pressedRow = true;
+                _startDragRow = false;
+                _pressedRowPosition = e.GetPosition(control);
+
+                _dragChanges = new List<Models.Change>();
+                var dataContext = control.DataContext;
+                Models.Change pressedChange = null;
+
+                if (dataContext is ViewModels.ChangeTreeNode node)
+                {
+                    if (!node.IsFolder)
+                        pressedChange = node.Change;
+                }
+                else if (dataContext is Models.Change change)
+                {
+                    pressedChange = change;
+                }
+
+                var cmdKey = OperatingSystem.IsMacOS() ? KeyModifiers.Meta : KeyModifiers.Control;
+                bool hasModifiers = e.KeyModifiers.HasFlag(cmdKey) || e.KeyModifiers.HasFlag(KeyModifiers.Shift);
+
+                var selected = SelectedChanges ?? [];
+                if (pressedChange != null)
+                {
+                    if (selected.Contains(pressedChange))
+                    {
+                        _dragChanges.AddRange(selected);
+                        if (!hasModifiers)
+                        {
+                            _pressedChangeForClick = pressedChange;
+                            e.Handled = true;
+                        }
+                    }
+                    else
+                    {
+                        _dragChanges.Add(pressedChange);
+                        _pressedChangeForClick = null;
+                    }
+                }
+                else if (dataContext is ViewModels.ChangeTreeNode folderNode && folderNode.IsFolder)
+                {
+                    var folderChanges = new List<Models.Change>();
+                    CollectChangesInNode(folderChanges, folderNode);
+
+                    bool selectedContainsFolder = true;
+                    foreach (var fc in folderChanges)
+                    {
+                        if (!selected.Contains(fc))
+                        {
+                            selectedContainsFolder = false;
+                            break;
+                        }
+                    }
+
+                    if (selectedContainsFolder && selected.Count > 0)
+                    {
+                        _dragChanges.AddRange(selected);
+                        if (!hasModifiers)
+                        {
+                            e.Handled = true;
+                        }
+                    }
+                    else
+                    {
+                        _dragChanges.AddRange(folderChanges);
+                    }
+                    _pressedChangeForClick = null;
+                }
+            }
+            else
+            {
+                _pressedRow = false;
+                _startDragRow = false;
+                _dragChanges = null;
+                _pressedChangeForClick = null;
+            }
+        }
+
+        private void OnRowPointerReleased(object sender, PointerReleasedEventArgs e)
+        {
+            if (_pressedRow && !_startDragRow && _pressedChangeForClick != null)
+            {
+                SelectedChanges = new List<Models.Change> { _pressedChangeForClick };
+            }
+
+            _pressedRow = false;
+            _startDragRow = false;
+            _dragChanges = null;
+            _pressedChangeForClick = null;
+        }
+
+        private async void OnRowPointerMoved(object sender, PointerEventArgs e)
+        {
+            if (_pressedRow && !_startDragRow && _dragChanges != null && _dragChanges.Count > 0 && sender is Control control)
+            {
+                var delta = e.GetPosition(control) - _pressedRowPosition;
+                var sizeSquired = delta.X * delta.X + delta.Y * delta.Y;
+                if (sizeSquired < 64)
+                    return;
+
+                _startDragRow = true;
+
+                var prefix = IsUnstagedChange ? "unstaged:" : "staged:";
+                var builder = new System.Text.StringBuilder();
+                builder.Append(prefix);
+                for (int i = 0; i < _dragChanges.Count; i++)
+                {
+                    if (i > 0)
+                        builder.Append(';');
+                    builder.Append(_dragChanges[i].Path);
+                }
+
+                var data = new DataTransfer();
+                data.Add(DataTransferItem.Create(_dndFormat, builder.ToString()));
+
+                await DragDrop.DoDragDropAsync(e, data, DragDropEffects.Move);
+            }
+        }
+
+        private void OnDragOver(object sender, DragEventArgs e)
+        {
+            if (e.DataTransfer.Contains(_dndFormat))
+            {
+                var rawData = e.DataTransfer.TryGetValue(_dndFormat);
+                if (!string.IsNullOrEmpty(rawData))
+                {
+                    var isSrcUnstaged = rawData.StartsWith("unstaged:");
+                    if (isSrcUnstaged != IsUnstagedChange)
+                    {
+                        e.DragEffects = DragDropEffects.Move;
+                        e.Handled = true;
+                        return;
+                    }
+                }
+            }
+            e.DragEffects = DragDropEffects.None;
+            e.Handled = true;
+        }
+
+        private async void OnDrop(object sender, DragEventArgs e)
+        {
+            _pressedRow = false;
+            _startDragRow = false;
+
+            if (e.DataTransfer.Contains(_dndFormat))
+            {
+                var rawData = e.DataTransfer.TryGetValue(_dndFormat);
+                if (!string.IsNullOrEmpty(rawData))
+                {
+                    var isSrcUnstaged = rawData.StartsWith("unstaged:");
+                    if (isSrcUnstaged != IsUnstagedChange)
+                    {
+                        e.Handled = true;
+
+                        var colonIdx = rawData.IndexOf(':');
+                        if (colonIdx == -1)
+                            return;
+
+                        var pathsStr = rawData.Substring(colonIdx + 1);
+                        var paths = pathsStr.Split(';', StringSplitOptions.RemoveEmptyEntries);
+                        if (paths.Length == 0)
+                            return;
+
+                        var workingCopy = DataContext as ViewModels.WorkingCopy;
+                        if (workingCopy == null)
+                        {
+                            var parent = this.FindAncestorOfType<WorkingCopy>();
+                            if (parent != null)
+                                workingCopy = parent.DataContext as ViewModels.WorkingCopy;
+                        }
+
+                        if (workingCopy == null)
+                            return;
+
+                        var changesToProcess = new List<Models.Change>();
+                        var sourceList = isSrcUnstaged ? workingCopy.Unstaged : workingCopy.Staged;
+                        if (sourceList != null)
+                        {
+                            var pathSet = new HashSet<string>(paths);
+                            foreach (var c in sourceList)
+                            {
+                                if (pathSet.Contains(c.Path))
+                                    changesToProcess.Add(c);
+                            }
+                        }
+
+                        if (changesToProcess.Count > 0)
+                        {
+                            if (IsUnstagedChange)
+                            {
+                                await workingCopy.UnstageChangesAsync(changesToProcess, null);
+                            }
+                            else
+                            {
+                                await workingCopy.StageChangesAsync(changesToProcess, null);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
