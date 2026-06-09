@@ -31,6 +31,7 @@ namespace SourceGit.Commands
         public EditorType Editor { get; set; } = EditorType.CoreEditor;
         public string SSHKey { get; set; } = string.Empty;
         public string Args { get; set; } = string.Empty;
+        public Dictionary<string, string> Envs { get; } = new();
 
         // Only used in `ExecAsync` mode.
         public CancellationToken CancellationToken { get; set; } = CancellationToken.None;
@@ -110,7 +111,7 @@ namespace SourceGit.Commands
             return true;
         }
 
-        protected Result ReadToEnd()
+        public Result ReadToEnd()
         {
             using var proc = new Process();
             proc.StartInfo = CreateGitStartInfo(true);
@@ -133,7 +134,7 @@ namespace SourceGit.Commands
             return rs;
         }
 
-        protected async Task<Result> ReadToEndAsync()
+        public async Task<Result> ReadToEndAsync()
         {
             using var proc = new Process();
             proc.StartInfo = CreateGitStartInfo(true);
@@ -182,6 +183,14 @@ namespace SourceGit.Commands
             // If an SSH private key was provided, sets the environment.
             if (!start.Environment.ContainsKey("GIT_SSH_COMMAND") && !string.IsNullOrEmpty(SSHKey))
                 start.Environment.Add("GIT_SSH_COMMAND", $"ssh -i '{SSHKey}' -F '/dev/null'");
+
+            foreach (var env in Envs)
+            {
+                if (start.Environment.ContainsKey(env.Key))
+                    start.Environment[env.Key] = env.Value;
+                else
+                    start.Environment.Add(env.Key, env.Value);
+            }
 
             // Force using en_US.UTF-8 locale
             if (OperatingSystem.IsLinux())

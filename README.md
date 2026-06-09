@@ -4,6 +4,7 @@
 This is a custom fork of SourceGit with extra features and UX improvements:
 * **Drag-and-Drop Local Changes**: Drag and drop modified files and folders between **UNSTAGED** and **STAGED** panels to stage or unstage changes.
 * **Multi-Drag Support**: Multiple selected files remain visually highlighted during drag-and-drop and are moved together.
+* **Direct Commit**: Commit selected files directly to any local branch without switching to it, with automatic conflict validation and option to discard changes from the working copy.
 
 
 [![stars](https://img.shields.io/github/stars/sourcegit-scm/sourcegit.svg)](https://github.com/sourcegit-scm/sourcegit/stargazers)

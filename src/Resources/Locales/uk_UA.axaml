@@ -20,6 +20,7 @@
   <x:String x:Key="Text.AIAssistant.Model" xml:space="preserve">Модель</x:String>
   <x:String x:Key="Text.AIAssistant.Regen" xml:space="preserve">ПЕРЕГЕНЕРУВАТИ</x:String>
   <x:String x:Key="Text.AIAssistant.Tip" xml:space="preserve">Використати AI для генерації повідомлення коміту</x:String>
+  <x:String x:Key="Text.Apply.File" xml:space="preserve">Файл патчу:</x:String>
   <x:String x:Key="Text.Apply.File.Placeholder" xml:space="preserve">Виберіть файл .patch для застосування</x:String>
   <x:String x:Key="Text.Apply.IgnoreWS" xml:space="preserve">Ігнорувати зміни пробілів</x:String>
   <x:String x:Key="Text.Apply.Title" xml:space="preserve">Застосувати Патч</x:String>
@@ -432,6 +433,7 @@
   <x:String x:Key="Text.Preferences.General.DateFormat" xml:space="preserve">Формат дати</x:String>
   <x:String x:Key="Text.Preferences.General.Locale" xml:space="preserve">Мова</x:String>
   <x:String x:Key="Text.Preferences.General.MaxHistoryCommits" xml:space="preserve">Кількість комітів в історії</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowAuthorTime" xml:space="preserve">Показувати час автора замість часу коміту в графі</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChildren" xml:space="preserve">Показувати дочірні коміти в деталях</x:String>
   <x:String x:Key="Text.Preferences.General.ShowTagsInGraph" xml:space="preserve">Показувати теги в графі комітів</x:String>
   <x:String x:Key="Text.Preferences.General.SubjectGuideLength" xml:space="preserve">Довжина лінії-орієнтира для теми</x:String>
@@ -677,4 +679,12 @@
   <x:String x:Key="Text.Worktree.Lock" xml:space="preserve">Заблокувати</x:String>
   <x:String x:Key="Text.Worktree.Remove" xml:space="preserve">Видалити</x:String>
   <x:String x:Key="Text.Worktree.Unlock" xml:space="preserve">Розблокувати</x:String>
+  <x:String x:Key="Text.FileCM.Commit2Branch" xml:space="preserve">Закомітити вибране в іншу гілку...</x:String>
+  <x:String x:Key="Text.DirectCommit.Title" xml:space="preserve">Коміт в іншу гілку</x:String>
+  <x:String x:Key="Text.DirectCommit.TargetBranch" xml:space="preserve">Цільова гілка:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message" xml:space="preserve">Повідомлення коміту:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message.Placeholder" xml:space="preserve">Введіть повідомлення коміту тут...</x:String>
+  <x:String x:Key="Text.DirectCommit.Discard" xml:space="preserve">Видалити зміни з поточної робочої копії після коміту</x:String>
+  <x:String x:Key="Text.DirectCommit.ConflictsDetected" xml:space="preserve">Увага! Виявлено конфлікти. Деякі файли містять інші зміни на цільовій гілці!</x:String>
+  <x:String x:Key="Text.DirectCommit.ForceOverwrite" xml:space="preserve">Примусово перезаписати конфлікти в цільовій гілці</x:String>
 </ResourceDictionary>

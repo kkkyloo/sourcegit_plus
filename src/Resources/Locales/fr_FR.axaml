@@ -31,6 +31,7 @@
   <x:String x:Key="Text.App.HideOthers" xml:space="preserve">Masquer les autres</x:String>
   <x:String x:Key="Text.App.ShowAll" xml:space="preserve">Tout Afficher</x:String>
   <x:String x:Key="Text.Apply.3Way" xml:space="preserve">Fusion à 3 voies</x:String>
+  <x:String x:Key="Text.Apply.File" xml:space="preserve">Fichier de patch :</x:String>
   <x:String x:Key="Text.Apply.File.Placeholder" xml:space="preserve">Selectionner le fichier .patch à appliquer</x:String>
   <x:String x:Key="Text.Apply.IgnoreWS" xml:space="preserve">Ignorer les changements d'espaces blancs</x:String>
   <x:String x:Key="Text.Apply.Title" xml:space="preserve">Appliquer le patch</x:String>
@@ -57,7 +58,7 @@
   <x:String x:Key="Text.Bisect.Detecting">Bisect en cours. Le HEAD actuel est-il bon ou mauvais ?</x:String>
   <x:String x:Key="Text.Bisect.Good">Bon</x:String>
   <x:String x:Key="Text.Bisect.Skip">Passer</x:String>
-  <x:String x:Key="Text.Bisect.WaitingForFirstGood">Bisect en cours. Marquer le commit actuel comme bon ou mauvais et en récupérer un autre.</x:String>
+  <x:String x:Key="Text.Bisect.WaitingForRange">Bisect en cours. Marquer le commit actuel comme bon ou mauvais et en récupérer un autre.</x:String>
   <x:String x:Key="Text.Blame" xml:space="preserve">Blâme</x:String>
   <x:String x:Key="Text.Blame.BlameOnPreviousRevision" xml:space="preserve">Blâmer sur la révision précédente</x:String>
   <x:String x:Key="Text.Blame.IgnoreWhitespace" xml:space="preserve">Ignorer les changements d'espaces</x:String>
@@ -491,6 +492,7 @@
   <x:String x:Key="Text.Histories.Header.Author" xml:space="preserve">AUTEUR</x:String>
   <x:String x:Key="Text.Histories.Header.AuthorTime" xml:space="preserve">HEURE DE L'AUTEUR</x:String>
   <x:String x:Key="Text.Histories.Header.CommitTime" xml:space="preserve">HEURE DE COMMIT</x:String>
+  <x:String x:Key="Text.Histories.Header.DateTime" xml:space="preserve">DATE HEURE</x:String>
   <x:String x:Key="Text.Histories.Header.GraphAndSubject" xml:space="preserve">GRAPHE &amp; SUJET</x:String>
   <x:String x:Key="Text.Histories.Header.SHA" xml:space="preserve">SHA</x:String>
   <x:String x:Key="Text.Histories.HighlightsInGraph" xml:space="preserve">MISE EN ÉVIDENCE AU GRAPHE</x:String>
@@ -663,6 +665,7 @@
   <x:String x:Key="Text.Preferences.General.EnableCompactFolders" xml:space="preserve">Activer les dossiers compacts dans l'arborescence des changements</x:String>
   <x:String x:Key="Text.Preferences.General.Locale" xml:space="preserve">Language</x:String>
   <x:String x:Key="Text.Preferences.General.MaxHistoryCommits" xml:space="preserve">Historique de commits</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowAuthorTime" xml:space="preserve">Afficher l'heure de l'auteur au lieu de l'heure de validation dans le graphique</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChangesPageByDefault" xml:space="preserve">Afficher la page 'CHANGEMENTS LOCAUX' par défaut</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChangesTabInCommitDetailByDefault" xml:space="preserve">Afficher l'onglet 'CHANGEMENTS' dans les détails du commit par défaut</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChildren" xml:space="preserve">Afficher les enfants dans les détails du commit</x:String>
@@ -1003,4 +1006,12 @@
   <x:String x:Key="Text.Worktree.Remove" xml:space="preserve">Supprimer</x:String>
   <x:String x:Key="Text.Worktree.Unlock" xml:space="preserve">Déverrouiller</x:String>
   <x:String x:Key="Text.Yes" xml:space="preserve">OUI</x:String>
+  <x:String x:Key="Text.FileCM.Commit2Branch" xml:space="preserve">Valider la sélection dans une autre branche...</x:String>
+  <x:String x:Key="Text.DirectCommit.Title" xml:space="preserve">Valider dans une autre branche</x:String>
+  <x:String x:Key="Text.DirectCommit.TargetBranch" xml:space="preserve">Branche cible:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message" xml:space="preserve">Message de validation:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message.Placeholder" xml:space="preserve">Entrez le message de validation ici...</x:String>
+  <x:String x:Key="Text.DirectCommit.Discard" xml:space="preserve">Supprimer de la copie de travail actuelle après validation</x:String>
+  <x:String x:Key="Text.DirectCommit.ConflictsDetected" xml:space="preserve">Attention : Conflits détectés. Certains fichiers contiennent des modifications différentes dans la branche cible !</x:String>
+  <x:String x:Key="Text.DirectCommit.ForceOverwrite" xml:space="preserve">Forcer la surimpression des conflits dans la branche cible</x:String>
 </ResourceDictionary>

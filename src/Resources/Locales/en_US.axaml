@@ -27,11 +27,9 @@
   <x:String x:Key="Text.App.HideOthers" xml:space="preserve">Hide Others</x:String>
   <x:String x:Key="Text.App.ShowAll" xml:space="preserve">Show All</x:String>
   <x:String x:Key="Text.Apply.3Way" xml:space="preserve">3-Way Merge</x:String>
+  <x:String x:Key="Text.Apply.File" xml:space="preserve">Patch File:</x:String>
   <x:String x:Key="Text.Apply.File.Placeholder" xml:space="preserve">Select .patch file to apply</x:String>
   <x:String x:Key="Text.Apply.IgnoreWS" xml:space="preserve">Ignore whitespace changes</x:String>
-  <x:String x:Key="Text.Apply.Source" xml:space="preserve">Source:</x:String>
-  <x:String x:Key="Text.Apply.Source.File" xml:space="preserve">File</x:String>
-  <x:String x:Key="Text.Apply.Source.Clipboard" xml:space="preserve">Clipboard</x:String>
   <x:String x:Key="Text.Apply.Title" xml:space="preserve">Apply Patch</x:String>
   <x:String x:Key="Text.Apply.WS" xml:space="preserve">Whitespace:</x:String>
   <x:String x:Key="Text.ApplyStash" xml:space="preserve">Apply Stash</x:String>
@@ -56,8 +54,7 @@
   <x:String x:Key="Text.Bisect.Detecting">Bisecting. Is current HEAD good or bad?</x:String>
   <x:String x:Key="Text.Bisect.Good">Good</x:String>
   <x:String x:Key="Text.Bisect.Skip">Skip</x:String>
-  <x:String x:Key="Text.Bisect.WaitingForFirstBad">Bisecting. Mark current commit as bad or checkout another one then mark it as bad.</x:String>
-  <x:String x:Key="Text.Bisect.WaitingForFirstGood">Bisecting. Mark current commit as good or bad and checkout another one.</x:String>
+  <x:String x:Key="Text.Bisect.WaitingForRange">Bisecting. Mark current commit as good or bad and checkout another one.</x:String>
   <x:String x:Key="Text.Blame" xml:space="preserve">Blame</x:String>
   <x:String x:Key="Text.Blame.BlameOnPreviousRevision" xml:space="preserve">Blame on Previous Revision</x:String>
   <x:String x:Key="Text.Blame.IgnoreWhitespace">Ignore whitespace changes</x:String>
@@ -309,7 +306,6 @@
   <x:String x:Key="Text.ConventionalCommit.Type" xml:space="preserve">Type of Change:</x:String>
   <x:String x:Key="Text.Copy" xml:space="preserve">Copy</x:String>
   <x:String x:Key="Text.CopyAllText" xml:space="preserve">Copy All Text</x:String>
-  <x:String x:Key="Text.CopyAsPatch" xml:space="preserve">Copy as Patch</x:String>
   <x:String x:Key="Text.CopyFullPath" xml:space="preserve">Copy Full Path</x:String>
   <x:String x:Key="Text.CopyPath" xml:space="preserve">Copy Path</x:String>
   <x:String x:Key="Text.CreateBranch" xml:space="preserve">Create Branch...</x:String>
@@ -494,6 +490,7 @@
   <x:String x:Key="Text.Histories.Header.Author" xml:space="preserve">AUTHOR</x:String>
   <x:String x:Key="Text.Histories.Header.AuthorTime" xml:space="preserve">AUTHOR TIME</x:String>
   <x:String x:Key="Text.Histories.Header.CommitTime" xml:space="preserve">COMMIT TIME</x:String>
+  <x:String x:Key="Text.Histories.Header.DateTime" xml:space="preserve">DATE TIME</x:String>
   <x:String x:Key="Text.Histories.Header.GraphAndSubject" xml:space="preserve">GRAPH &amp; SUBJECT</x:String>
   <x:String x:Key="Text.Histories.Header.SHA" xml:space="preserve">SHA</x:String>
   <x:String x:Key="Text.Histories.HighlightsInGraph" xml:space="preserve">HIGHLIGHTS IN GRAPH</x:String>
@@ -670,6 +667,7 @@
   <x:String x:Key="Text.Preferences.General.EnableCompactFolders" xml:space="preserve">Enable compact folders in changes tree</x:String>
   <x:String x:Key="Text.Preferences.General.Locale" xml:space="preserve">Language</x:String>
   <x:String x:Key="Text.Preferences.General.MaxHistoryCommits" xml:space="preserve">History Commits</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowAuthorTime" xml:space="preserve">Show author time instead of commit time in graph</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChangesPageByDefault" xml:space="preserve">Show `LOCAL CHANGES` page by default</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChangesTabInCommitDetailByDefault" xml:space="preserve">Show `CHANGES` tab in commit detail by default</x:String>
   <x:String x:Key="Text.Preferences.General.ShowChildren" xml:space="preserve">Show children in the commit details</x:String>
@@ -1015,4 +1013,12 @@
   <x:String x:Key="Text.Worktree.Remove" xml:space="preserve">Remove</x:String>
   <x:String x:Key="Text.Worktree.Unlock" xml:space="preserve">Unlock</x:String>
   <x:String x:Key="Text.Yes" xml:space="preserve">YES</x:String>
+  <x:String x:Key="Text.FileCM.Commit2Branch" xml:space="preserve">Commit selected to another branch...</x:String>
+  <x:String x:Key="Text.DirectCommit.Title" xml:space="preserve">Commit to Another Branch</x:String>
+  <x:String x:Key="Text.DirectCommit.TargetBranch" xml:space="preserve">Target Branch:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message" xml:space="preserve">Commit Message:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message.Placeholder" xml:space="preserve">Enter commit message here...</x:String>
+  <x:String x:Key="Text.DirectCommit.Discard" xml:space="preserve">Delete from current working copy after commit</x:String>
+  <x:String x:Key="Text.DirectCommit.ConflictsDetected" xml:space="preserve">Warning: Conflicts detected. Some files contain different changes in the target branch!</x:String>
+  <x:String x:Key="Text.DirectCommit.ForceOverwrite" xml:space="preserve">Force overwrite conflicts in target branch</x:String>
 </ResourceDictionary>

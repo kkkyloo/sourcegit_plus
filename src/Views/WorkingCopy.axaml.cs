@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -412,6 +412,16 @@ namespace SourceGit.Views
                         e.Handled = true;
                     };
 
+                    var commit2branch = new MenuItem();
+                    commit2branch.Header = App.Text("FileCM.Commit2Branch");
+                    commit2branch.Icon = this.CreateMenuIcon("Icons.Commit");
+                    commit2branch.Click += (_, e) =>
+                    {
+                        if (repo.CanCreatePopup())
+                            repo.ShowPopup(new ViewModels.DirectCommit(repo, selectedUnstaged));
+                        e.Handled = true;
+                    };
+
                     var patch = new MenuItem();
                     patch.Header = App.Text("FileCM.SaveAsPatch");
                     patch.Icon = this.CreateMenuIcon("Icons.Save");
@@ -455,6 +465,7 @@ namespace SourceGit.Views
                     menu.Items.Add(stage);
                     menu.Items.Add(discard);
                     menu.Items.Add(stash);
+                    menu.Items.Add(commit2branch);
                     menu.Items.Add(patch);
                     menu.Items.Add(assumeUnchanged);
                     menu.Items.Add(new MenuItem() { Header = "-" });
@@ -818,6 +829,16 @@ namespace SourceGit.Views
                     e.Handled = true;
                 };
 
+                var commit2branch = new MenuItem();
+                commit2branch.Header = App.Text("FileCM.Commit2Branch");
+                commit2branch.Icon = this.CreateMenuIcon("Icons.Commit");
+                commit2branch.Click += (_, e) =>
+                {
+                    if (repo.CanCreatePopup())
+                        repo.ShowPopup(new ViewModels.DirectCommit(repo, selectedUnstaged));
+                    e.Handled = true;
+                };
+
                 var patch = new MenuItem();
                 patch.Header = App.Text("FileCM.SaveAsPatch");
                 patch.Icon = this.CreateMenuIcon("Icons.Save");
@@ -849,6 +870,7 @@ namespace SourceGit.Views
                 menu.Items.Add(stage);
                 menu.Items.Add(discard);
                 menu.Items.Add(stash);
+                menu.Items.Add(commit2branch);
                 menu.Items.Add(patch);
 
                 if (hasSelectedFolder)

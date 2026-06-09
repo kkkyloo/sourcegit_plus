@@ -1,0 +1,75 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:SourceGit.ViewModels"
+             xmlns:v="using:SourceGit.Views"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+             x:Class="SourceGit.Views.DirectCommit"
+             x:DataType="vm:DirectCommit">
+  <StackPanel Orientation="Vertical" Margin="8,0">
+    <!-- Header -->
+    <StackPanel Orientation="Horizontal">
+      <Path Width="16" Height="16" Data="{StaticResource Icons.Commit}"/>
+      <TextBlock FontSize="18" Margin="8,0,0,0" Classes="bold" Text="{DynamicResource Text.DirectCommit.Title}"/>
+    </StackPanel>
+
+    <!-- Content -->
+    <Grid Margin="0,16,0,0" RowDefinitions="32,Auto,32,Auto" ColumnDefinitions="140,*">
+      <!-- Target Branch Selector -->
+      <TextBlock Grid.Row="0" Grid.Column="0"
+                 HorizontalAlignment="Right" VerticalAlignment="Center"
+                 Margin="0,0,8,0"
+                 Text="{DynamicResource Text.DirectCommit.TargetBranch}"/>
+      <v:BranchSelector Grid.Row="0" Grid.Column="1"
+                        Height="28"
+                        VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                        Branches="{Binding Branches, Mode=OneWay}"
+                        SelectedBranch="{Binding SelectedBranch, Mode=TwoWay}"
+                        UsePureName="True"/>
+
+      <!-- Commit Message -->
+      <TextBlock Grid.Row="1" Grid.Column="0"
+                 HorizontalAlignment="Right" VerticalAlignment="Top"
+                 Margin="0,8,8,0"
+                 Text="{DynamicResource Text.DirectCommit.Message}"/>
+      <TextBox Grid.Row="1" Grid.Column="1"
+               Height="80" Margin="0,4,0,0"
+               CornerRadius="3"
+               AcceptsReturn="True"
+               TextWrapping="Wrap"
+               VerticalContentAlignment="Top"
+               Text="{Binding Message, Mode=TwoWay}"
+               Watermark="{DynamicResource Text.DirectCommit.Message.Placeholder}"/>
+
+      <!-- Discard After Commit -->
+      <CheckBox Grid.Row="2" Grid.Column="1"
+                Content="{DynamicResource Text.DirectCommit.Discard}"
+                IsChecked="{Binding DiscardAfterCommit, Mode=TwoWay}"/>
+
+      <!-- Conflicts & Overwrite Area -->
+      <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="0,8,0,0" IsVisible="{Binding HasConflicts}">
+        <Border Background="{DynamicResource Brush.Conflict}" CornerRadius="4" Padding="8">
+          <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+              <Path Width="14" Height="14" Data="{StaticResource Icons.Error}" Fill="Red"/>
+              <TextBlock Margin="8,0,0,0" FontWeight="Bold" Text="{DynamicResource Text.DirectCommit.ConflictsDetected}" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <ItemsControl Margin="22,8,0,0" ItemsSource="{Binding Conflicts}">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="x:String">
+                  <TextBlock Margin="0,2" Text="{Binding}" Foreground="{DynamicResource Brush.FG1}"/>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </StackPanel>
+        </Border>
+
+        <CheckBox Margin="0,8,0,0"
+                  Content="{DynamicResource Text.DirectCommit.ForceOverwrite}"
+                  IsChecked="{Binding ForceOverwrite, Mode=TwoWay}"/>
+      </StackPanel>
+    </Grid>
+  </StackPanel>
+</UserControl>
