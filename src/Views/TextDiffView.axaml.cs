@@ -508,10 +508,12 @@ namespace SourceGit.Views
             if (chunk == null || (!chunk.Combined && chunk.IsOldSide != IsOld))
                 return;
 
+            var extentHeight = ExtentHeight;
+            var width = extentHeight > Bounds.Height ? Bounds.Width - 12 : Bounds.Width;
             var color = (Color)this.FindResource("SystemAccentColor")!;
             var brush = new SolidColorBrush(color, 0.1);
             var pen = new Pen(color.ToUInt32());
-            var rect = new Rect(0, chunk.Y, Bounds.Width, chunk.Height);
+            var rect = new Rect(0, chunk.Y, width, chunk.Height);
             var aligned = PixelSnapHelpers.PixelAlign(rect, PixelSnapHelpers.GetPixelSize(this));
 
             context.DrawRectangle(brush, null, aligned);
@@ -968,7 +970,7 @@ namespace SourceGit.Views
             _scrollViewer = this.FindDescendantOfType<ScrollViewer>();
             if (_scrollViewer != null)
             {
-                _scrollViewer.Bind(ScrollViewer.OffsetProperty, new Binding("ScrollOffset", BindingMode.TwoWay));
+                _scrollViewer.Bind(ScrollViewer.OffsetProperty, CompiledBinding.Create<ViewModels.TextDiffContext, Vector>(vm => vm.ScrollOffset, mode: BindingMode.TwoWay));
                 _scrollViewer.ScrollChanged += OnTextViewScrollChanged;
             }
         }
@@ -1022,6 +1024,9 @@ namespace SourceGit.Views
                 return;
 
             var view = TextArea.TextView;
+            if (!view.VisualLinesValid)
+                return;
+
             var selection = TextArea.Selection;
             if (!selection.IsEmpty)
             {
@@ -1154,7 +1159,7 @@ namespace SourceGit.Views
             if (_scrollViewer != null)
             {
                 _scrollViewer.ScrollChanged += OnTextViewScrollChanged;
-                _scrollViewer.Bind(ScrollViewer.OffsetProperty, new Binding("ScrollOffset", BindingMode.OneWay));
+                _scrollViewer.Bind(ScrollViewer.OffsetProperty, CompiledBinding.Create<ViewModels.TextDiffContext, Vector>(vm => vm.ScrollOffset));
             }
         }
 
@@ -1210,6 +1215,9 @@ namespace SourceGit.Views
                 return;
 
             var view = TextArea.TextView;
+            if (!view.VisualLinesValid)
+                return;
+
             var lines = IsOld ? diff.Old : diff.New;
             var selection = TextArea.Selection;
             if (!selection.IsEmpty)

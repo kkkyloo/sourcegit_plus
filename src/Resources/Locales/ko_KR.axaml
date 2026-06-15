@@ -1,871 +1,1022 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceInclude Source="avares://SourceGit/Resources/Locales/en_US.axaml"/>
+  </ResourceDictionary.MergedDictionaries>
 
-  <x:String x:Key="Text.About" xml:space="preserve">정보</x:String>
-  <x:String x:Key="Text.About.Menu" xml:space="preserve">SourceGit 정보</x:String>
-  <x:String x:Key="Text.About.ReleaseNotes" xml:space="preserve">릴리스 노트</x:String>
-  <x:String x:Key="Text.About.SubTitle" xml:space="preserve">오픈소스 &amp; 무료 Git GUI 클라이언트</x:String>
-  <x:String x:Key="Text.AddToIgnore" xml:space="preserve">무시할 파일 추가</x:String>
-  <x:String x:Key="Text.AddToIgnore.Pattern" xml:space="preserve">패턴:</x:String>
-  <x:String x:Key="Text.AddToIgnore.Storage" xml:space="preserve">저장 파일:</x:String>
-  <x:String x:Key="Text.AddWorktree" xml:space="preserve">워크트리 추가</x:String>
-  <x:String x:Key="Text.AddWorktree.Location" xml:space="preserve">위치:</x:String>
-  <x:String x:Key="Text.AddWorktree.Location.Placeholder" xml:space="preserve">이 워크트리의 경로입니다. 상대 경로를 지원합니다.</x:String>
-  <x:String x:Key="Text.AddWorktree.Name" xml:space="preserve">브랜치 이름:</x:String>
-  <x:String x:Key="Text.AddWorktree.Name.Placeholder" xml:space="preserve">선택 사항. 기본값은 대상 폴더 이름입니다.</x:String>
-  <x:String x:Key="Text.AddWorktree.Tracking" xml:space="preserve">추적할 브랜치:</x:String>
-  <x:String x:Key="Text.AddWorktree.Tracking.Toggle" xml:space="preserve">원격 브랜치 추적</x:String>
-  <x:String x:Key="Text.AddWorktree.WhatToCheckout" xml:space="preserve">체크아웃할 대상:</x:String>
-  <x:String x:Key="Text.AddWorktree.WhatToCheckout.CreateNew" xml:space="preserve">새 브랜치 생성</x:String>
-  <x:String x:Key="Text.AddWorktree.WhatToCheckout.Existing" xml:space="preserve">기존 브랜치</x:String>
-  <x:String x:Key="Text.AIAssistant" xml:space="preserve">AI 어시스턴트</x:String>
-  <x:String x:Key="Text.AIAssistant.Model" xml:space="preserve">모델</x:String>
-  <x:String x:Key="Text.AIAssistant.Regen" xml:space="preserve">재생성</x:String>
-  <x:String x:Key="Text.AIAssistant.Tip" xml:space="preserve">AI를 사용하여 커밋 메시지 생성</x:String>
-  <x:String x:Key="Text.App.Hide" xml:space="preserve">SourceGit 숨기기</x:String>
-  <x:String x:Key="Text.App.ShowAll" xml:space="preserve">모두 보기</x:String>
-  <x:String x:Key="Text.Apply.File" xml:space="preserve">패치 파일:</x:String>
-  <x:String x:Key="Text.Apply.File.Placeholder" xml:space="preserve">적용할 .patch 파일을 선택하세요</x:String>
-  <x:String x:Key="Text.Apply.IgnoreWS" xml:space="preserve">공백 변경 사항 무시</x:String>
-  <x:String x:Key="Text.Apply.Title" xml:space="preserve">패치 적용</x:String>
-  <x:String x:Key="Text.Apply.WS" xml:space="preserve">공백:</x:String>
-  <x:String x:Key="Text.ApplyStash" xml:space="preserve">스태시 적용</x:String>
-  <x:String x:Key="Text.ApplyStash.DropAfterApply" xml:space="preserve">적용 후 삭제</x:String>
-  <x:String x:Key="Text.ApplyStash.RestoreIndex" xml:space="preserve">인덱스의 변경 사항 복원</x:String>
-  <x:String x:Key="Text.ApplyStash.Stash" xml:space="preserve">스태시:</x:String>
-  <x:String x:Key="Text.Archive" xml:space="preserve">아카이브...</x:String>
-  <x:String x:Key="Text.Archive.File" xml:space="preserve">아카이브 저장 위치:</x:String>
-  <x:String x:Key="Text.Archive.File.Placeholder" xml:space="preserve">아카이브 파일 경로 선택</x:String>
-  <x:String x:Key="Text.Archive.Revision" xml:space="preserve">리비전:</x:String>
-  <x:String x:Key="Text.Archive.Title" xml:space="preserve">아카이브</x:String>
+  <x:String x:Key="Text.About" xml:space="preserve">ьаХы│┤</x:String>
+  <x:String x:Key="Text.About.GitSourceRevision" xml:space="preserve">ьЖМьКд ы▓ДьаД:</x:String>
+  <x:String x:Key="Text.About.Menu" xml:space="preserve">SourceGit ьаХы│┤</x:String>
+  <x:String x:Key="Text.About.ReleaseDate" xml:space="preserve">ы░░эПмьЭ╝: {0}</x:String>
+  <x:String x:Key="Text.About.ReleaseNotes" xml:space="preserve">ыж┤ыжмьКд ыЕ╕эК╕</x:String>
+  <x:String x:Key="Text.About.SubTitle" xml:space="preserve">ьШдэФИьЖМьКд &amp; ым┤ыгМ Git GUI эБ┤ыЭ╝ьЭ┤ьЦ╕эК╕</x:String>
+  <x:String x:Key="Text.AddToIgnore" xml:space="preserve">ым┤ьЛЬэХа эММьЭ╝ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.AddToIgnore.Pattern" xml:space="preserve">эМиэД┤:</x:String>
+  <x:String x:Key="Text.AddToIgnore.Storage" xml:space="preserve">ьаАьЮе эММьЭ╝:</x:String>
+  <x:String x:Key="Text.AddWorktree" xml:space="preserve">ьЫМэБмэК╕ыжм ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.AddWorktree.Location" xml:space="preserve">ьЬДь╣Ш:</x:String>
+  <x:String x:Key="Text.AddWorktree.Location.Placeholder" xml:space="preserve">ьЭ┤ ьЫМэБмэК╕ыжмьЭШ ъ▓╜ыбЬьЮЕыЛИыЛд. ьГБыМА ъ▓╜ыбЬые╝ ьзАьЫРэХйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.AddWorktree.Name" xml:space="preserve">ы╕МыЮЬь╣Ш ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.AddWorktree.Name.Placeholder" xml:space="preserve">ьДаэГЭ ьВмэХн. ъ╕░ы│╕ъ░ТьЭА ыМАьГБ эП┤ыНФ ьЭ┤ыжДьЮЕыЛИыЛд.</x:String>
+  <x:String x:Key="Text.AddWorktree.Tracking" xml:space="preserve">ь╢ФьаБэХа ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.AddWorktree.Tracking.Toggle" xml:space="preserve">ьЫРъ▓й ы╕МыЮЬь╣Ш ь╢ФьаБ</x:String>
+  <x:String x:Key="Text.AddWorktree.WhatToCheckout" xml:space="preserve">ь▓┤эБмьХДьЫГэХа ыМАьГБ:</x:String>
+  <x:String x:Key="Text.AddWorktree.WhatToCheckout.CreateNew" xml:space="preserve">ьГИ ы╕МыЮЬь╣Ш ьГЭьД▒</x:String>
+  <x:String x:Key="Text.AddWorktree.WhatToCheckout.Existing" xml:space="preserve">ъ╕░ьб┤ ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.AIAssistant" xml:space="preserve">AI ьЦ┤ьЛЬьКдэД┤эК╕</x:String>
+  <x:String x:Key="Text.AIAssistant.Model" xml:space="preserve">ыкиыН╕</x:String>
+  <x:String x:Key="Text.AIAssistant.Regen" xml:space="preserve">ьЮмьГЭьД▒</x:String>
+  <x:String x:Key="Text.AIAssistant.Tip" xml:space="preserve">AIые╝ ьВмьЪйэХШьЧм ь╗ды░Л ыйФьЛЬьзА ьГЭьД▒</x:String>
+  <x:String x:Key="Text.AIAssistant.Use" xml:space="preserve">ьВмьЪй</x:String>
+  <x:String x:Key="Text.App.Hide" xml:space="preserve">SourceGit ьИиъ╕░ъ╕░</x:String>
+  <x:String x:Key="Text.App.HideOthers" xml:space="preserve">ыЛдые╕ эХныкй ьИиъ╕░ъ╕░</x:String>
+  <x:String x:Key="Text.App.ShowAll" xml:space="preserve">ыкиыСР ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.Apply.3Way" xml:space="preserve">3ы░йэЦе ы│СэХй</x:String>
+  <x:String x:Key="Text.Apply.File.Placeholder" xml:space="preserve">ьаБьЪйэХа .patch эММьЭ╝ьЭД ьДаэГЭэХШьД╕ьЪФ</x:String>
+  <x:String x:Key="Text.Apply.IgnoreWS" xml:space="preserve">ъ│╡ы░▒ ы│Аъ▓╜ ьВмэХн ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.Apply.Source" xml:space="preserve">ьЫРы│╕:</x:String>
+  <x:String x:Key="Text.Apply.Source.File" xml:space="preserve">эММьЭ╝</x:String>
+  <x:String x:Key="Text.Apply.Source.Clipboard" xml:space="preserve">эБ┤ыж╜ы│┤ыУЬ</x:String>
+  <x:String x:Key="Text.Apply.Title" xml:space="preserve">эМиь╣Ш ьаБьЪй</x:String>
+  <x:String x:Key="Text.Apply.WS" xml:space="preserve">ъ│╡ы░▒:</x:String>
+  <x:String x:Key="Text.ApplyStash" xml:space="preserve">ьКдэГЬьЛЬ ьаБьЪй</x:String>
+  <x:String x:Key="Text.ApplyStash.DropAfterApply" xml:space="preserve">ьаБьЪй эЫД ьВньаЬ</x:String>
+  <x:String x:Key="Text.ApplyStash.RestoreIndex" xml:space="preserve">ьЭ╕ыН▒ьКдьЭШ ы│Аъ▓╜ ьВмэХн ы│╡ьЫР</x:String>
+  <x:String x:Key="Text.ApplyStash.Stash" xml:space="preserve">ьКдэГЬьЛЬ:</x:String>
+  <x:String x:Key="Text.Archive" xml:space="preserve">ьХДь╣┤ьЭ┤ы╕М...</x:String>
+  <x:String x:Key="Text.Archive.File" xml:space="preserve">ьХДь╣┤ьЭ┤ы╕М ьаАьЮе ьЬДь╣Ш:</x:String>
+  <x:String x:Key="Text.Archive.File.Placeholder" xml:space="preserve">ьХДь╣┤ьЭ┤ы╕М эММьЭ╝ ъ▓╜ыбЬ ьДаэГЭ</x:String>
+  <x:String x:Key="Text.Archive.Revision" xml:space="preserve">ыжмы╣ДьаД:</x:String>
+  <x:String x:Key="Text.Archive.Title" xml:space="preserve">ьХДь╣┤ьЭ┤ы╕М</x:String>
   <x:String x:Key="Text.Askpass" xml:space="preserve">SourceGit Askpass</x:String>
-  <x:String x:Key="Text.Askpass.Passphrase" xml:space="preserve">암호 입력:</x:String>
-  <x:String x:Key="Text.AssumeUnchanged" xml:space="preserve">변경되지 않음으로 간주된 파일</x:String>
-  <x:String x:Key="Text.AssumeUnchanged.Empty" xml:space="preserve">변경되지 않음으로 간주된 파일 없음</x:String>
-  <x:String x:Key="Text.Avatar.Load" xml:space="preserve">이미지 불러오기...</x:String>
-  <x:String x:Key="Text.Avatar.Refetch" xml:space="preserve">새로 고침</x:String>
-  <x:String x:Key="Text.BinaryNotSupported" xml:space="preserve">바이너리 파일은 지원되지 않습니다!!!</x:String>
-  <x:String x:Key="Text.Bisect">이진 탐색</x:String>
-  <x:String x:Key="Text.Bisect.Abort">중단</x:String>
-  <x:String x:Key="Text.Bisect.Bad">나쁨</x:String>
-  <x:String x:Key="Text.Bisect.Detecting">이진 탐색 중. 현재 HEAD가 '좋음' 상태입니까, '나쁨' 상태입니까?</x:String>
-  <x:String x:Key="Text.Bisect.Good">좋음</x:String>
-  <x:String x:Key="Text.Bisect.Skip">건너뛰기</x:String>
-  <x:String x:Key="Text.Bisect.WaitingForRange">이진 탐색 중. 현재 커밋을 '좋음' 또는 '나쁨'으로 표시하고 다른 커밋을 체크아웃하세요.</x:String>
-  <x:String x:Key="Text.Blame" xml:space="preserve">블레임</x:String>
-  <x:String x:Key="Text.BranchCM.Checkout" xml:space="preserve">${0}$ 체크아웃...</x:String>
-  <x:String x:Key="Text.BranchCM.CopyName" xml:space="preserve">브랜치 이름 복사</x:String>
-  <x:String x:Key="Text.BranchCM.CustomAction" xml:space="preserve">사용자 지정 작업</x:String>
-  <x:String x:Key="Text.BranchCM.Delete" xml:space="preserve">${0}$ 삭제...</x:String>
-  <x:String x:Key="Text.BranchCM.DeleteMultiBranches" xml:space="preserve">선택한 {0}개의 브랜치 삭제</x:String>
-  <x:String x:Key="Text.BranchCM.FastForward" xml:space="preserve">${0}$(으)로 Fast-Forward</x:String>
-  <x:String x:Key="Text.BranchCM.FetchInto" xml:space="preserve">${0}$에서 ${1}$(으)로 Fetch...</x:String>
-  <x:String x:Key="Text.BranchCM.Finish" xml:space="preserve">Git Flow - ${0}$ 완료</x:String>
-  <x:String x:Key="Text.BranchCM.InteractiveRebase.Manually" xml:space="preserve">${1}$을(를) 기반으로 ${0}$ 대화형 리베이스</x:String>
-  <x:String x:Key="Text.BranchCM.Merge" xml:space="preserve">${0}$을(를) ${1}$(으)로 병합...</x:String>
-  <x:String x:Key="Text.BranchCM.MergeMultiBranches" xml:space="preserve">선택한 {0}개의 브랜치를 현재 브랜치로 병합</x:String>
+  <x:String x:Key="Text.Askpass.Passphrase" xml:space="preserve">ьХФэШ╕ ьЮЕыае:</x:String>
+  <x:String x:Key="Text.AssumeUnchanged" xml:space="preserve">ы│Аъ▓╜ыРШьзА ьХКьЭМьЬ╝ыбЬ ъ░Дьг╝ыРЬ эММьЭ╝</x:String>
+  <x:String x:Key="Text.AssumeUnchanged.Empty" xml:space="preserve">ы│Аъ▓╜ыРШьзА ьХКьЭМьЬ╝ыбЬ ъ░Дьг╝ыРЬ эММьЭ╝ ьЧЖьЭМ</x:String>
+  <x:String x:Key="Text.Avatar.Load" xml:space="preserve">ьЭ┤ып╕ьзА ы╢ИыЯмьШдъ╕░...</x:String>
+  <x:String x:Key="Text.Avatar.Refetch" xml:space="preserve">ьГИыбЬ ъ│аь╣и</x:String>
+  <x:String x:Key="Text.BinaryNotSupported" xml:space="preserve">ы░ФьЭ┤ыДИыжм эММьЭ╝ьЭА ьзАьЫРыРШьзА ьХКьК╡ыЛИыЛд!!!</x:String>
+  <x:String x:Key="Text.Bisect">ьЭ┤ьзД эГРьГЙ</x:String>
+  <x:String x:Key="Text.Bisect.Abort">ьдСыЛи</x:String>
+  <x:String x:Key="Text.Bisect.Bad">ыВШьБи</x:String>
+  <x:String x:Key="Text.Bisect.Good">ьвЛьЭМ</x:String>
+  <x:String x:Key="Text.Bisect.Skip">ъ▒┤ыДИыЫ░ъ╕░</x:String>
+  <x:String x:Key="Text.Bisect.WaitingForFirstGood">ьЭ┤ьзД эГРьГЙ ьдС. эШДьЮм ь╗ды░ЛьЭД 'ьвЛьЭМ' ыШРыКФ 'ыВШьБи'ьЬ╝ыбЬ эСЬьЛЬэХШъ│а ыЛдые╕ ь╗ды░ЛьЭД ь▓┤эБмьХДьЫГэХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.Bisect.WaitingForMark">ьЭ┤ьзД эГРьГЙ ьдС. эШДьЮм HEADъ░А 'ьвЛьЭМ' ьГБэГЬьЮЕыЛИъ╣М, 'ыВШьБи' ьГБэГЬьЮЕыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.Blame" xml:space="preserve">ы╕ФыаИьЮД</x:String>
+  <x:String x:Key="Text.Blame.BlameOnPreviousRevision" xml:space="preserve">ьЭ┤ьаД ыжмы╣ДьаДьЬ╝ыбЬ ь▒ЕьЮД ь╢ФьаБ</x:String>
+  <x:String x:Key="Text.Blame.IgnoreWhitespace" xml:space="preserve">ъ│╡ы░▒ ы│Аъ▓╜ ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.Blame.TypeNotSupported" xml:space="preserve">ьЭ┤ эММьЭ╝ьЭА ь▒ЕьЮД ь╢ФьаБ ъ╕░ыКеьЭД ьзАьЫРэХШьзА ьХКьК╡ыЛИыЛд</x:String>
+  <x:String x:Key="Text.BranchCM.Checkout" xml:space="preserve">${0}$(ьЬ╝)ыбЬ ь▓┤эБмьХДьЫГ...</x:String>
+  <x:String x:Key="Text.BranchCM.CompareTwo" xml:space="preserve">ьДаэГЭэХЬ ыСР ы╕МыЮЬь╣Ш ы╣Дъ╡РэХШъ╕░</x:String>
+  <x:String x:Key="Text.BranchCM.CompareWith" xml:space="preserve">ыЛдьЭМъ│╝ ы╣Дъ╡Р...</x:String>
+  <x:String x:Key="Text.BranchCM.CompareWithHead" xml:space="preserve">HEADьЩА ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.BranchCM.CompareWithSpecial" xml:space="preserve">${0}$ьЩА ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.BranchCM.CopyName" xml:space="preserve">ы╕МыЮЬь╣Ш ьЭ┤ыжД ы│╡ьВм</x:String>
+  <x:String x:Key="Text.BranchCM.CreatePR" xml:space="preserve">PR ьГЭьД▒</x:String>
+  <x:String x:Key="Text.BranchCM.CreatePRForUpstream" xml:space="preserve">ьЧЕьКдэК╕ыж╝ ${0}$ьЧР ыМАэХЬ PR ьГЭьД▒...</x:String>
+  <x:String x:Key="Text.BranchCM.CustomAction" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.BranchCM.Delete" xml:space="preserve">${0}$ ьВньаЬ...</x:String>
+  <x:String x:Key="Text.BranchCM.DeleteMultiBranches" xml:space="preserve">ьДаэГЭэХЬ {0}ъ░ЬьЭШ ы╕МыЮЬь╣Ш ьВньаЬ</x:String>
+  <x:String x:Key="Text.BranchCM.EditDescription" xml:space="preserve">${0}$ ьДдыкЕ эО╕ьзС...</x:String>
+  <x:String x:Key="Text.BranchCM.FastForward" xml:space="preserve">${0}$(ьЬ╝)ыбЬ Fast-Forward</x:String>
+  <x:String x:Key="Text.BranchCM.FetchInto" xml:space="preserve">${0}$ьЧРьДЬ ${1}$(ьЬ╝)ыбЬ Fetch...</x:String>
+  <x:String x:Key="Text.BranchCM.Finish" xml:space="preserve">Git Flow - ${0}$ ьЩДыгМ</x:String>
+  <x:String x:Key="Text.BranchCM.InteractiveRebase.Manually" xml:space="preserve">${1}$ьЭД(ые╝) ъ╕░ы░ШьЬ╝ыбЬ ${0}$ ыМАэЩФэШХ ыжмы▓аьЭ┤ьКд</x:String>
+  <x:String x:Key="Text.BranchCM.Merge" xml:space="preserve">${0}$ьЭД(ые╝) ${1}$(ьЬ╝)ыбЬ ы│СэХй...</x:String>
+  <x:String x:Key="Text.BranchCM.MergeMultiBranches" xml:space="preserve">ьДаэГЭэХЬ {0}ъ░ЬьЭШ ы╕МыЮЬь╣Шые╝ эШДьЮм ы╕МыЮЬь╣ШыбЬ ы│СэХй</x:String>
   <x:String x:Key="Text.BranchCM.Pull" xml:space="preserve">${0}$ Pull</x:String>
-  <x:String x:Key="Text.BranchCM.PullInto" xml:space="preserve">${0}$에서 ${1}$(으)로 Pull...</x:String>
-  <x:String x:Key="Text.BranchCM.Push" xml:space="preserve">${0}$ Push</x:String>
-  <x:String x:Key="Text.BranchCM.Rebase" xml:space="preserve">${1}$을(를) 기반으로 ${0}$ 리베이스...</x:String>
-  <x:String x:Key="Text.BranchCM.Rename" xml:space="preserve">${0}$ 이름 바꾸기...</x:String>
-  <x:String x:Key="Text.BranchCM.ResetToSelectedCommit" xml:space="preserve">${0}$을(를) ${1}$(으)로 리셋...</x:String>
-  <x:String x:Key="Text.BranchCM.SwitchToWorktree" xml:space="preserve">${0}$(워크트리)로 전환</x:String>
-  <x:String x:Key="Text.BranchCM.Tracking" xml:space="preserve">추적 브랜치 설정...</x:String>
-  <x:String x:Key="Text.BranchTree.Ahead" xml:space="preserve">{0}개 커밋 앞섬</x:String>
-  <x:String x:Key="Text.BranchTree.AheadBehind" xml:space="preserve">{0}개 커밋 앞섬, {1}개 커밋 뒤처짐</x:String>
-  <x:String x:Key="Text.BranchTree.Behind" xml:space="preserve">{0}개 커밋 뒤처짐</x:String>
-  <x:String x:Key="Text.BranchTree.InvalidUpstream" xml:space="preserve">유효하지 않음</x:String>
-  <x:String x:Key="Text.BranchTree.Remote" xml:space="preserve">원격</x:String>
-  <x:String x:Key="Text.BranchTree.Status" xml:space="preserve">상태</x:String>
-  <x:String x:Key="Text.BranchTree.Tracking" xml:space="preserve">추적 중</x:String>
+  <x:String x:Key="Text.BranchCM.PullInto" xml:space="preserve">${0}$ьЧРьДЬ ${1}$(ьЬ╝)ыбЬ Pull...</x:String>
+  <x:String x:Key="Text.BranchCM.Push" xml:space="preserve">${0}$(ьЬ╝)ыбЬ Push</x:String>
+  <x:String x:Key="Text.BranchCM.Rebase" xml:space="preserve">${1}$ьЭД(ые╝) ъ╕░ы░ШьЬ╝ыбЬ ${0}$ ыжмы▓аьЭ┤ьКд...</x:String>
+  <x:String x:Key="Text.BranchCM.Rename" xml:space="preserve">${0}$ ьЭ┤ыжД ы░Фъ╛╕ъ╕░...</x:String>
+  <x:String x:Key="Text.BranchCM.ResetToSelectedCommit" xml:space="preserve">${0}$ьЭД(ые╝) ${1}$(ьЬ╝)ыбЬ ыжмьЕЛ...</x:String>
+  <x:String x:Key="Text.BranchCM.SwitchToWorktree" xml:space="preserve">${0}$(ьЫМэБмэК╕ыжм)ыбЬ ьаДэЩШ</x:String>
+  <x:String x:Key="Text.BranchCM.Tracking" xml:space="preserve">ь╢ФьаБ ы╕МыЮЬь╣Ш ьДдьаХ...</x:String>
+  <x:String x:Key="Text.BranchTree.Ahead" xml:space="preserve">{0}ъ░Ь ь╗ды░Л ьХЮьДм</x:String>
+  <x:String x:Key="Text.BranchTree.AheadBehind" xml:space="preserve">{0}ъ░Ь ь╗ды░Л ьХЮьДм, {1}ъ░Ь ь╗ды░Л ыТдь▓ШьзР</x:String>
+  <x:String x:Key="Text.BranchTree.Behind" xml:space="preserve">{0}ъ░Ь ь╗ды░Л ыТдь▓ШьзР</x:String>
+  <x:String x:Key="Text.BranchTree.InvalidUpstream" xml:space="preserve">ьЬаэЪиэХШьзА ьХКьЭМ</x:String>
+  <x:String x:Key="Text.BranchTree.Remote" xml:space="preserve">ьЫРъ▓й</x:String>
+  <x:String x:Key="Text.BranchTree.Status" xml:space="preserve">ьГБэГЬ</x:String>
+  <x:String x:Key="Text.BranchTree.Tracking" xml:space="preserve">ь╢ФьаБ ьдС</x:String>
   <x:String x:Key="Text.BranchTree.URL" xml:space="preserve">URL</x:String>
-  <x:String x:Key="Text.BranchTree.Worktree" xml:space="preserve">워크트리</x:String>
-  <x:String x:Key="Text.Cancel" xml:space="preserve">취소</x:String>
-  <x:String x:Key="Text.ChangeCM.CheckoutFirstParentRevision" xml:space="preserve">부모 리비전으로 리셋</x:String>
-  <x:String x:Key="Text.ChangeCM.CheckoutThisRevision" xml:space="preserve">이 리비전으로 리셋</x:String>
-  <x:String x:Key="Text.ChangeCM.GenerateCommitMessage" xml:space="preserve">커밋 메시지 생성</x:String>
-  <x:String x:Key="Text.ChangeDisplayMode" xml:space="preserve">표시 모드 변경</x:String>
-  <x:String x:Key="Text.ChangeDisplayMode.Grid" xml:space="preserve">파일 및 디렉터리 목록으로 보기</x:String>
-  <x:String x:Key="Text.ChangeDisplayMode.List" xml:space="preserve">경로 목록으로 보기</x:String>
-  <x:String x:Key="Text.ChangeDisplayMode.Tree" xml:space="preserve">파일 시스템 트리로 보기</x:String>
-  <x:String x:Key="Text.ChangeSubmoduleUrl" xml:space="preserve">서브모듈 URL 변경</x:String>
-  <x:String x:Key="Text.ChangeSubmoduleUrl.Submodule" xml:space="preserve">서브모듈:</x:String>
+  <x:String x:Key="Text.BranchTree.Worktree" xml:space="preserve">ьЫМэБмэК╕ыжм</x:String>
+  <x:String x:Key="Text.Cancel" xml:space="preserve">ь╖иьЖМ</x:String>
+  <x:String x:Key="Text.ChangeCM.CheckoutFirstParentRevision" xml:space="preserve">ы╢Аыки ыжмы╣ДьаДьЬ╝ыбЬ ыжмьЕЛ</x:String>
+  <x:String x:Key="Text.ChangeCM.CheckoutThisRevision" xml:space="preserve">ьЭ┤ ыжмы╣ДьаДьЬ╝ыбЬ ыжмьЕЛ</x:String>
+  <x:String x:Key="Text.ChangeCM.GenerateCommitMessage" xml:space="preserve">ь╗ды░Л ыйФьЛЬьзА ьГЭьД▒</x:String>
+  <x:String x:Key="Text.ChangeCM.Merge" xml:space="preserve">ы│СэХй(ыВ┤ьЮе)</x:String>
+  <x:String x:Key="Text.ChangeCM.MergeExternal" xml:space="preserve">ы│СэХй(ьЩ╕ы╢А ыПДъ╡м)</x:String>
+  <x:String x:Key="Text.ChangeCM.ResetFileTo" xml:space="preserve">эММьЭ╝ьЭД ${0}$(ьЬ╝)ыбЬ ыРШыПМыжмъ╕░</x:String>
+  <x:String x:Key="Text.ChangeDisplayMode" xml:space="preserve">эСЬьЛЬ ыкиыУЬ ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.ChangeDisplayMode.Grid" xml:space="preserve">эММьЭ╝ ы░П ыФФыаЙэД░ыжм ыкйыбЭьЬ╝ыбЬ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.ChangeDisplayMode.List" xml:space="preserve">ъ▓╜ыбЬ ыкйыбЭьЬ╝ыбЬ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.ChangeDisplayMode.Tree" xml:space="preserve">эММьЭ╝ ьЛЬьКдэЕЬ эК╕ыжмыбЬ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.ChangeSubmoduleUrl" xml:space="preserve">ьДЬы╕МыкиыУИ URL ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.ChangeSubmoduleUrl.Submodule" xml:space="preserve">ьДЬы╕МыкиыУИ:</x:String>
   <x:String x:Key="Text.ChangeSubmoduleUrl.URL" xml:space="preserve">URL:</x:String>
-  <x:String x:Key="Text.Checkout" xml:space="preserve">브랜치 체크아웃</x:String>
-  <x:String x:Key="Text.Checkout.Commit" xml:space="preserve">커밋 체크아웃</x:String>
-  <x:String x:Key="Text.Checkout.Commit.Target" xml:space="preserve">커밋:</x:String>
-  <x:String x:Key="Text.Checkout.Commit.Warning" xml:space="preserve">경고: 커밋 체크아웃을 하면, HEAD가 분리됩니다(detached)</x:String>
-  <x:String x:Key="Text.Checkout.LocalChanges" xml:space="preserve">로컬 변경 사항:</x:String>
-  <x:String x:Key="Text.Checkout.Target" xml:space="preserve">브랜치:</x:String>
-  <x:String x:Key="Text.Checkout.WarnLostCommits" xml:space="preserve">현재 HEAD에 브랜치/태그에 연결되지 않은 커밋이 있습니다! 계속하시겠습니까?</x:String>
-  <x:String x:Key="Text.Checkout.WithFastForward" xml:space="preserve">체크아웃 &amp; Fast-Forward</x:String>
-  <x:String x:Key="Text.Checkout.WithFastForward.Upstream" xml:space="preserve">Fast-Forward 대상:</x:String>
-  <x:String x:Key="Text.CherryPick" xml:space="preserve">체리픽</x:String>
-  <x:String x:Key="Text.CherryPick.AppendSourceToMessage" xml:space="preserve">커밋 메시지에 원본 추가</x:String>
-  <x:String x:Key="Text.CherryPick.Commit" xml:space="preserve">커밋:</x:String>
-  <x:String x:Key="Text.CherryPick.CommitChanges" xml:space="preserve">모든 변경 사항 커밋</x:String>
-  <x:String x:Key="Text.CherryPick.Mainline" xml:space="preserve">메인라인:</x:String>
-  <x:String x:Key="Text.CherryPick.Mainline.Tips" xml:space="preserve">어느 쪽을 메인라인으로 간주해야 할지 알 수 없기 때문에 일반적으로 병합(merge)을 체리픽할 수 없습니다. 이 옵션을 사용하면 지정된 부모를 기준으로 변경 사항을 다시 적용할 수 있습니다.</x:String>
-  <x:String x:Key="Text.ClearStashes" xml:space="preserve">모든 스태시 지우기</x:String>
-  <x:String x:Key="Text.ClearStashes.Message" xml:space="preserve">모든 스태시를 지우려고 합니다. 계속하시겠습니까?</x:String>
-  <x:String x:Key="Text.Clone" xml:space="preserve">원격 저장소 복제</x:String>
-  <x:String x:Key="Text.Clone.AdditionalParam" xml:space="preserve">추가 파라미터:</x:String>
-  <x:String x:Key="Text.Clone.AdditionalParam.Placeholder" xml:space="preserve">저장소 복제 시 추가 인수. 선택 사항.</x:String>
-  <x:String x:Key="Text.Clone.LocalName" xml:space="preserve">로컬 이름:</x:String>
-  <x:String x:Key="Text.Clone.LocalName.Placeholder" xml:space="preserve">저장소 이름. 선택 사항.</x:String>
-  <x:String x:Key="Text.Clone.ParentFolder" xml:space="preserve">상위 폴더:</x:String>
-  <x:String x:Key="Text.Clone.RecurseSubmodules" xml:space="preserve">서브모듈 초기화 &amp; 업데이트</x:String>
-  <x:String x:Key="Text.Clone.RemoteURL" xml:space="preserve">저장소 URL:</x:String>
-  <x:String x:Key="Text.Close" xml:space="preserve">닫기</x:String>
-  <x:String x:Key="Text.CodeEditor" xml:space="preserve">에디터</x:String>
-  <x:String x:Key="Text.CommitCM.Checkout" xml:space="preserve">커밋 체크아웃</x:String>
-  <x:String x:Key="Text.CommitCM.CherryPick" xml:space="preserve">커밋 체리픽</x:String>
-  <x:String x:Key="Text.CommitCM.CherryPickMultiple" xml:space="preserve">체리픽...</x:String>
-  <x:String x:Key="Text.CommitCM.CompareWithHead" xml:space="preserve">HEAD와 비교</x:String>
-  <x:String x:Key="Text.CommitCM.CompareWithWorktree" xml:space="preserve">워크트리와 비교</x:String>
-  <x:String x:Key="Text.CommitCM.CopyAuthor" xml:space="preserve">작성자</x:String>
-  <x:String x:Key="Text.CommitCM.CopyCommitMessage" xml:space="preserve">메시지</x:String>
-  <x:String x:Key="Text.CommitCM.CopyCommitter" xml:space="preserve">커밋터</x:String>
+  <x:String x:Key="Text.Checkout" xml:space="preserve">ы╕МыЮЬь╣Ш ь▓┤эБмьХДьЫГ</x:String>
+  <x:String x:Key="Text.Checkout.Commit" xml:space="preserve">ь╗ды░Л ь▓┤эБмьХДьЫГ</x:String>
+  <x:String x:Key="Text.Checkout.Commit.Target" xml:space="preserve">ь╗ды░Л:</x:String>
+  <x:String x:Key="Text.Checkout.Commit.Warning" xml:space="preserve">ъ▓╜ъ│а: ь╗ды░Л ь▓┤эБмьХДьЫГьЭД эХШый┤, HEADъ░А ы╢ДыжмыРйыЛИыЛд(detached)</x:String>
+  <x:String x:Key="Text.Checkout.LocalChanges" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн:</x:String>
+  <x:String x:Key="Text.Checkout.Target" xml:space="preserve">ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.Checkout.WarnLostCommits" xml:space="preserve">эШДьЮм HEADьЧР ы╕МыЮЬь╣Ш/эГЬъ╖╕ьЧР ьЧ░ъ▓░ыРШьзА ьХКьЭА ь╗ды░ЛьЭ┤ ьЮИьК╡ыЛИыЛд! ъ│ДьЖНэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.Checkout.WarnUpdatingSubmodules" xml:space="preserve">ыЛдьЭМ ьДЬы╕МыкиыУИьЭД ьЧЕыН░ьЭ┤эК╕эХ┤ьХ╝ эХйыЛИыЛд:{0}ьЧЕыН░ьЭ┤эК╕эХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.Checkout.WithFastForward" xml:space="preserve">ь▓┤эБмьХДьЫГ &amp; Fast-Forward</x:String>
+  <x:String x:Key="Text.Checkout.WithFastForward.Upstream" xml:space="preserve">Fast-Forward ыМАьГБ:</x:String>
+  <x:String x:Key="Text.CheckoutBranchFromStash" xml:space="preserve">ьКдэГЬьЛЬьЧРьДЬ ы╕МыЮЬь╣Ш ь▓┤эБмьХДьЫГ</x:String>
+  <x:String x:Key="Text.CheckoutBranchFromStash.Branch" xml:space="preserve">ьГИыбЬьЪ┤ ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.CheckoutBranchFromStash.Stash" xml:space="preserve">ьКдэГЬьЛЬ:</x:String>
+  <x:String x:Key="Text.CherryPick" xml:space="preserve">ь▓┤ыжмэФ╜</x:String>
+  <x:String x:Key="Text.CherryPick.AppendSourceToMessage" xml:space="preserve">ь╗ды░Л ыйФьЛЬьзАьЧР ьЫРы│╕ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.CherryPick.Commit" xml:space="preserve">ь╗ды░Л:</x:String>
+  <x:String x:Key="Text.CherryPick.CommitChanges" xml:space="preserve">ыкиыУа ы│Аъ▓╜ ьВмэХн ь╗ды░Л</x:String>
+  <x:String x:Key="Text.CherryPick.Mainline" xml:space="preserve">ыйФьЭ╕ыЭ╝ьЭ╕:</x:String>
+  <x:String x:Key="Text.CherryPick.Mainline.Tips" xml:space="preserve">ьЦ┤ыКР ьк╜ьЭД ыйФьЭ╕ыЭ╝ьЭ╕ьЬ╝ыбЬ ъ░Дьг╝эХ┤ьХ╝ эХаьзА ьХМ ьИШ ьЧЖъ╕░ ыХМым╕ьЧР ьЭ╝ы░ШьаБьЬ╝ыбЬ ы│СэХй(merge)ьЭД ь▓┤ыжмэФ╜эХа ьИШ ьЧЖьК╡ыЛИыЛд. ьЭ┤ ьШ╡ьЕШьЭД ьВмьЪйэХШый┤ ьзАьаХыРЬ ы╢Аыкиые╝ ъ╕░ьдАьЬ╝ыбЬ ы│Аъ▓╜ ьВмэХньЭД ыЛдьЛЬ ьаБьЪйэХа ьИШ ьЮИьК╡ыЛИыЛд.</x:String>
+  <x:String x:Key="Text.ClearStashes" xml:space="preserve">ыкиыУа ьКдэГЬьЛЬ ьзАьЪ░ъ╕░</x:String>
+  <x:String x:Key="Text.ClearStashes.Message" xml:space="preserve">ыкиыУа ьКдэГЬьЛЬые╝ ьзАьЪ░ыадъ│а эХйыЛИыЛд. ъ│ДьЖНэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.Clone" xml:space="preserve">ьЫРъ▓й ьаАьЮеьЖМ ы│╡ьаЬ</x:String>
+  <x:String x:Key="Text.Clone.AdditionalParam" xml:space="preserve">ь╢Фъ░А эММыЭ╝ып╕эД░:</x:String>
+  <x:String x:Key="Text.Clone.AdditionalParam.Placeholder" xml:space="preserve">ьаАьЮеьЖМ ы│╡ьаЬ ьЛЬ ь╢Фъ░А ьЭ╕ьИШ. ьДаэГЭ ьВмэХн.</x:String>
+  <x:String x:Key="Text.Clone.Bookmark" xml:space="preserve">ы╢БызИэБм:</x:String>
+  <x:String x:Key="Text.Clone.Group" xml:space="preserve">ъ╖╕ыг╣:</x:String>
+  <x:String x:Key="Text.Clone.LocalName" xml:space="preserve">ыбЬь╗м ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.Clone.LocalName.Placeholder" xml:space="preserve">ьаАьЮеьЖМ ьЭ┤ыжД. ьДаэГЭ ьВмэХн.</x:String>
+  <x:String x:Key="Text.Clone.ParentFolder" xml:space="preserve">ьГБьЬД эП┤ыНФ:</x:String>
+  <x:String x:Key="Text.Clone.RecurseSubmodules" xml:space="preserve">ьДЬы╕МыкиыУИ ь┤Иъ╕░эЩФ &amp; ьЧЕыН░ьЭ┤эК╕</x:String>
+  <x:String x:Key="Text.Clone.RemoteURL" xml:space="preserve">ьаАьЮеьЖМ URL:</x:String>
+  <x:String x:Key="Text.Close" xml:space="preserve">ыЛлъ╕░</x:String>
+  <x:String x:Key="Text.CodeEditor" xml:space="preserve">ьЧРыФФэД░</x:String>
+  <x:String x:Key="Text.CommandPalette.Branches" xml:space="preserve">ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.CommandPalette.BranchesAndTags" xml:space="preserve">ы╕МыЮЬь╣Ш &amp; эГЬъ╖╕</x:String>
+  <x:String x:Key="Text.CommandPalette.RepositoryActions" xml:space="preserve">ьаАьЮеьЖМ ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.CommandPalette.RevisionFiles" xml:space="preserve">ыжмы╣ДьаД эММьЭ╝</x:String>
+  <x:String x:Key="Text.CommitCM.Checkout" xml:space="preserve">ь╗ды░Л ь▓┤эБмьХДьЫГ</x:String>
+  <x:String x:Key="Text.CommitCM.CherryPick" xml:space="preserve">ь╗ды░Л ь▓┤ыжмэФ╜</x:String>
+  <x:String x:Key="Text.CommitCM.CherryPickMultiple" xml:space="preserve">ь▓┤ыжмэФ╜...</x:String>
+  <x:String x:Key="Text.CommitCM.CompareWithHead" xml:space="preserve">HEADьЩА ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.CommitCM.CompareWithWorktree" xml:space="preserve">ьЫМэБмэК╕ыжмьЩА ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.CommitCM.CopyAuthor" xml:space="preserve">ьЮСьД▒ьЮР</x:String>
+  <x:String x:Key="Text.CommitCM.CopyAuthorTime" xml:space="preserve">ьЮСьД▒ ьЛЬъ░Д</x:String>
+  <x:String x:Key="Text.CommitCM.CopyCommitMessage" xml:space="preserve">ыйФьЛЬьзА</x:String>
+  <x:String x:Key="Text.CommitCM.CopyCommitter" xml:space="preserve">ь╗ды░ЛэД░</x:String>
+  <x:String x:Key="Text.CommitCM.CopyCommitterTime" xml:space="preserve">ь╗ды░Л ьЛЬъ░Д</x:String>
   <x:String x:Key="Text.CommitCM.CopySHA" xml:space="preserve">SHA</x:String>
-  <x:String x:Key="Text.CommitCM.CopySubject" xml:space="preserve">제목</x:String>
-  <x:String x:Key="Text.CommitCM.CustomAction" xml:space="preserve">사용자 지정 작업</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase" xml:space="preserve">대화형 리베이스</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase.Drop" xml:space="preserve">삭제(Drop)...</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase.Edit" xml:space="preserve">수정(Edit)...</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase.Fixup" xml:space="preserve">부모에 합치기(Fixup)...</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase.Manually" xml:space="preserve">${1}$을(를) 기반으로 ${0}$ 대화형 리베이스</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase.Reword" xml:space="preserve">메시지 수정(Reword)...</x:String>
-  <x:String x:Key="Text.CommitCM.InteractiveRebase.Squash" xml:space="preserve">부모에 합치기(Squash)...</x:String>
-  <x:String x:Key="Text.CommitCM.MergeMultiple" xml:space="preserve">병합...</x:String>
-  <x:String x:Key="Text.CommitCM.PushRevision" xml:space="preserve">${0}$을(를) ${1}$(으)로 푸시</x:String>
-  <x:String x:Key="Text.CommitCM.Rebase" xml:space="preserve">${1}$을(를) 기반으로 ${0}$ 리베이스</x:String>
-  <x:String x:Key="Text.CommitCM.Reset" xml:space="preserve">${0}$을(를) ${1}$(으)로 리셋</x:String>
-  <x:String x:Key="Text.CommitCM.Revert" xml:space="preserve">커밋 되돌리기</x:String>
-  <x:String x:Key="Text.CommitCM.SaveAsPatch" xml:space="preserve">패치로 저장...</x:String>
-  <x:String x:Key="Text.CommitDetail.Changes" xml:space="preserve">변경 사항</x:String>
-  <x:String x:Key="Text.CommitDetail.Changes.Count" xml:space="preserve">변경된 파일</x:String>
-  <x:String x:Key="Text.CommitDetail.Changes.Search" xml:space="preserve">변경 사항 검색...</x:String>
-  <x:String x:Key="Text.CommitDetail.Files" xml:space="preserve">파일</x:String>
-  <x:String x:Key="Text.CommitDetail.Files.LFS" xml:space="preserve">LFS 파일</x:String>
-  <x:String x:Key="Text.CommitDetail.Files.Search" xml:space="preserve">파일 검색...</x:String>
-  <x:String x:Key="Text.CommitDetail.Files.Submodule" xml:space="preserve">서브모듈</x:String>
-  <x:String x:Key="Text.CommitDetail.Info" xml:space="preserve">정보</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Author" xml:space="preserve">작성자</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Children" xml:space="preserve">자식</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Committer" xml:space="preserve">커밋터</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.ContainsIn" xml:space="preserve">이 커밋을 포함하는 ref 확인</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.ContainsIn.Title" xml:space="preserve">커밋 포함 REF</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.CopyEmail" xml:space="preserve">이메일 복사</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.CopyName" xml:space="preserve">이름 복사</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.CopyNameAndEmail" xml:space="preserve">이름 &amp; 이메일 복사</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.GotoChangesPage" xml:space="preserve">처음 100개의 변경 사항만 표시합니다. 모든 변경 사항은 '변경 사항' 탭에서 확인하세요.</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Key" xml:space="preserve">키:</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Message" xml:space="preserve">메시지</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Parents" xml:space="preserve">부모</x:String>
+  <x:String x:Key="Text.CommitCM.CopySubject" xml:space="preserve">ьаЬыкй</x:String>
+  <x:String x:Key="Text.CommitCM.CustomAction" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase" xml:space="preserve">ыМАэЩФэШХ ыжмы▓аьЭ┤ьКд</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase.Drop" xml:space="preserve">ьВньаЬ(Drop)...</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase.Edit" xml:space="preserve">ьИШьаХ(Edit)...</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase.Fixup" xml:space="preserve">ы╢АыкиьЧР эХйь╣Шъ╕░(Fixup)...</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase.Manually" xml:space="preserve">${1}$ьЭД(ые╝) ъ╕░ы░ШьЬ╝ыбЬ ${0}$(ьЭД)ые╝ ыМАэЩФэШХ ыжмы▓аьЭ┤ьКд</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase.Reword" xml:space="preserve">ыйФьЛЬьзА ьИШьаХ(Reword)...</x:String>
+  <x:String x:Key="Text.CommitCM.InteractiveRebase.Squash" xml:space="preserve">ы╢АыкиьЧР эХйь╣Шъ╕░(Squash)...</x:String>
+  <x:String x:Key="Text.CommitCM.MergeMultiple" xml:space="preserve">ы│СэХй...</x:String>
+  <x:String x:Key="Text.CommitCM.PushRevision" xml:space="preserve">${0}$ьЭД(ые╝) ${1}$(ьЬ╝)ыбЬ эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.CommitCM.Rebase" xml:space="preserve">${1}$ьЭД(ые╝) ъ╕░ы░ШьЬ╝ыбЬ ${0}$(ьЭД)ые╝ ыжмы▓аьЭ┤ьКд</x:String>
+  <x:String x:Key="Text.CommitCM.Reset" xml:space="preserve">${0}$ьЭД(ые╝) ${1}$(ьЬ╝)ыбЬ ыжмьЕЛ</x:String>
+  <x:String x:Key="Text.CommitCM.Revert" xml:space="preserve">ь╗ды░Л ыРШыПМыжмъ╕░</x:String>
+  <x:String x:Key="Text.CommitCM.SaveAsPatch" xml:space="preserve">эМиь╣ШыбЬ ьаАьЮе...</x:String>
+  <x:String x:Key="Text.CommitDetail.Changes" xml:space="preserve">ы│Аъ▓╜ ьВмэХн</x:String>
+  <x:String x:Key="Text.CommitDetail.Changes.Count" xml:space="preserve">ы│Аъ▓╜ыРЬ эММьЭ╝</x:String>
+  <x:String x:Key="Text.CommitDetail.Changes.Search" xml:space="preserve">ы│Аъ▓╜ ьВмэХн ъ▓АьГЙ...</x:String>
+  <x:String x:Key="Text.CommitDetail.CollapseToBottom" xml:space="preserve">ьД╕ы╢А ьаХы│┤ ьаСъ╕░</x:String>
+  <x:String x:Key="Text.CommitDetail.Files" xml:space="preserve">эММьЭ╝</x:String>
+  <x:String x:Key="Text.CommitDetail.Files.LFS" xml:space="preserve">LFS эММьЭ╝</x:String>
+  <x:String x:Key="Text.CommitDetail.Files.Search" xml:space="preserve">эММьЭ╝ ъ▓АьГЙ...</x:String>
+  <x:String x:Key="Text.CommitDetail.Files.Submodule" xml:space="preserve">ьДЬы╕МыкиыУИ</x:String>
+  <x:String x:Key="Text.CommitDetail.Info" xml:space="preserve">ьаХы│┤</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Author" xml:space="preserve">ьЮСьД▒ьЮР</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Children" xml:space="preserve">ьЮРьЛЭ</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Committer" xml:space="preserve">ь╗ды░ЛэД░</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.ContainsIn" xml:space="preserve">ьЭ┤ ь╗ды░ЛьЭД эПмэХиэХШыКФ ref эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.ContainsIn.Title" xml:space="preserve">ь╗ды░Л эПмэХи REF</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.CopyEmail" xml:space="preserve">ьЭ┤ыйФьЭ╝ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.CopyName" xml:space="preserve">ьЭ┤ыжД ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.CopyNameAndEmail" xml:space="preserve">ьЭ┤ыжД &amp; ьЭ┤ыйФьЭ╝ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.GotoChangesPage" xml:space="preserve">ь▓ШьЭМ 100ъ░ЬьЭШ ы│Аъ▓╜ ьВмэХнызМ эСЬьЛЬэХйыЛИыЛд. ыкиыУа ы│Аъ▓╜ ьВмэХньЭА 'ы│Аъ▓╜ ьВмэХн' эГньЧРьДЬ эЩХьЭ╕эХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Key" xml:space="preserve">эВд:</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Message" xml:space="preserve">ыйФьЛЬьзА</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Parents" xml:space="preserve">ы╢Аыки</x:String>
   <x:String x:Key="Text.CommitDetail.Info.Refs" xml:space="preserve">REFS</x:String>
   <x:String x:Key="Text.CommitDetail.Info.SHA" xml:space="preserve">SHA</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.Signer" xml:space="preserve">서명자:</x:String>
-  <x:String x:Key="Text.CommitDetail.Info.WebLinks" xml:space="preserve">브라우저에서 열기</x:String>
-  <x:String x:Key="Text.CommitMessageTextBox.SubjectCount" xml:space="preserve">제목</x:String>
-  <x:String x:Key="Text.Compare" xml:space="preserve">비교</x:String>
-  <x:String x:Key="Text.Configure" xml:space="preserve">저장소 설정</x:String>
-  <x:String x:Key="Text.Configure.CommitMessageTemplate" xml:space="preserve">커밋 템플릿</x:String>
-  <x:String x:Key="Text.Configure.CommitMessageTemplate.BuiltinVars" xml:space="preserve">${files_num}, ${branch_name}, ${files} 및 ${files:N} (N은 출력할 최대 파일 경로 수)을(를) 사용할 수 있습니다.</x:String>
-  <x:String x:Key="Text.Configure.CommitMessageTemplate.Content" xml:space="preserve">템플릿 내용:</x:String>
-  <x:String x:Key="Text.Configure.CommitMessageTemplate.Name" xml:space="preserve">템플릿 이름:</x:String>
-  <x:String x:Key="Text.Configure.CustomAction" xml:space="preserve">사용자 지정 작업</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Arguments" xml:space="preserve">인수:</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Arguments.Tip" xml:space="preserve">내장 파라미터: 
-  
-  ${REPO} 저장소 경로
-  ${REMOTE} 선택한 원격 또는 선택한 브랜치의 원격
-  ${BRANCH} 선택한 브랜치 (원격 브랜치의 경우 ${REMOTE} 부분 제외)
-  ${BRANCH_FRIENDLY_NAME} 선택한 브랜치의 식별하기 쉬운 이름 (원격 브랜치의 경우 ${REMOTE} 부분 포함)
-  ${SHA} 선택한 커밋의 해시
-  ${TAG} 선택한 태그
-  ${FILE} 저장소 루트에 상대적인 선택된 파일
-  $1, $2 ... 입력 컨트롤 값</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Executable" xml:space="preserve">실행 파일:</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.InputControls" xml:space="preserve">입력 컨트롤:</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.InputControls.Edit" xml:space="preserve">편집</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Name" xml:space="preserve">이름:</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope" xml:space="preserve">범위:</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope.Branch" xml:space="preserve">브랜치</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope.Commit" xml:space="preserve">커밋</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope.File" xml:space="preserve">파일</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope.Remote" xml:space="preserve">원격</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope.Repository" xml:space="preserve">저장소</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.Scope.Tag" xml:space="preserve">태그</x:String>
-  <x:String x:Key="Text.Configure.CustomAction.WaitForExit" xml:space="preserve">작업이 끝날 때까지 대기</x:String>
-  <x:String x:Key="Text.Configure.Email" xml:space="preserve">이메일 주소</x:String>
-  <x:String x:Key="Text.Configure.Email.Placeholder" xml:space="preserve">이메일 주소</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.Signer" xml:space="preserve">ьДЬыкЕьЮР:</x:String>
+  <x:String x:Key="Text.CommitDetail.Info.WebLinks" xml:space="preserve">ы╕МыЭ╝ьЪ░ьаАьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.CommitMessageTextBox.Column" xml:space="preserve">ьЧ┤</x:String>
+  <x:String x:Key="Text.CommitMessageTextBox.Placeholder" xml:space="preserve">ь╗ды░Л ыйФьЛЬьзАые╝ ьЮЕыаеэХШьД╕ьЪФ. ьаЬыкйъ│╝ ьДдыкЕьЭА ы╣И ьдДыбЬ ъ╡мы╢ДэХШьД╕ьЪФ!</x:String>
+  <x:String x:Key="Text.CommitMessageTextBox.SubjectCount" xml:space="preserve">ьаЬыкй</x:String>
+  <x:String x:Key="Text.Compare" xml:space="preserve">ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.Compare.Changes" xml:space="preserve">ы│Аъ▓╜ьаР</x:String>
+  <x:String x:Key="Text.Compare.Commits" xml:space="preserve">ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Compare.Commits.LeftOnly" xml:space="preserve">ьЩ╝ьк╜ьЧРызМ ьЮИыКФ ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Compare.Commits.RightOnly" xml:space="preserve">ьШдые╕ьк╜ьЧРызМ ьЮИыКФ ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Compare.Commits.Tips" xml:space="preserve">эМБ: ы░ШыМАэО╕ьЭ┤ HEADьЭ╕ ъ▓╜ьЪ░ ьДаэГЭэХЬ ь╗ды░ЛьЭД ь▓┤ыжмэФ╜эХа ьИШ ьЮИьК╡ыЛИыЛд(ь╗иэЕНьКдэК╕ ыйФыЙ┤ ьВмьЪй).</x:String>
+  <x:String x:Key="Text.Configure" xml:space="preserve">ьаАьЮеьЖМ ьДдьаХ</x:String>
+  <x:String x:Key="Text.Configure.CommitMessageTemplate" xml:space="preserve">ь╗ды░Л эЕЬэФМыж┐</x:String>
+  <x:String x:Key="Text.Configure.CommitMessageTemplate.BuiltinVars" xml:space="preserve">${files_num}, ${branch_name}, ${files} ы░П ${files:N} (NьЭА ь╢ЬыаеэХа ь╡ЬыМА эММьЭ╝ ъ▓╜ыбЬ ьИШ)ьЭД(ые╝) ьВмьЪйэХа ьИШ ьЮИьК╡ыЛИыЛд.</x:String>
+  <x:String x:Key="Text.Configure.CommitMessageTemplate.Content" xml:space="preserve">эЕЬэФМыж┐ ыВ┤ьЪй:</x:String>
+  <x:String x:Key="Text.Configure.CommitMessageTemplate.Name" xml:space="preserve">эЕЬэФМыж┐ ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.Configure.CustomAction" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Arguments" xml:space="preserve">ьЭ╕ьИШ:</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Arguments.Tip" xml:space="preserve">ыВ┤ьЮе эММыЭ╝ып╕эД░:
+
+  ${REPO} ьаАьЮеьЖМ ъ▓╜ыбЬ
+  ${REMOTE} ьДаэГЭэХЬ ьЫРъ▓й ыШРыКФ ьДаэГЭэХЬ ы╕МыЮЬь╣ШьЭШ ьЫРъ▓й
+  ${BRANCH} ьДаэГЭэХЬ ы╕МыЮЬь╣Ш (ьЫРъ▓й ы╕МыЮЬь╣ШьЭШ ъ▓╜ьЪ░ ${REMOTE} ы╢Аы╢Д ьаЬьЩ╕)
+  ${BRANCH_FRIENDLY_NAME} ьДаэГЭэХЬ ы╕МыЮЬь╣ШьЭШ ьЛЭы│ДэХШъ╕░ ьЙмьЪ┤ ьЭ┤ыжД (ьЫРъ▓й ы╕МыЮЬь╣ШьЭШ ъ▓╜ьЪ░ ${REMOTE} ы╢Аы╢Д эПмэХи)
+  ${SHA} ьДаэГЭэХЬ ь╗ды░ЛьЭШ эХ┤ьЛЬ
+  ${TAG} ьДаэГЭэХЬ эГЬъ╖╕
+  ${FILE} ьаАьЮеьЖМ ыгиэК╕ьЧР ьГБыМАьаБьЭ╕ ьДаэГЭыРЬ эММьЭ╝
+  $1, $2 ... ьЮЕыае ь╗иэК╕ыбд ъ░Т</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Executable" xml:space="preserve">ьЛдэЦЙ эММьЭ╝:</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.InputControls" xml:space="preserve">ьЮЕыае ь╗иэК╕ыбд:</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.InputControls.Edit" xml:space="preserve">эО╕ьзС</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Name" xml:space="preserve">ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope" xml:space="preserve">ы▓ФьЬД:</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope.Branch" xml:space="preserve">ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope.Commit" xml:space="preserve">ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope.File" xml:space="preserve">эММьЭ╝</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope.Remote" xml:space="preserve">ьЫРъ▓й</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope.Repository" xml:space="preserve">ьаАьЮеьЖМ</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.Scope.Tag" xml:space="preserve">эГЬъ╖╕</x:String>
+  <x:String x:Key="Text.Configure.CustomAction.WaitForExit" xml:space="preserve">ьЮСьЧЕьЭ┤ ыБЭыВа ыХМъ╣МьзА ыМАъ╕░</x:String>
+  <x:String x:Key="Text.Configure.Email" xml:space="preserve">ьЭ┤ыйФьЭ╝ ьг╝ьЖМ</x:String>
+  <x:String x:Key="Text.Configure.Email.Placeholder" xml:space="preserve">ьЭ┤ыйФьЭ╝ ьг╝ьЖМ</x:String>
   <x:String x:Key="Text.Configure.Git" xml:space="preserve">GIT</x:String>
-  <x:String x:Key="Text.Configure.Git.AutoFetch" xml:space="preserve">원격 자동 Fetch</x:String>
-  <x:String x:Key="Text.Configure.Git.AutoFetchIntervalSuffix" xml:space="preserve">분</x:String>
-  <x:String x:Key="Text.Configure.Git.DefaultRemote" xml:space="preserve">기본 원격</x:String>
-  <x:String x:Key="Text.Configure.Git.PreferredMergeMode" xml:space="preserve">선호하는 병합 모드</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker" xml:space="preserve">이슈 트래커</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleAzure" xml:space="preserve">Azure DevOps 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGerritChangeIdCommit" xml:space="preserve">Gerrit Change-Id 커밋 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGiteeIssue" xml:space="preserve">Gitee 이슈 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGiteePullRequest" xml:space="preserve">Gitee Pull Request 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGitHub" xml:space="preserve">GitHub 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGitLabIssue" xml:space="preserve">GitLab 이슈 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGitLabMergeRequest" xml:space="preserve">GitLab Merge Request 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.AddSampleJira" xml:space="preserve">Jira 규칙 추가</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.NewRule" xml:space="preserve">새 규칙</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.Regex" xml:space="preserve">이슈 정규식:</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.RuleName" xml:space="preserve">규칙 이름:</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.Share" xml:space="preserve">.issuetracker 파일에 이 규칙 공유</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.URLTemplate" xml:space="preserve">결과 URL:</x:String>
-  <x:String x:Key="Text.Configure.IssueTracker.URLTemplate.Tip" xml:space="preserve">정규식 그룹 값에 접근하려면 $1, $2를 사용하세요.</x:String>
+  <x:String x:Key="Text.Configure.Git.AskBeforeAutoUpdatingSubmodules" xml:space="preserve">ьДЬы╕МыкиыУИ ьЮРыПЩ ьЧЕыН░ьЭ┤эК╕ ьаДьЧР эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.Configure.Git.AutoFetch" xml:space="preserve">ьЫРъ▓й ьЮРыПЩ Fetch</x:String>
+  <x:String x:Key="Text.Configure.Git.AutoFetchIntervalSuffix" xml:space="preserve">ы╢Д</x:String>
+  <x:String x:Key="Text.Configure.Git.ConventionalTypesOverride" xml:space="preserve">Conventional Commit ьЬаэШХ</x:String>
+  <x:String x:Key="Text.Configure.Git.DefaultRemote" xml:space="preserve">ъ╕░ы│╕ ьЫРъ▓й</x:String>
+  <x:String x:Key="Text.Configure.Git.PreferredMergeMode" xml:space="preserve">ьДаэШ╕эХШыКФ ы│СэХй ыкиыУЬ</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker" xml:space="preserve">ьЭ┤ьКИ эК╕ыЮШь╗д</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleAzure" xml:space="preserve">Azure DevOps ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGerritChangeIdCommit" xml:space="preserve">Gerrit Change-Id ь╗ды░Л ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGiteeIssue" xml:space="preserve">Gitee ьЭ┤ьКИ ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGiteePullRequest" xml:space="preserve">Gitee Pull Request ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGitHub" xml:space="preserve">GitHub ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGitLabIssue" xml:space="preserve">GitLab ьЭ┤ьКИ ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleGitLabMergeRequest" xml:space="preserve">GitLab Merge Request ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.AddSampleJira" xml:space="preserve">Jira ъ╖Ьь╣Щ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.NewRule" xml:space="preserve">ьГИ ъ╖Ьь╣Щ</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.Regex" xml:space="preserve">ьЭ┤ьКИ ьаХъ╖ЬьЛЭ:</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.RuleName" xml:space="preserve">ъ╖Ьь╣Щ ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.Share" xml:space="preserve">.issuetracker эММьЭ╝ьЧР ьЭ┤ ъ╖Ьь╣Щ ъ│╡ьЬа</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.URLTemplate" xml:space="preserve">ъ▓░ъ│╝ URL:</x:String>
+  <x:String x:Key="Text.Configure.IssueTracker.URLTemplate.Tip" xml:space="preserve">ьаХъ╖ЬьЛЭ ъ╖╕ыг╣ ъ░ТьЧР ьаСъ╖╝эХШыадый┤ $1, $2ые╝ ьВмьЪйэХШьД╕ьЪФ.</x:String>
   <x:String x:Key="Text.Configure.OpenAI" xml:space="preserve">AI</x:String>
-  <x:String x:Key="Text.Configure.OpenAI.Preferred" xml:space="preserve">선호하는 서비스:</x:String>
-  <x:String x:Key="Text.Configure.OpenAI.Preferred.Tip" xml:space="preserve">'선호하는 서비스'가 설정되면, SourceGit은 이 저장소에서 해당 서비스만 사용합니다. 그렇지 않고 사용 가능한 서비스가 두 개 이상인 경우, 하나를 선택할 수 있는 컨텍스트 메뉴가 표시됩니다.</x:String>
-  <x:String x:Key="Text.Configure.Proxy" xml:space="preserve">HTTP 프록시</x:String>
-  <x:String x:Key="Text.Configure.Proxy.Placeholder" xml:space="preserve">이 저장소에서 사용하는 HTTP 프록시</x:String>
-  <x:String x:Key="Text.Configure.User" xml:space="preserve">사용자 이름</x:String>
-  <x:String x:Key="Text.Configure.User.Placeholder" xml:space="preserve">이 저장소의 사용자 이름</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls" xml:space="preserve">사용자 지정 작업 컨트롤 편집</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.CheckedValue" xml:space="preserve">선택 시 값:</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.CheckedValue.Tip" xml:space="preserve">선택 시, 이 값이 명령줄 인수로 사용됩니다</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.Description" xml:space="preserve">설명:</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.DefaultValue" xml:space="preserve">기본값:</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.IsFolder" xml:space="preserve">폴더 여부:</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.Label" xml:space="preserve">레이블:</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.Options" xml:space="preserve">옵션:</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.Options.Tip" xml:space="preserve">옵션 구분자로 '|'를 사용하세요</x:String>
-  <x:String x:Key="Text.ConfigureCustomActionControls.Type" xml:space="preserve">유형:</x:String>
-  <x:String x:Key="Text.ConfigureWorkspace" xml:space="preserve">작업 공간</x:String>
-  <x:String x:Key="Text.ConfigureWorkspace.Color" xml:space="preserve">색상</x:String>
-  <x:String x:Key="Text.ConfigureWorkspace.Name" xml:space="preserve">이름</x:String>
-  <x:String x:Key="Text.ConfigureWorkspace.Restore" xml:space="preserve">시작 시 탭 복원</x:String>
-  <x:String x:Key="Text.ConfirmEmptyCommit.Continue" xml:space="preserve">계속</x:String>
-  <x:String x:Key="Text.ConfirmEmptyCommit.NoLocalChanges" xml:space="preserve">빈 커밋이 감지되었습니다! 계속하시겠습니까 (--allow-empty)?</x:String>
-  <x:String x:Key="Text.ConfirmEmptyCommit.StageAllThenCommit" xml:space="preserve">모두 스테이징 &amp; 커밋</x:String>
-  <x:String x:Key="Text.ConfirmEmptyCommit.WithLocalChanges" xml:space="preserve">빈 커밋이 감지되었습니다! 계속하시겠습니까 (--allow-empty) 아니면 모두 스테이징 후 커밋하시겠습니까?</x:String>
-  <x:String x:Key="Text.ConfirmRestart.Title" xml:space="preserve">재시작 필요</x:String>
-  <x:String x:Key="Text.ConfirmRestart.Message" xml:space="preserve">변경 사항을 적용하려면 앱을 다시 시작해야 합니다.</x:String>
-  <x:String x:Key="Text.ConventionalCommit" xml:space="preserve">Conventional Commit 도우미</x:String>
-  <x:String x:Key="Text.ConventionalCommit.BreakingChanges" xml:space="preserve">주요 변경 사항(Breaking Change):</x:String>
-  <x:String x:Key="Text.ConventionalCommit.ClosedIssue" xml:space="preserve">종료된 이슈:</x:String>
-  <x:String x:Key="Text.ConventionalCommit.Detail" xml:space="preserve">상세 변경 내역:</x:String>
-  <x:String x:Key="Text.ConventionalCommit.Scope" xml:space="preserve">범위:</x:String>
-  <x:String x:Key="Text.ConventionalCommit.ShortDescription" xml:space="preserve">간단한 설명:</x:String>
-  <x:String x:Key="Text.ConventionalCommit.Type" xml:space="preserve">변경 유형:</x:String>
-  <x:String x:Key="Text.Copy" xml:space="preserve">복사</x:String>
-  <x:String x:Key="Text.CopyAllText" xml:space="preserve">전체 텍스트 복사</x:String>
-  <x:String x:Key="Text.CopyFullPath" xml:space="preserve">전체 경로 복사</x:String>
-  <x:String x:Key="Text.CopyPath" xml:space="preserve">경로 복사</x:String>
-  <x:String x:Key="Text.CreateBranch" xml:space="preserve">브랜치 생성...</x:String>
-  <x:String x:Key="Text.CreateBranch.BasedOn" xml:space="preserve">기준:</x:String>
-  <x:String x:Key="Text.CreateBranch.Checkout" xml:space="preserve">생성된 브랜치로 체크아웃</x:String>
-  <x:String x:Key="Text.CreateBranch.LocalChanges" xml:space="preserve">로컬 변경 사항:</x:String>
-  <x:String x:Key="Text.CreateBranch.Name" xml:space="preserve">새 브랜치 이름:</x:String>
-  <x:String x:Key="Text.CreateBranch.Name.Placeholder" xml:space="preserve">브랜치 이름을 입력하세요.</x:String>
-  <x:String x:Key="Text.CreateBranch.Title" xml:space="preserve">로컬 브랜치 생성</x:String>
-  <x:String x:Key="Text.CreateBranch.OverwriteExisting" xml:space="preserve">기존 브랜치 덮어쓰기</x:String>
-  <x:String x:Key="Text.CreateTag" xml:space="preserve">태그 생성...</x:String>
-  <x:String x:Key="Text.CreateTag.BasedOn" xml:space="preserve">태그 생성 위치:</x:String>
-  <x:String x:Key="Text.CreateTag.GPGSign" xml:space="preserve">GPG 서명</x:String>
-  <x:String x:Key="Text.CreateTag.Message" xml:space="preserve">태그 메시지:</x:String>
-  <x:String x:Key="Text.CreateTag.Message.Placeholder" xml:space="preserve">선택 사항.</x:String>
-  <x:String x:Key="Text.CreateTag.Name" xml:space="preserve">태그 이름:</x:String>
-  <x:String x:Key="Text.CreateTag.Name.Placeholder" xml:space="preserve">권장 형식: v1.0.0-alpha</x:String>
-  <x:String x:Key="Text.CreateTag.PushToAllRemotes" xml:space="preserve">생성 후 모든 원격에 푸시</x:String>
-  <x:String x:Key="Text.CreateTag.Title" xml:space="preserve">새 태그 생성</x:String>
-  <x:String x:Key="Text.CreateTag.Type" xml:space="preserve">종류:</x:String>
-  <x:String x:Key="Text.CreateTag.Type.Annotated" xml:space="preserve">주석 태그</x:String>
-  <x:String x:Key="Text.CreateTag.Type.Lightweight" xml:space="preserve">경량 태그</x:String>
-  <x:String x:Key="Text.CtrlClickTip" xml:space="preserve">Ctrl을 누른 채 클릭하면 바로 시작합니다</x:String>
-  <x:String x:Key="Text.Cut" xml:space="preserve">잘라내기</x:String>
-  <x:String x:Key="Text.DealWithLocalChanges.Discard" xml:space="preserve">폐기</x:String>
-  <x:String x:Key="Text.DealWithLocalChanges.StashAndReapply" xml:space="preserve">스태시 &amp; 재적용</x:String>
-  <x:String x:Key="Text.DeinitSubmodule" xml:space="preserve">서브모듈 초기화 해제</x:String>
-  <x:String x:Key="Text.DeinitSubmodule.Force" xml:space="preserve">로컬 변경 사항이 있어도 강제로 초기화 해제합니다.</x:String>
-  <x:String x:Key="Text.DeinitSubmodule.Path" xml:space="preserve">서브모듈:</x:String>
-  <x:String x:Key="Text.DeleteBranch" xml:space="preserve">브랜치 삭제</x:String>
-  <x:String x:Key="Text.DeleteBranch.Branch" xml:space="preserve">브랜치:</x:String>
-  <x:String x:Key="Text.DeleteBranch.IsRemoteTip" xml:space="preserve">원격 브랜치를 삭제하려고 합니다!!!</x:String>
-  <x:String x:Key="Text.DeleteBranch.WithTrackingRemote" xml:space="preserve">원격 브랜치 ${0}$도 함께 삭제</x:String>
-  <x:String x:Key="Text.DeleteMultiBranch" xml:space="preserve">여러 브랜치 삭제</x:String>
-  <x:String x:Key="Text.DeleteMultiBranch.Tip" xml:space="preserve">한 번에 여러 브랜치를 삭제하려고 합니다. 실행하기 전에 다시 한번 확인하세요!</x:String>
-  <x:String x:Key="Text.DeleteMultiTags" xml:space="preserve">여러 태그 삭제</x:String>
-  <x:String x:Key="Text.DeleteMultiTags.DeleteFromRemotes" xml:space="preserve">원격 저장소에서도 삭제</x:String>
-  <x:String x:Key="Text.DeleteMultiTags.Tip" xml:space="preserve">한 번에 여러 태그를 삭제하려고 합니다. 실행하기 전에 다시 한번 확인하세요!</x:String>
-  <x:String x:Key="Text.DeleteRemote" xml:space="preserve">원격 삭제</x:String>
-  <x:String x:Key="Text.DeleteRemote.Remote" xml:space="preserve">원격:</x:String>
-  <x:String x:Key="Text.DeleteRepositoryNode.Path" xml:space="preserve">경로:</x:String>
-  <x:String x:Key="Text.DeleteRepositoryNode.Target" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.DeleteRepositoryNode.TipForGroup" xml:space="preserve">모든 하위 항목이 목록에서 제거됩니다.</x:String>
-  <x:String x:Key="Text.DeleteRepositoryNode.TipForRepository" xml:space="preserve">목록에서만 제거되며, 디스크에서 삭제되지 않습니다!</x:String>
-  <x:String x:Key="Text.DeleteRepositoryNode.TitleForGroup" xml:space="preserve">그룹 삭제 확인</x:String>
-  <x:String x:Key="Text.DeleteRepositoryNode.TitleForRepository" xml:space="preserve">저장소 삭제 확인</x:String>
-  <x:String x:Key="Text.DeleteSubmodule" xml:space="preserve">서브모듈 삭제</x:String>
-  <x:String x:Key="Text.DeleteSubmodule.Path" xml:space="preserve">서브모듈 경로:</x:String>
-  <x:String x:Key="Text.DeleteTag" xml:space="preserve">태그 삭제</x:String>
-  <x:String x:Key="Text.DeleteTag.Tag" xml:space="preserve">태그:</x:String>
-  <x:String x:Key="Text.DeleteTag.WithRemote" xml:space="preserve">원격 저장소에서도 삭제</x:String>
-  <x:String x:Key="Text.Diff.Binary" xml:space="preserve">바이너리 비교</x:String>
-  <x:String x:Key="Text.Diff.FileModeChanged" xml:space="preserve">파일 모드 변경됨</x:String>
-  <x:String x:Key="Text.Diff.First" xml:space="preserve">첫 번째 차이점</x:String>
-  <x:String x:Key="Text.Diff.IgnoreWhitespace" xml:space="preserve">공백 변경 사항 무시</x:String>
-  <x:String x:Key="Text.Diff.Image.Blend" xml:space="preserve">혼합</x:String>
-  <x:String x:Key="Text.Diff.Image.Difference" xml:space="preserve">차이점</x:String>
-  <x:String x:Key="Text.Diff.Image.SideBySide" xml:space="preserve">나란히 보기</x:String>
-  <x:String x:Key="Text.Diff.Image.Swipe" xml:space="preserve">스와이프</x:String>
-  <x:String x:Key="Text.Diff.Last" xml:space="preserve">마지막 차이점</x:String>
-  <x:String x:Key="Text.Diff.LFS" xml:space="preserve">LFS 객체 변경</x:String>
-  <x:String x:Key="Text.Diff.New" xml:space="preserve">신규</x:String>
-  <x:String x:Key="Text.Diff.Next" xml:space="preserve">다음 차이점</x:String>
-  <x:String x:Key="Text.Diff.NoChange" xml:space="preserve">변경 사항 없음 또는 줄바꿈(EOL) 변경만 있음</x:String>
-  <x:String x:Key="Text.Diff.Old" xml:space="preserve">기존</x:String>
-  <x:String x:Key="Text.Diff.Prev" xml:space="preserve">이전 차이점</x:String>
-  <x:String x:Key="Text.Diff.SaveAsPatch" xml:space="preserve">패치로 저장</x:String>
-  <x:String x:Key="Text.Diff.ShowHiddenSymbols" xml:space="preserve">숨겨진 기호 표시</x:String>
-  <x:String x:Key="Text.Diff.SideBySide" xml:space="preserve">나란히 비교</x:String>
-  <x:String x:Key="Text.Diff.Submodule" xml:space="preserve">서브모듈</x:String>
-  <x:String x:Key="Text.Diff.Submodule.Deleted" xml:space="preserve">삭제됨</x:String>
-  <x:String x:Key="Text.Diff.Submodule.New" xml:space="preserve">신규</x:String>
-  <x:String x:Key="Text.Diff.SwapCommits" xml:space="preserve">전환</x:String>
-  <x:String x:Key="Text.Diff.SyntaxHighlight" xml:space="preserve">구문 강조</x:String>
-  <x:String x:Key="Text.Diff.ToggleWordWrap" xml:space="preserve">줄 바꿈</x:String>
-  <x:String x:Key="Text.Diff.UseMerger" xml:space="preserve">병합 도구에서 열기</x:String>
-  <x:String x:Key="Text.Diff.VisualLines.All" xml:space="preserve">모든 줄 표시</x:String>
-  <x:String x:Key="Text.Diff.VisualLines.Decr" xml:space="preserve">표시 줄 수 줄이기</x:String>
-  <x:String x:Key="Text.Diff.VisualLines.Incr" xml:space="preserve">표시 줄 수 늘리기</x:String>
-  <x:String x:Key="Text.Diff.Welcome" xml:space="preserve">파일을 선택하여 변경 사항 보기</x:String>
-  <x:String x:Key="Text.DirHistories" xml:space="preserve">디렉터리 히스토리</x:String>
-  <x:String x:Key="Text.DirtyState.HasLocalChanges" xml:space="preserve">로컬 변경 사항 있음</x:String>
-  <x:String x:Key="Text.DirtyState.HasPendingPullOrPush" xml:space="preserve">업스트림과 불일치</x:String>
-  <x:String x:Key="Text.DirtyState.UpToDate" xml:space="preserve">이미 최신 상태</x:String>
-  <x:String x:Key="Text.Discard" xml:space="preserve">변경 사항 폐기</x:String>
-  <x:String x:Key="Text.Discard.All" xml:space="preserve">작업 사본의 모든 로컬 변경 사항.</x:String>
-  <x:String x:Key="Text.Discard.Changes" xml:space="preserve">변경 사항:</x:String>
-  <x:String x:Key="Text.Discard.IncludeIgnored" xml:space="preserve">무시된 파일 포함</x:String>
-  <x:String x:Key="Text.Discard.IncludeUntracked" xml:space="preserve">추적하지 않는 파일 포함</x:String>
-  <x:String x:Key="Text.Discard.Total" xml:space="preserve">{0}개의 변경 사항이 폐기됩니다</x:String>
-  <x:String x:Key="Text.Discard.Warning" xml:space="preserve">이 작업은 되돌릴 수 없습니다!!!</x:String>
-  <x:String x:Key="Text.EditRepositoryNode.Bookmark" xml:space="preserve">북마크:</x:String>
-  <x:String x:Key="Text.EditRepositoryNode.Name" xml:space="preserve">새 이름:</x:String>
-  <x:String x:Key="Text.EditRepositoryNode.Target" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.EditRepositoryNode.TitleForGroup" xml:space="preserve">선택한 그룹 편집</x:String>
-  <x:String x:Key="Text.EditRepositoryNode.TitleForRepository" xml:space="preserve">선택한 저장소 편집</x:String>
-  <x:String x:Key="Text.ExecuteCustomAction.Target" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.ExecuteCustomAction.Repository" xml:space="preserve">이 저장소</x:String>
+  <x:String x:Key="Text.Configure.OpenAI.Preferred" xml:space="preserve">ьДаэШ╕эХШыКФ ьДЬы╣ДьКд:</x:String>
+  <x:String x:Key="Text.Configure.OpenAI.Preferred.Tip" xml:space="preserve">'ьДаэШ╕эХШыКФ ьДЬы╣ДьКд'ъ░А ьДдьаХыРШый┤, SourceGitьЭА ьЭ┤ ьаАьЮеьЖМьЧРьДЬ эХ┤ыЛ╣ ьДЬы╣ДьКдызМ ьВмьЪйэХйыЛИыЛд. ъ╖╕ыаЗьзА ьХКъ│а ьВмьЪй ъ░АыКеэХЬ ьДЬы╣ДьКдъ░А ыСР ъ░Ь ьЭ┤ьГБьЭ╕ ъ▓╜ьЪ░, эХШыВШые╝ ьДаэГЭэХа ьИШ ьЮИыКФ ь╗иэЕНьКдэК╕ ыйФыЙ┤ъ░А эСЬьЛЬыРйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.Configure.Proxy" xml:space="preserve">HTTP эФДыбЭьЛЬ</x:String>
+  <x:String x:Key="Text.Configure.Proxy.Placeholder" xml:space="preserve">ьЭ┤ ьаАьЮеьЖМьЧРьДЬ ьВмьЪйэХШыКФ HTTP эФДыбЭьЛЬ</x:String>
+  <x:String x:Key="Text.Configure.User" xml:space="preserve">ьВмьЪйьЮР ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.Configure.User.Placeholder" xml:space="preserve">ьЭ┤ ьаАьЮеьЖМьЭШ ьВмьЪйьЮР ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ ь╗иэК╕ыбд эО╕ьзС</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.CheckedValue" xml:space="preserve">ьДаэГЭ ьЛЬ ъ░Т:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.CheckedValue.Tip" xml:space="preserve">ьДаэГЭ ьЛЬ, ьЭ┤ ъ░ТьЭ┤ ыкЕыа╣ьдД ьЭ╕ьИШыбЬ ьВмьЪйыРйыЛИыЛд</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.Description" xml:space="preserve">ьДдыкЕ:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.DefaultValue" xml:space="preserve">ъ╕░ы│╕ъ░Т:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.IsFolder" xml:space="preserve">эП┤ыНФ ьЧмы╢А:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.Label" xml:space="preserve">ыаИьЭ┤ы╕Ф:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.Options" xml:space="preserve">ьШ╡ьЕШ:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.Options.Tip" xml:space="preserve">ьШ╡ьЕШ ъ╡мы╢ДьЮРыбЬ '|'ые╝ ьВмьЪйэХШьД╕ьЪФ</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.StringFormatter" xml:space="preserve">ым╕ьЮРьЧ┤ эПмыздэД░:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.StringFormatter.Tip" xml:space="preserve">ьДаэГЭ ьВмэХн. ь╢Ьыае ым╕ьЮРьЧ┤ эШХьЛЭ ьзАьаХьЧР ьВмьЪйэХйыЛИыЛд. ьЮЕыаеьЭ┤ ы╣ДьЦ┤ ьЮИьЬ╝ый┤ ым┤ьЛЬыРйыЛИыЛд. ьЮЕыае ым╕ьЮРьЧ┤ьЭА `${VALUE}`ыбЬ эСЬьЛЬэХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.StringValue.Tip" xml:space="preserve">ьЧмъ╕░ьЧРьДЬыПД ыВ┤ьЮе ы│АьИШ ${REPO}, ${REMOTE}, ${BRANCH}, ${BRANCH_FRIENDLY_NAME}, ${SHA}, ${FILE}, ${TAG}ые╝ ьВмьЪйэХа ьИШ ьЮИьК╡ыЛИыЛд</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.Type" xml:space="preserve">ьЬаэШХ:</x:String>
+  <x:String x:Key="Text.ConfigureCustomActionControls.UseFriendlyName" xml:space="preserve">эСЬьЛЬьЪй ьЭ┤ыжД ьВмьЪй:</x:String>
+  <x:String x:Key="Text.ConfigureWorkspace" xml:space="preserve">ьЮСьЧЕ ъ│╡ъ░Д</x:String>
+  <x:String x:Key="Text.ConfigureWorkspace.Color" xml:space="preserve">ьГЙьГБ</x:String>
+  <x:String x:Key="Text.ConfigureWorkspace.Name" xml:space="preserve">ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.ConfigureWorkspace.Restore" xml:space="preserve">ьЛЬьЮС ьЛЬ эГн ы│╡ьЫР</x:String>
+  <x:String x:Key="Text.ConfirmEmptyCommit.Continue" xml:space="preserve">ъ│ДьЖН</x:String>
+  <x:String x:Key="Text.ConfirmEmptyCommit.NoLocalChanges" xml:space="preserve">ы╣И ь╗ды░ЛьЭ┤ ъ░РьзАыРШьЧИьК╡ыЛИыЛд! ъ│ДьЖНэХШьЛЬъ▓аьК╡ыЛИъ╣М (--allow-empty)?</x:String>
+  <x:String x:Key="Text.ConfirmEmptyCommit.StageAllThenCommit" xml:space="preserve">ыкиыСР ьКдэЕМьЭ┤ьзХ &amp; ь╗ды░Л</x:String>
+  <x:String x:Key="Text.ConfirmEmptyCommit.StageSelectedThenCommit" xml:space="preserve">ьДаэГЭ эХныкй ьКдэЕМьЭ┤ьзХ эЫД ь╗ды░Л</x:String>
+  <x:String x:Key="Text.ConfirmEmptyCommit.WithLocalChanges" xml:space="preserve">ы╣И ь╗ды░ЛьЭ┤ ъ░РьзАыРШьЧИьК╡ыЛИыЛд! ъ│ДьЖНэХШьЛЬъ▓аьК╡ыЛИъ╣М (--allow-empty) ьХДыЛИый┤ ыкиыСР ьКдэЕМьЭ┤ьзХ эЫД ь╗ды░ЛэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.ConfirmRestart.Title" xml:space="preserve">ьЮмьЛЬьЮС эХДьЪФ</x:String>
+  <x:String x:Key="Text.ConfirmRestart.Message" xml:space="preserve">ы│Аъ▓╜ ьВмэХньЭД ьаБьЪйэХШыадый┤ ьХ▒ьЭД ыЛдьЛЬ ьЛЬьЮСэХ┤ьХ╝ эХйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.ConventionalCommit" xml:space="preserve">Conventional Commit ыПДьЪ░ып╕</x:String>
+  <x:String x:Key="Text.ConventionalCommit.BreakingChanges" xml:space="preserve">ьг╝ьЪФ ы│Аъ▓╜ ьВмэХн(Breaking Change):</x:String>
+  <x:String x:Key="Text.ConventionalCommit.ClosedIssue" xml:space="preserve">ьвЕыгМыРЬ ьЭ┤ьКИ:</x:String>
+  <x:String x:Key="Text.ConventionalCommit.Detail" xml:space="preserve">ьГБьД╕ ы│Аъ▓╜ ыВ┤ьЧн:</x:String>
+  <x:String x:Key="Text.ConventionalCommit.Scope" xml:space="preserve">ы▓ФьЬД:</x:String>
+  <x:String x:Key="Text.ConventionalCommit.ShortDescription" xml:space="preserve">ъ░ДыЛиэХЬ ьДдыкЕ:</x:String>
+  <x:String x:Key="Text.ConventionalCommit.Type" xml:space="preserve">ы│Аъ▓╜ ьЬаэШХ:</x:String>
+  <x:String x:Key="Text.Copy" xml:space="preserve">ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CopyAllText" xml:space="preserve">ьаДь▓┤ эЕНьКдэК╕ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CopyAsPatch" xml:space="preserve">эМиь╣ШыбЬ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CopyFullPath" xml:space="preserve">ьаДь▓┤ ъ▓╜ыбЬ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CopyPath" xml:space="preserve">ъ▓╜ыбЬ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.CreateBranch" xml:space="preserve">ы╕МыЮЬь╣Ш ьГЭьД▒...</x:String>
+  <x:String x:Key="Text.CreateBranch.BasedOn" xml:space="preserve">ъ╕░ьдА:</x:String>
+  <x:String x:Key="Text.CreateBranch.Checkout" xml:space="preserve">ьГЭьД▒ыРЬ ы╕МыЮЬь╣ШыбЬ ь▓┤эБмьХДьЫГ</x:String>
+  <x:String x:Key="Text.CreateBranch.LocalChanges" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн:</x:String>
+  <x:String x:Key="Text.CreateBranch.Name" xml:space="preserve">ьГИ ы╕МыЮЬь╣Ш ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.CreateBranch.Name.Placeholder" xml:space="preserve">ы╕МыЮЬь╣Ш ьЭ┤ыжДьЭД ьЮЕыаеэХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.CreateBranch.Title" xml:space="preserve">ыбЬь╗м ы╕МыЮЬь╣Ш ьГЭьД▒</x:String>
+  <x:String x:Key="Text.CreateBranch.OverwriteExisting" xml:space="preserve">ъ╕░ьб┤ ы╕МыЮЬь╣Ш ыНоьЦ┤ьУ░ъ╕░</x:String>
+  <x:String x:Key="Text.CreateTag" xml:space="preserve">эГЬъ╖╕ ьГЭьД▒...</x:String>
+  <x:String x:Key="Text.CreateTag.BasedOn" xml:space="preserve">эГЬъ╖╕ ьГЭьД▒ ьЬДь╣Ш:</x:String>
+  <x:String x:Key="Text.CreateTag.GPGSign" xml:space="preserve">GPG ьДЬыкЕ</x:String>
+  <x:String x:Key="Text.CreateTag.Message" xml:space="preserve">эГЬъ╖╕ ыйФьЛЬьзА:</x:String>
+  <x:String x:Key="Text.CreateTag.Message.Placeholder" xml:space="preserve">ьДаэГЭ ьВмэХн.</x:String>
+  <x:String x:Key="Text.CreateTag.Name" xml:space="preserve">эГЬъ╖╕ ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.CreateTag.Name.Placeholder" xml:space="preserve">ъ╢МьЮе эШХьЛЭ: v1.0.0-alpha</x:String>
+  <x:String x:Key="Text.CreateTag.PushToAllRemotes" xml:space="preserve">ьГЭьД▒ эЫД ыкиыУа ьЫРъ▓йьЧР эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.CreateTag.Title" xml:space="preserve">ьГИ эГЬъ╖╕ ьГЭьД▒</x:String>
+  <x:String x:Key="Text.CreateTag.Type" xml:space="preserve">ьвЕыеШ:</x:String>
+  <x:String x:Key="Text.CreateTag.Type.Annotated" xml:space="preserve">ьг╝ьДЭ эГЬъ╖╕</x:String>
+  <x:String x:Key="Text.CreateTag.Type.Lightweight" xml:space="preserve">ъ▓╜ыЯЙ эГЬъ╖╕</x:String>
+  <x:String x:Key="Text.CtrlClickTip" xml:space="preserve">CtrlьЭД ыИДые╕ ь▒Д эБ┤ыжнэХШый┤ ы░ФыбЬ ьЛЬьЮСэХйыЛИыЛд</x:String>
+  <x:String x:Key="Text.Cut" xml:space="preserve">ьЮШыЭ╝ыВ┤ъ╕░</x:String>
+  <x:String x:Key="Text.DealWithLocalChanges.Discard" xml:space="preserve">эПРъ╕░</x:String>
+  <x:String x:Key="Text.DealWithLocalChanges.DoNothing" xml:space="preserve">ьХДым┤ъ▓ГыПД эХШьзА ьХКъ╕░</x:String>
+  <x:String x:Key="Text.DealWithLocalChanges.StashAndReapply" xml:space="preserve">ьКдэГЬьЛЬ &amp; ьЮмьаБьЪй</x:String>
+  <x:String x:Key="Text.DeinitSubmodule" xml:space="preserve">ьДЬы╕МыкиыУИ ь┤Иъ╕░эЩФ эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.DeinitSubmodule.Force" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХньЭ┤ ьЮИьЦ┤ыПД ъ░ХьаЬыбЬ ь┤Иъ╕░эЩФ эХ┤ьаЬэХйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.DeinitSubmodule.Path" xml:space="preserve">ьДЬы╕МыкиыУИ:</x:String>
+  <x:String x:Key="Text.DeleteBranch" xml:space="preserve">ы╕МыЮЬь╣Ш ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteBranch.Branch" xml:space="preserve">ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.DeleteBranch.IsRemoteTip" xml:space="preserve">ьЫРъ▓й ы╕МыЮЬь╣Шые╝ ьВньаЬэХШыадъ│а эХйыЛИыЛд!!!</x:String>
+  <x:String x:Key="Text.DeleteBranch.WithTrackingRemote" xml:space="preserve">ьЫРъ▓й ы╕МыЮЬь╣Ш ${0}$ыПД эХиъ╗Ш ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteMultiBranch" xml:space="preserve">ьЧмыЯм ы╕МыЮЬь╣Ш ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteMultiBranch.Tip" xml:space="preserve">эХЬ ы▓ИьЧР ьЧмыЯм ы╕МыЮЬь╣Шые╝ ьВньаЬэХШыадъ│а эХйыЛИыЛд. ьЛдэЦЙэХШъ╕░ ьаДьЧР ыЛдьЛЬ эХЬы▓И эЩХьЭ╕эХШьД╕ьЪФ!</x:String>
+  <x:String x:Key="Text.DeleteMultiTags" xml:space="preserve">ьЧмыЯм эГЬъ╖╕ ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteMultiTags.DeleteFromRemotes" xml:space="preserve">ьЫРъ▓й ьаАьЮеьЖМьЧРьДЬыПД ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteMultiTags.Tip" xml:space="preserve">эХЬ ы▓ИьЧР ьЧмыЯм эГЬъ╖╕ые╝ ьВньаЬэХШыадъ│а эХйыЛИыЛд. ьЛдэЦЙэХШъ╕░ ьаДьЧР ыЛдьЛЬ эХЬы▓И эЩХьЭ╕эХШьД╕ьЪФ!</x:String>
+  <x:String x:Key="Text.DeleteRemote" xml:space="preserve">ьЫРъ▓й ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteRemote.Remote" xml:space="preserve">ьЫРъ▓й:</x:String>
+  <x:String x:Key="Text.DeleteRepositoryNode.Path" xml:space="preserve">ъ▓╜ыбЬ:</x:String>
+  <x:String x:Key="Text.DeleteRepositoryNode.Target" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.DeleteRepositoryNode.TipForGroup" xml:space="preserve">ыкиыУа эХШьЬД эХныкйьЭ┤ ыкйыбЭьЧРьДЬ ьаЬъ▒░ыРйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.DeleteRepositoryNode.TipForRepository" xml:space="preserve">ыкйыбЭьЧРьДЬызМ ьаЬъ▒░ыРШый░, ыФФьКдэБмьЧРьДЬ ьВньаЬыРШьзА ьХКьК╡ыЛИыЛд!</x:String>
+  <x:String x:Key="Text.DeleteRepositoryNode.TitleForGroup" xml:space="preserve">ъ╖╕ыг╣ ьВньаЬ эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.DeleteRepositoryNode.TitleForRepository" xml:space="preserve">ьаАьЮеьЖМ ьВньаЬ эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.DeleteSubmodule" xml:space="preserve">ьДЬы╕МыкиыУИ ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteSubmodule.Path" xml:space="preserve">ьДЬы╕МыкиыУИ ъ▓╜ыбЬ:</x:String>
+  <x:String x:Key="Text.DeleteTag" xml:space="preserve">эГЬъ╖╕ ьВньаЬ</x:String>
+  <x:String x:Key="Text.DeleteTag.Tag" xml:space="preserve">эГЬъ╖╕:</x:String>
+  <x:String x:Key="Text.DeleteTag.WithRemote" xml:space="preserve">ьЫРъ▓й ьаАьЮеьЖМьЧРьДЬыПД ьВньаЬ</x:String>
+  <x:String x:Key="Text.Diff.Binary" xml:space="preserve">ы░ФьЭ┤ыДИыжм ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.Diff.FileModeChanged" xml:space="preserve">эММьЭ╝ ыкиыУЬ ы│Аъ▓╜ыРи</x:String>
+  <x:String x:Key="Text.Diff.First" xml:space="preserve">ь▓л ы▓Иьз╕ ь░иьЭ┤ьаР</x:String>
+  <x:String x:Key="Text.Diff.IgnoreWhitespace" xml:space="preserve">ъ│╡ы░▒ ы│Аъ▓╜ ьВмэХн ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.Diff.Image.Blend" xml:space="preserve">эШ╝эХй</x:String>
+  <x:String x:Key="Text.Diff.Image.Difference" xml:space="preserve">ь░иьЭ┤ьаР</x:String>
+  <x:String x:Key="Text.Diff.Image.SideBySide" xml:space="preserve">ыВШыЮАэЮИ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.Diff.Image.Swipe" xml:space="preserve">ьКдьЩАьЭ┤эФД</x:String>
+  <x:String x:Key="Text.Diff.Last" xml:space="preserve">ызИьзАызЙ ь░иьЭ┤ьаР</x:String>
+  <x:String x:Key="Text.Diff.LFS" xml:space="preserve">LFS ъ░Эь▓┤ ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.Diff.New" xml:space="preserve">ьЛаъ╖Ь</x:String>
+  <x:String x:Key="Text.Diff.Next" xml:space="preserve">ыЛдьЭМ ь░иьЭ┤ьаР</x:String>
+  <x:String x:Key="Text.Diff.NoChange" xml:space="preserve">ы│Аъ▓╜ ьВмэХн ьЧЖьЭМ ыШРыКФ ьдДы░Фъ┐И(EOL) ы│Аъ▓╜ызМ ьЮИьЭМ</x:String>
+  <x:String x:Key="Text.Diff.Old" xml:space="preserve">ъ╕░ьб┤</x:String>
+  <x:String x:Key="Text.Diff.Prev" xml:space="preserve">ьЭ┤ьаД ь░иьЭ┤ьаР</x:String>
+  <x:String x:Key="Text.Diff.SaveAsPatch" xml:space="preserve">эМиь╣ШыбЬ ьаАьЮе</x:String>
+  <x:String x:Key="Text.Diff.ShowHiddenSymbols" xml:space="preserve">ьИиъ▓иьзД ъ╕░эШ╕ эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Diff.SideBySide" xml:space="preserve">ыВШыЮАэЮИ ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.Diff.Submodule" xml:space="preserve">ьДЬы╕МыкиыУИ</x:String>
+  <x:String x:Key="Text.Diff.Submodule.Deleted" xml:space="preserve">ьВньаЬыРи</x:String>
+  <x:String x:Key="Text.Diff.Submodule.New" xml:space="preserve">ьЛаъ╖Ь</x:String>
+  <x:String x:Key="Text.Diff.Submodule.UncommittedChanges" xml:space="preserve">ь╗ды░Л ьХИ эХЬ ы│Аъ▓╜ ьВмэХн + {0}ъ░Ь</x:String>
+  <x:String x:Key="Text.Diff.SwapCommits" xml:space="preserve">ьаДэЩШ</x:String>
+  <x:String x:Key="Text.Diff.SyntaxHighlight" xml:space="preserve">ъ╡мым╕ ъ░Хьб░</x:String>
+  <x:String x:Key="Text.Diff.ToggleWordWrap" xml:space="preserve">ьдД ы░Фъ┐И</x:String>
+  <x:String x:Key="Text.Diff.UseMerger" xml:space="preserve">ы│СэХй ыПДъ╡мьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Diff.VisualLines.All" xml:space="preserve">ыкиыУа ьдД эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Diff.VisualLines.Decr" xml:space="preserve">эСЬьЛЬ ьдД ьИШ ьдДьЭ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Diff.VisualLines.Incr" xml:space="preserve">эСЬьЛЬ ьдД ьИШ ыКШыжмъ╕░</x:String>
+  <x:String x:Key="Text.Diff.Welcome" xml:space="preserve">эММьЭ╝ьЭД ьДаэГЭэХШьЧм ы│Аъ▓╜ ьВмэХн ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.DirHistories" xml:space="preserve">ыФФыаЙэД░ыжм эЮИьКдэЖаыжм</x:String>
+  <x:String x:Key="Text.DirtyState.HasLocalChanges" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн ьЮИьЭМ</x:String>
+  <x:String x:Key="Text.DirtyState.HasPendingPullOrPush" xml:space="preserve">ьЧЕьКдэК╕ыж╝ъ│╝ ы╢ИьЭ╝ь╣Ш</x:String>
+  <x:String x:Key="Text.DirtyState.UpToDate" xml:space="preserve">ьЭ┤ып╕ ь╡ЬьЛа ьГБэГЬ</x:String>
+  <x:String x:Key="Text.Discard" xml:space="preserve">ы│Аъ▓╜ ьВмэХн эПРъ╕░</x:String>
+  <x:String x:Key="Text.Discard.All" xml:space="preserve">ьЮСьЧЕ ьВмы│╕ьЭШ ыкиыУа ыбЬь╗м ы│Аъ▓╜ ьВмэХн.</x:String>
+  <x:String x:Key="Text.Discard.Changes" xml:space="preserve">ы│Аъ▓╜ ьВмэХн:</x:String>
+  <x:String x:Key="Text.Discard.IncludeIgnored" xml:space="preserve">ым┤ьЛЬыРЬ эММьЭ╝ эПмэХи</x:String>
+  <x:String x:Key="Text.Discard.IncludeModified" xml:space="preserve">ьИШьаХ/ьВньаЬыРЬ эММьЭ╝ эПмэХи</x:String>
+  <x:String x:Key="Text.Discard.IncludeUntracked" xml:space="preserve">ь╢ФьаБэХШьзА ьХКыКФ эММьЭ╝ эПмэХи</x:String>
+  <x:String x:Key="Text.Discard.Total" xml:space="preserve">{0}ъ░ЬьЭШ ы│Аъ▓╜ ьВмэХньЭ┤ эПРъ╕░ыРйыЛИыЛд</x:String>
+  <x:String x:Key="Text.Discard.Warning" xml:space="preserve">ьЭ┤ ьЮСьЧЕьЭА ыРШыПМыж┤ ьИШ ьЧЖьК╡ыЛИыЛд!!!</x:String>
+  <x:String x:Key="Text.EditBranchDescription" xml:space="preserve">ы╕МыЮЬь╣Ш ьДдыкЕ ьИШьаХ</x:String>
+  <x:String x:Key="Text.EditBranchDescription.Target" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.EditRepositoryNode.Bookmark" xml:space="preserve">ы╢БызИэБм:</x:String>
+  <x:String x:Key="Text.EditRepositoryNode.Name" xml:space="preserve">ьГИ ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.EditRepositoryNode.Target" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.EditRepositoryNode.TitleForGroup" xml:space="preserve">ьДаэГЭэХЬ ъ╖╕ыг╣ эО╕ьзС</x:String>
+  <x:String x:Key="Text.EditRepositoryNode.TitleForRepository" xml:space="preserve">ьДаэГЭэХЬ ьаАьЮеьЖМ эО╕ьзС</x:String>
+  <x:String x:Key="Text.ExecuteCustomAction.Target" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.ExecuteCustomAction.Repository" xml:space="preserve">ьЭ┤ ьаАьЮеьЖМ</x:String>
   <x:String x:Key="Text.Fetch" xml:space="preserve">Fetch</x:String>
-  <x:String x:Key="Text.Fetch.AllRemotes" xml:space="preserve">모든 원격 Fetch</x:String>
-  <x:String x:Key="Text.Fetch.Force" xml:space="preserve">로컬 ref 강제 덮어쓰기</x:String>
-  <x:String x:Key="Text.Fetch.NoTags" xml:space="preserve">태그 없이 Fetch</x:String>
-  <x:String x:Key="Text.Fetch.Remote" xml:space="preserve">원격:</x:String>
-  <x:String x:Key="Text.Fetch.Title" xml:space="preserve">원격 변경 사항 Fetch</x:String>
-  <x:String x:Key="Text.FileCM.AssumeUnchanged" xml:space="preserve">변경되지 않음으로 간주</x:String>
-  <x:String x:Key="Text.FileCM.Discard" xml:space="preserve">폐기...</x:String>
-  <x:String x:Key="Text.FileCM.DiscardMulti" xml:space="preserve">{0}개 파일 폐기...</x:String>
-  <x:String x:Key="Text.FileCM.ResolveUsing" xml:space="preserve">${0}$을(를) 사용하여 해결</x:String>
-  <x:String x:Key="Text.FileCM.SaveAsPatch" xml:space="preserve">패치로 저장...</x:String>
-  <x:String x:Key="Text.FileCM.Stage" xml:space="preserve">스테이지</x:String>
-  <x:String x:Key="Text.FileCM.StageMulti" xml:space="preserve">{0}개 파일 스테이지</x:String>
-  <x:String x:Key="Text.FileCM.Stash" xml:space="preserve">스태시...</x:String>
-  <x:String x:Key="Text.FileCM.StashMulti" xml:space="preserve">{0}개 파일 스태시...</x:String>
-  <x:String x:Key="Text.FileCM.Unstage" xml:space="preserve">언스테이지</x:String>
-  <x:String x:Key="Text.FileCM.UnstageMulti" xml:space="preserve">{0}개 파일 언스테이지</x:String>
-  <x:String x:Key="Text.FileCM.UseMine" xml:space="preserve">내 것 사용 (checkout --ours)</x:String>
-  <x:String x:Key="Text.FileCM.UseTheirs" xml:space="preserve">상대방 것 사용 (checkout --theirs)</x:String>
-  <x:String x:Key="Text.FileHistory" xml:space="preserve">파일 히스토리</x:String>
-  <x:String x:Key="Text.FileHistory.FileChange" xml:space="preserve">변경 사항</x:String>
-  <x:String x:Key="Text.FileHistory.FileContent" xml:space="preserve">내용</x:String>
+  <x:String x:Key="Text.Fetch.AllRemotes" xml:space="preserve">ыкиыУа ьЫРъ▓й Fetch</x:String>
+  <x:String x:Key="Text.Fetch.Force" xml:space="preserve">ыбЬь╗м ref ъ░ХьаЬ ыНоьЦ┤ьУ░ъ╕░</x:String>
+  <x:String x:Key="Text.Fetch.NoTags" xml:space="preserve">эГЬъ╖╕ ьЧЖьЭ┤ Fetch</x:String>
+  <x:String x:Key="Text.Fetch.Remote" xml:space="preserve">ьЫРъ▓й:</x:String>
+  <x:String x:Key="Text.Fetch.Title" xml:space="preserve">ьЫРъ▓й ы│Аъ▓╜ ьВмэХн Fetch</x:String>
+  <x:String x:Key="Text.FileCM.AssumeUnchanged" xml:space="preserve">ы│Аъ▓╜ыРШьзА ьХКьЭМьЬ╝ыбЬ ъ░Дьг╝</x:String>
+  <x:String x:Key="Text.FileCM.CustomAction" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.FileCM.Discard" xml:space="preserve">эПРъ╕░...</x:String>
+  <x:String x:Key="Text.FileCM.DiscardMulti" xml:space="preserve">{0}ъ░Ь эММьЭ╝ эПРъ╕░...</x:String>
+  <x:String x:Key="Text.FileCM.ResolveUsing" xml:space="preserve">${0}$ьЭД(ые╝) ьВмьЪйэХШьЧм эХ┤ъ▓░</x:String>
+  <x:String x:Key="Text.FileCM.SaveAsPatch" xml:space="preserve">эМиь╣ШыбЬ ьаАьЮе...</x:String>
+  <x:String x:Key="Text.FileCM.Stage" xml:space="preserve">ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.FileCM.StageMulti" xml:space="preserve">{0}ъ░Ь эММьЭ╝ ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.FileCM.Stash" xml:space="preserve">ьКдэГЬьЛЬ...</x:String>
+  <x:String x:Key="Text.FileCM.StashMulti" xml:space="preserve">{0}ъ░Ь эММьЭ╝ ьКдэГЬьЛЬ...</x:String>
+  <x:String x:Key="Text.FileCM.Unstage" xml:space="preserve">ьЦ╕ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.FileCM.UnstageMulti" xml:space="preserve">{0}ъ░Ь эММьЭ╝ ьЦ╕ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.FileCM.UseMine" xml:space="preserve">ыВ┤ ъ▓Г ьВмьЪй (checkout --ours)</x:String>
+  <x:String x:Key="Text.FileCM.UseTheirs" xml:space="preserve">ьГБыМАы░й ъ▓Г ьВмьЪй (checkout --theirs)</x:String>
+  <x:String x:Key="Text.FileHistory" xml:space="preserve">эММьЭ╝ эЮИьКдэЖаыжм</x:String>
+  <x:String x:Key="Text.FileHistory.FileChange" xml:space="preserve">ы│Аъ▓╜ ьВмэХн</x:String>
+  <x:String x:Key="Text.FileHistory.FileContent" xml:space="preserve">ыВ┤ьЪй</x:String>
   <x:String x:Key="Text.GitFlow" xml:space="preserve">Git-Flow</x:String>
-  <x:String x:Key="Text.GitFlow.DevelopBranch" xml:space="preserve">개발 브랜치:</x:String>
+  <x:String x:Key="Text.GitFlow.DevelopBranch" xml:space="preserve">ъ░Ьы░Ь ы╕МыЮЬь╣Ш:</x:String>
   <x:String x:Key="Text.GitFlow.Feature" xml:space="preserve">Feature:</x:String>
-  <x:String x:Key="Text.GitFlow.FeaturePrefix" xml:space="preserve">Feature 접두사:</x:String>
-  <x:String x:Key="Text.GitFlow.FinishFeature" xml:space="preserve">FLOW - Feature 완료</x:String>
-  <x:String x:Key="Text.GitFlow.FinishHotfix" xml:space="preserve">FLOW - Hotfix 완료</x:String>
-  <x:String x:Key="Text.GitFlow.FinishRelease" xml:space="preserve">FLOW - Release 완료</x:String>
-  <x:String x:Key="Text.GitFlow.FinishTarget" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.GitFlow.FinishWithSquash" xml:space="preserve">병합 시 스쿼시</x:String>
-  <x:String x:Key="Text.GitFlow.Hotfix" xml:space="preserve">핫픽스:</x:String>
-  <x:String x:Key="Text.GitFlow.HotfixPrefix" xml:space="preserve">Hotfix 접두사:</x:String>
-  <x:String x:Key="Text.GitFlow.Init" xml:space="preserve">Git-Flow 초기화</x:String>
-  <x:String x:Key="Text.GitFlow.KeepBranchAfterFinish" xml:space="preserve">브랜치 유지</x:String>
-  <x:String x:Key="Text.GitFlow.ProductionBranch" xml:space="preserve">운영 브랜치:</x:String>
-  <x:String x:Key="Text.GitFlow.Release" xml:space="preserve">릴리스:</x:String>
-  <x:String x:Key="Text.GitFlow.ReleasePrefix" xml:space="preserve">Release 접두사:</x:String>
-  <x:String x:Key="Text.GitFlow.StartFeature" xml:space="preserve">Feature 시작...</x:String>
-  <x:String x:Key="Text.GitFlow.StartFeatureTitle" xml:space="preserve">FLOW - Feature 시작</x:String>
-  <x:String x:Key="Text.GitFlow.StartHotfix" xml:space="preserve">Hotfix 시작...</x:String>
-  <x:String x:Key="Text.GitFlow.StartHotfixTitle" xml:space="preserve">FLOW - Hotfix 시작</x:String>
-  <x:String x:Key="Text.GitFlow.StartPlaceholder" xml:space="preserve">이름 입력</x:String>
-  <x:String x:Key="Text.GitFlow.StartRelease" xml:space="preserve">Release 시작...</x:String>
-  <x:String x:Key="Text.GitFlow.StartReleaseTitle" xml:space="preserve">FLOW - Release 시작</x:String>
-  <x:String x:Key="Text.GitFlow.TagPrefix" xml:space="preserve">버전 태그 접두사:</x:String>
+  <x:String x:Key="Text.GitFlow.FeaturePrefix" xml:space="preserve">Feature ьаСыСРьВм:</x:String>
+  <x:String x:Key="Text.GitFlow.FinishFeature" xml:space="preserve">FLOW - Feature ьЩДыгМ</x:String>
+  <x:String x:Key="Text.GitFlow.FinishHotfix" xml:space="preserve">FLOW - Hotfix ьЩДыгМ</x:String>
+  <x:String x:Key="Text.GitFlow.FinishRelease" xml:space="preserve">FLOW - Release ьЩДыгМ</x:String>
+  <x:String x:Key="Text.GitFlow.FinishTarget" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.GitFlow.FinishWithSquash" xml:space="preserve">ы│СэХй ьЛЬ ьКдь┐╝ьЛЬ</x:String>
+  <x:String x:Key="Text.GitFlow.Hotfix" xml:space="preserve">эХлэФ╜ьКд:</x:String>
+  <x:String x:Key="Text.GitFlow.HotfixPrefix" xml:space="preserve">Hotfix ьаСыСРьВм:</x:String>
+  <x:String x:Key="Text.GitFlow.Init" xml:space="preserve">Git-Flow ь┤Иъ╕░эЩФ</x:String>
+  <x:String x:Key="Text.GitFlow.KeepBranchAfterFinish" xml:space="preserve">ы╕МыЮЬь╣Ш ьЬаьзА</x:String>
+  <x:String x:Key="Text.GitFlow.ProductionBranch" xml:space="preserve">ьЪ┤ьШБ ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.GitFlow.Release" xml:space="preserve">ыж┤ыжмьКд:</x:String>
+  <x:String x:Key="Text.GitFlow.ReleasePrefix" xml:space="preserve">Release ьаСыСРьВм:</x:String>
+  <x:String x:Key="Text.GitFlow.StartFeature" xml:space="preserve">Feature ьЛЬьЮС...</x:String>
+  <x:String x:Key="Text.GitFlow.StartFeatureTitle" xml:space="preserve">FLOW - Feature ьЛЬьЮС</x:String>
+  <x:String x:Key="Text.GitFlow.StartHotfix" xml:space="preserve">Hotfix ьЛЬьЮС...</x:String>
+  <x:String x:Key="Text.GitFlow.StartHotfixTitle" xml:space="preserve">FLOW - Hotfix ьЛЬьЮС</x:String>
+  <x:String x:Key="Text.GitFlow.StartPlaceholder" xml:space="preserve">ьЭ┤ыжД ьЮЕыае</x:String>
+  <x:String x:Key="Text.GitFlow.StartRelease" xml:space="preserve">Release ьЛЬьЮС...</x:String>
+  <x:String x:Key="Text.GitFlow.StartReleaseTitle" xml:space="preserve">FLOW - Release ьЛЬьЮС</x:String>
+  <x:String x:Key="Text.GitFlow.TagPrefix" xml:space="preserve">ы▓ДьаД эГЬъ╖╕ ьаСыСРьВм:</x:String>
   <x:String x:Key="Text.GitLFS" xml:space="preserve">Git LFS</x:String>
-  <x:String x:Key="Text.GitLFS.AddTrackPattern" xml:space="preserve">추적 패턴 추가...</x:String>
-  <x:String x:Key="Text.GitLFS.AddTrackPattern.IsFilename" xml:space="preserve">패턴이 파일 이름임</x:String>
-  <x:String x:Key="Text.GitLFS.AddTrackPattern.Pattern" xml:space="preserve">사용자 정의 패턴:</x:String>
-  <x:String x:Key="Text.GitLFS.AddTrackPattern.Title" xml:space="preserve">Git LFS에 추적 패턴 추가</x:String>
+  <x:String x:Key="Text.GitLFS.AddTrackPattern" xml:space="preserve">ь╢ФьаБ эМиэД┤ ь╢Фъ░А...</x:String>
+  <x:String x:Key="Text.GitLFS.AddTrackPattern.IsFilename" xml:space="preserve">эМиэД┤ьЭ┤ эММьЭ╝ ьЭ┤ыжДьЮД</x:String>
+  <x:String x:Key="Text.GitLFS.AddTrackPattern.Pattern" xml:space="preserve">ьВмьЪйьЮР ьаХьЭШ эМиэД┤:</x:String>
+  <x:String x:Key="Text.GitLFS.AddTrackPattern.Title" xml:space="preserve">Git LFSьЧР ь╢ФьаБ эМиэД┤ ь╢Фъ░А</x:String>
   <x:String x:Key="Text.GitLFS.Fetch" xml:space="preserve">Fetch</x:String>
-  <x:String x:Key="Text.GitLFS.Fetch.Tips" xml:space="preserve">Git LFS 객체를 다운로드하려면 `git lfs fetch`를 실행하세요. 이 작업은 작업 사본을 업데이트하지 않습니다.</x:String>
-  <x:String x:Key="Text.GitLFS.Fetch.Title" xml:space="preserve">LFS 객체 Fetch</x:String>
-  <x:String x:Key="Text.GitLFS.Install" xml:space="preserve">Git LFS 훅(hook) 설치</x:String>
-  <x:String x:Key="Text.GitLFS.Locks" xml:space="preserve">잠금 보기</x:String>
-  <x:String x:Key="Text.GitLFS.Locks.Empty" xml:space="preserve">잠긴 파일 없음</x:String>
-  <x:String x:Key="Text.GitLFS.Locks.Lock" xml:space="preserve">잠금</x:String>
-  <x:String x:Key="Text.GitLFS.Locks.OnlyMine" xml:space="preserve">내 잠금만 보기</x:String>
-  <x:String x:Key="Text.GitLFS.Locks.Title" xml:space="preserve">LFS 잠금</x:String>
-  <x:String x:Key="Text.GitLFS.Locks.Unlock" xml:space="preserve">잠금 해제</x:String>
-  <x:String x:Key="Text.GitLFS.Locks.UnlockForce" xml:space="preserve">강제 잠금 해제</x:String>
-  <x:String x:Key="Text.GitLFS.Prune" xml:space="preserve">정리</x:String>
-  <x:String x:Key="Text.GitLFS.Prune.Tips" xml:space="preserve">로컬 저장소에서 오래된 LFS 파일을 삭제하려면 `git lfs prune`을 실행하세요</x:String>
+  <x:String x:Key="Text.GitLFS.Fetch.Tips" xml:space="preserve">Git LFS ъ░Эь▓┤ые╝ ыЛдьЪ┤ыбЬыУЬэХШыадый┤ `git lfs fetch`ые╝ ьЛдэЦЙэХШьД╕ьЪФ. ьЭ┤ ьЮСьЧЕьЭА ьЮСьЧЕ ьВмы│╕ьЭД ьЧЕыН░ьЭ┤эК╕эХШьзА ьХКьК╡ыЛИыЛд.</x:String>
+  <x:String x:Key="Text.GitLFS.Fetch.Title" xml:space="preserve">LFS ъ░Эь▓┤ Fetch</x:String>
+  <x:String x:Key="Text.GitLFS.Install" xml:space="preserve">Git LFS эЫЕ(hook) ьДдь╣Ш</x:String>
+  <x:String x:Key="Text.GitLFS.Locks" xml:space="preserve">ьЮаъ╕И ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.Empty" xml:space="preserve">ьЮаъ╕┤ эММьЭ╝ ьЧЖьЭМ</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.Lock" xml:space="preserve">ьЮаъ╕И</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.OnlyMine" xml:space="preserve">ыВ┤ ьЮаъ╕ИызМ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.Title" xml:space="preserve">LFS ьЮаъ╕И</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.Unlock" xml:space="preserve">ьЮаъ╕И эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.UnlockAllMyLocks" xml:space="preserve">ыВ┤ ьЮаъ╕И ыкиыСР эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.UnlockAllMyLocks.Confirm" xml:space="preserve">ьЮаъ╖╝ эММьЭ╝ьЭД ыкиыСР эХ┤ьаЬэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.GitLFS.Locks.UnlockForce" xml:space="preserve">ъ░ХьаЬ ьЮаъ╕И эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.GitLFS.Prune" xml:space="preserve">ьаХыжм</x:String>
+  <x:String x:Key="Text.GitLFS.Prune.Tips" xml:space="preserve">ыбЬь╗м ьаАьЮеьЖМьЧРьДЬ ьШдыЮШыРЬ LFS эММьЭ╝ьЭД ьВньаЬэХШыадый┤ `git lfs prune`ьЭД ьЛдэЦЙэХШьД╕ьЪФ</x:String>
   <x:String x:Key="Text.GitLFS.Pull" xml:space="preserve">Pull</x:String>
-  <x:String x:Key="Text.GitLFS.Pull.Tips" xml:space="preserve">현재 ref 및 체크아웃에 대한 모든 Git LFS 파일을 다운로드하려면 `git lfs pull`을 실행하세요</x:String>
-  <x:String x:Key="Text.GitLFS.Pull.Title" xml:space="preserve">LFS 객체 Pull</x:String>
-  <x:String x:Key="Text.GitLFS.Push" xml:space="preserve">푸시</x:String>
-  <x:String x:Key="Text.GitLFS.Push.Tips" xml:space="preserve">대기 중인 대용량 파일을 Git LFS 엔드포인트로 푸시합니다</x:String>
-  <x:String x:Key="Text.GitLFS.Push.Title" xml:space="preserve">LFS 객체 푸시</x:String>
-  <x:String x:Key="Text.GitLFS.Remote" xml:space="preserve">원격:</x:String>
-  <x:String x:Key="Text.GitLFS.Track" xml:space="preserve">'{0}' 이름의 파일 추적</x:String>
-  <x:String x:Key="Text.GitLFS.TrackByExtension" xml:space="preserve">모든 *{0} 파일 추적</x:String>
-  <x:String x:Key="Text.Histories" xml:space="preserve">히스토리</x:String>
-  <x:String x:Key="Text.Histories.Header.Author" xml:space="preserve">작성자</x:String>
-  <x:String x:Key="Text.Histories.Header.AuthorTime" xml:space="preserve">작성 시간</x:String>
-  <x:String x:Key="Text.Histories.Header.CommitTime" xml:space="preserve">커밋 시간</x:String>
-  <x:String x:Key="Text.Histories.Header.GraphAndSubject" xml:space="preserve">그래프 &amp; 제목</x:String>
+  <x:String x:Key="Text.GitLFS.Pull.Tips" xml:space="preserve">эШДьЮм ref ы░П ь▓┤эБмьХДьЫГьЧР ыМАэХЬ ыкиыУа Git LFS эММьЭ╝ьЭД ыЛдьЪ┤ыбЬыУЬэХШыадый┤ `git lfs pull`ьЭД ьЛдэЦЙэХШьД╕ьЪФ</x:String>
+  <x:String x:Key="Text.GitLFS.Pull.Title" xml:space="preserve">LFS ъ░Эь▓┤ Pull</x:String>
+  <x:String x:Key="Text.GitLFS.Push" xml:space="preserve">эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.GitLFS.Push.Tips" xml:space="preserve">ыМАъ╕░ ьдСьЭ╕ ыМАьЪйыЯЙ эММьЭ╝ьЭД Git LFS ьЧФыУЬэПмьЭ╕эК╕ыбЬ эС╕ьЛЬэХйыЛИыЛд</x:String>
+  <x:String x:Key="Text.GitLFS.Push.Title" xml:space="preserve">LFS ъ░Эь▓┤ эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.GitLFS.Remote" xml:space="preserve">ьЫРъ▓й:</x:String>
+  <x:String x:Key="Text.GitLFS.Track" xml:space="preserve">'{0}' ьЭ┤ыжДьЭШ эММьЭ╝ ь╢ФьаБ</x:String>
+  <x:String x:Key="Text.GitLFS.TrackByExtension" xml:space="preserve">ыкиыУа *{0} эММьЭ╝ ь╢ФьаБ</x:String>
+  <x:String x:Key="Text.GotoRevisionSelector" xml:space="preserve">ь╗ды░Л ьДаэГЭ</x:String>
+  <x:String x:Key="Text.Histories" xml:space="preserve">эЮИьКдэЖаыжм</x:String>
+  <x:String x:Key="Text.Histories.Header.Author" xml:space="preserve">ьЮСьД▒ьЮР</x:String>
+  <x:String x:Key="Text.Histories.Header.AuthorTime" xml:space="preserve">ьЮСьД▒ ьЛЬъ░Д</x:String>
+  <x:String x:Key="Text.Histories.Header.CommitTime" xml:space="preserve">ь╗ды░Л ьЛЬъ░Д</x:String>
+  <x:String x:Key="Text.Histories.Header.GraphAndSubject" xml:space="preserve">ъ╖╕ыЮШэФД &amp; ьаЬыкй</x:String>
   <x:String x:Key="Text.Histories.Header.SHA" xml:space="preserve">SHA</x:String>
-  <x:String x:Key="Text.Histories.Selected" xml:space="preserve">{0}개 커밋 선택됨</x:String>
-  <x:String x:Key="Text.Histories.Tips" xml:space="preserve">'Ctrl' 또는 'Shift' 키를 누른 채로 여러 커밋을 선택하세요.</x:String>
-  <x:String x:Key="Text.Histories.Tips.MacOS" xml:space="preserve">⌘ 또는 ⇧ 키를 누른 채로 여러 커밋을 선택하세요.</x:String>
-  <x:String x:Key="Text.Histories.Tips.Prefix" xml:space="preserve">팁:</x:String>
-  <x:String x:Key="Text.Hotkeys" xml:space="preserve">키보드 단축키 참조</x:String>
-  <x:String x:Key="Text.Hotkeys.Global" xml:space="preserve">전역</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.Clone" xml:space="preserve">새 저장소 복제</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.CloseTab" xml:space="preserve">현재 탭 닫기</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.GotoNextTab" xml:space="preserve">다음 탭으로 이동</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.GotoPrevTab" xml:space="preserve">이전 탭으로 이동</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.NewTab" xml:space="preserve">새 탭 만들기</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.OpenPreferences" xml:space="preserve">환경설정 대화상자 열기</x:String>
-  <x:String x:Key="Text.Hotkeys.Global.SwitchTab" xml:space="preserve">활성 탭 전환</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo" xml:space="preserve">저장소</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.Commit" xml:space="preserve">스테이징된 변경 사항 커밋</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.CommitAndPush" xml:space="preserve">스테이징된 변경 사항 커밋 및 푸시</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.CommitWithAutoStage" xml:space="preserve">모든 변경 사항 스테이징 후 커밋</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.Fetch" xml:space="preserve">Fetch (바로 시작)</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.GoHome" xml:space="preserve">대시보드 모드 (기본)</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.OpenSearchCommits" xml:space="preserve">커밋 검색 모드 열기</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.Pull" xml:space="preserve">Pull (바로 시작)</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.Push" xml:space="preserve">푸시 (바로 시작)</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.Refresh" xml:space="preserve">이 저장소 강제 새로고침</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.ViewChanges" xml:space="preserve">'변경 사항'으로 전환</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.ViewHistories" xml:space="preserve">'히스토리'로 전환</x:String>
-  <x:String x:Key="Text.Hotkeys.Repo.ViewStashes" xml:space="preserve">'스태시'로 전환</x:String>
-  <x:String x:Key="Text.Hunk.Discard" xml:space="preserve">폐기</x:String>
-  <x:String x:Key="Text.Hunk.Stage" xml:space="preserve">스테이지</x:String>
-  <x:String x:Key="Text.Hunk.Unstage" xml:space="preserve">언스테이지</x:String>
-  <x:String x:Key="Text.Init" xml:space="preserve">저장소 초기화</x:String>
-  <x:String x:Key="Text.Init.Path" xml:space="preserve">경로:</x:String>
-  <x:String x:Key="Text.InProgress.CherryPick" xml:space="preserve">체리픽 진행 중.</x:String>
-  <x:String x:Key="Text.InProgress.CherryPick.Head" xml:space="preserve">커밋 처리 중</x:String>
-  <x:String x:Key="Text.InProgress.Merge" xml:space="preserve">병합 진행 중.</x:String>
-  <x:String x:Key="Text.InProgress.Merge.Operating" xml:space="preserve">병합 중</x:String>
-  <x:String x:Key="Text.InProgress.Rebase" xml:space="preserve">리베이스 진행 중.</x:String>
-  <x:String x:Key="Text.InProgress.Rebase.StoppedAt" xml:space="preserve">중단 지점</x:String>
-  <x:String x:Key="Text.InProgress.Revert" xml:space="preserve">되돌리기 진행 중.</x:String>
-  <x:String x:Key="Text.InProgress.Revert.Head" xml:space="preserve">커밋 되돌리는 중</x:String>
-  <x:String x:Key="Text.InteractiveRebase" xml:space="preserve">대화형 리베이스</x:String>
-  <x:String x:Key="Text.InteractiveRebase.AutoStash" xml:space="preserve">로컬 변경 사항 스태시 &amp; 재적용</x:String>
-  <x:String x:Key="Text.InteractiveRebase.On" xml:space="preserve">기준:</x:String>
-  <x:String x:Key="Text.InteractiveRebase.ReorderTip" xml:space="preserve">드래그 앤 드롭으로 커밋 순서 변경</x:String>
-  <x:String x:Key="Text.InteractiveRebase.Target" xml:space="preserve">대상 브랜치:</x:String>
-  <x:String x:Key="Text.IssueLinkCM.CopyLink" xml:space="preserve">링크 복사</x:String>
-  <x:String x:Key="Text.IssueLinkCM.OpenInBrowser" xml:space="preserve">브라우저에서 열기</x:String>
-  <x:String x:Key="Text.Launcher.Error" xml:space="preserve">오류</x:String>
-  <x:String x:Key="Text.Launcher.Info" xml:space="preserve">알림</x:String>
-  <x:String x:Key="Text.Launcher.Pages" xml:space="preserve">탭</x:String>
-  <x:String x:Key="Text.Launcher.Workspaces" xml:space="preserve">작업 공간</x:String>
-  <x:String x:Key="Text.Merge" xml:space="preserve">브랜치 병합</x:String>
-  <x:String x:Key="Text.Merge.Edit" xml:space="preserve">병합 메시지 수정</x:String>
-  <x:String x:Key="Text.Merge.Into" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.Merge.Mode" xml:space="preserve">병합 옵션:</x:String>
-  <x:String x:Key="Text.Merge.Source" xml:space="preserve">소스:</x:String>
-  <x:String x:Key="Text.MergeMultiple" xml:space="preserve">병합 (다중)</x:String>
-  <x:String x:Key="Text.MergeMultiple.CommitChanges" xml:space="preserve">모든 변경 사항 커밋</x:String>
-  <x:String x:Key="Text.MergeMultiple.Strategy" xml:space="preserve">전략:</x:String>
-  <x:String x:Key="Text.MergeMultiple.Targets" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.MoveSubmodule" xml:space="preserve">서브모듈 이동</x:String>
-  <x:String x:Key="Text.MoveSubmodule.MoveTo" xml:space="preserve">이동 위치:</x:String>
-  <x:String x:Key="Text.MoveSubmodule.Submodule" xml:space="preserve">서브모듈:</x:String>
-  <x:String x:Key="Text.MoveRepositoryNode" xml:space="preserve">저장소 노드 이동</x:String>
-  <x:String x:Key="Text.MoveRepositoryNode.Target" xml:space="preserve">상위 노드 선택:</x:String>
-  <x:String x:Key="Text.Name" xml:space="preserve">이름:</x:String>
-  <x:String x:Key="Text.NotConfigured" xml:space="preserve">Git이 구성되지 않았습니다. [환경설정]으로 이동하여 먼저 구성하세요.</x:String>
-  <x:String x:Key="Text.OpenAppDataDir" xml:space="preserve">데이터 저장 디렉터리 열기</x:String>
-  <x:String x:Key="Text.OpenInExternalMergeTool" xml:space="preserve">병합 도구에서 열기</x:String>
-  <x:String x:Key="Text.Optional" xml:space="preserve">선택 사항.</x:String>
-  <x:String x:Key="Text.PageTabBar.New" xml:space="preserve">새 탭 만들기</x:String>
-  <x:String x:Key="Text.PageTabBar.Tab.Close" xml:space="preserve">탭 닫기</x:String>
-  <x:String x:Key="Text.PageTabBar.Tab.CloseOther" xml:space="preserve">다른 탭 닫기</x:String>
-  <x:String x:Key="Text.PageTabBar.Tab.CloseRight" xml:space="preserve">오른쪽 탭 닫기</x:String>
-  <x:String x:Key="Text.PageTabBar.Tab.CopyPath" xml:space="preserve">저장소 경로 복사</x:String>
-  <x:String x:Key="Text.PageTabBar.Tab.Edit" xml:space="preserve">편집</x:String>
-  <x:String x:Key="Text.PageTabBar.Welcome.Title" xml:space="preserve">저장소</x:String>
-  <x:String x:Key="Text.Paste" xml:space="preserve">붙여넣기</x:String>
-  <x:String x:Key="Text.Period.DaysAgo" xml:space="preserve">{0}일 전</x:String>
-  <x:String x:Key="Text.Period.HourAgo" xml:space="preserve">1시간 전</x:String>
-  <x:String x:Key="Text.Period.HoursAgo" xml:space="preserve">{0}시간 전</x:String>
-  <x:String x:Key="Text.Period.JustNow" xml:space="preserve">방금 전</x:String>
-  <x:String x:Key="Text.Period.LastMonth" xml:space="preserve">지난 달</x:String>
-  <x:String x:Key="Text.Period.LastYear" xml:space="preserve">작년</x:String>
-  <x:String x:Key="Text.Period.MinutesAgo" xml:space="preserve">{0}분 전</x:String>
-  <x:String x:Key="Text.Period.MonthsAgo" xml:space="preserve">{0}개월 전</x:String>
-  <x:String x:Key="Text.Period.YearsAgo" xml:space="preserve">{0}년 전</x:String>
-  <x:String x:Key="Text.Period.Yesterday" xml:space="preserve">어제</x:String>
-  <x:String x:Key="Text.Preferences" xml:space="preserve">환경설정</x:String>
+  <x:String x:Key="Text.Histories.HighlightsInGraph" xml:space="preserve">ъ╖╕ыЮШэФД ъ░Хьб░ эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Histories.HighlightsInGraph.All" xml:space="preserve">ыкиыСР</x:String>
+  <x:String x:Key="Text.Histories.HighlightsInGraph.CurrentBranchOnly" xml:space="preserve">эШДьЮм ы╕МыЮЬь╣ШызМ</x:String>
+  <x:String x:Key="Text.Histories.HighlightsInGraph.CurrentBranchAndSelectedCommits" xml:space="preserve">эШДьЮм ы╕МыЮЬь╣ШьЩА ьДаэГЭэХЬ ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Histories.HighlightsInGraph.SelectedCommitsOnly" xml:space="preserve">ьДаэГЭэХЬ ь╗ды░ЛызМ</x:String>
+  <x:String x:Key="Text.Histories.Selected" xml:space="preserve">{0}ъ░Ь ь╗ды░Л ьДаэГЭыРи</x:String>
+  <x:String x:Key="Text.Histories.ShowColumns" xml:space="preserve">эСЬьЛЬэХа ьЧн</x:String>
+  <x:String x:Key="Text.Histories.Tips" xml:space="preserve">'Ctrl' ыШРыКФ 'Shift' эВдые╝ ыИДые╕ ь▒ДыбЬ ьЧмыЯм ь╗ды░ЛьЭД ьДаэГЭэХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.Histories.Tips.MacOS" xml:space="preserve">тМШ ыШРыКФ тЗз эВдые╝ ыИДые╕ ь▒ДыбЬ ьЧмыЯм ь╗ды░ЛьЭД ьДаэГЭэХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.Histories.Tips.Prefix" xml:space="preserve">эМБ:</x:String>
+  <x:String x:Key="Text.HistoriesDetailsStandalone" xml:space="preserve">ы│ДыПДьЭШ ь░╜ьЬ╝ыбЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.HistoriesDetailsStandalone.CommitDetail" xml:space="preserve">ь╗ды░Л ьД╕ы╢А ьаХы│┤</x:String>
+  <x:String x:Key="Text.HistoriesDetailsStandalone.RevisionCompare" xml:space="preserve">ыжмы╣ДьаД ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.Hotkeys" xml:space="preserve">эВды│┤ыУЬ ыЛиь╢ХэВд ь░╕ьб░</x:String>
+  <x:String x:Key="Text.Hotkeys.Global" xml:space="preserve">ьаДьЧн</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.Clone" xml:space="preserve">ьГИ ьаАьЮеьЖМ ы│╡ьаЬ</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.CloseTab" xml:space="preserve">эШДьЮм эГн ыЛлъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.GotoNextTab" xml:space="preserve">ыЛдьЭМ эГньЬ╝ыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.GotoPrevTab" xml:space="preserve">ьЭ┤ьаД эГньЬ╝ыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.NewTab" xml:space="preserve">ьГИ эГн ызМыУдъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.OpenLocalRepository" xml:space="preserve">ыбЬь╗м ьаАьЮеьЖМ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.OpenPreferences" xml:space="preserve">эЩШъ▓╜ьДдьаХ ыМАэЩФьГБьЮР ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.ShowWorkspaceDropdownMenu" xml:space="preserve">ьЮСьЧЕ ъ│╡ъ░Д ыУЬыбныЛдьЪ┤ ыйФыЙ┤ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.SwitchTab" xml:space="preserve">эЩЬьД▒ эГн ьаДэЩШ</x:String>
+  <x:String x:Key="Text.Hotkeys.Global.Zoom" xml:space="preserve">эЩХыМА / ь╢ХьЖМ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo" xml:space="preserve">ьаАьЮеьЖМ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.Commit" xml:space="preserve">ьКдэЕМьЭ┤ьзХыРЬ ы│Аъ▓╜ ьВмэХн ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.CommitAndPush" xml:space="preserve">ьКдэЕМьЭ┤ьзХыРЬ ы│Аъ▓╜ ьВмэХн ь╗ды░Л ы░П эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.CommitWithAutoStage" xml:space="preserve">ыкиыУа ы│Аъ▓╜ ьВмэХн ьКдэЕМьЭ┤ьзХ эЫД ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.CreateBranch" xml:space="preserve">ы╕МыЮЬь╣Ш ьГЭьД▒</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.Fetch" xml:space="preserve">Fetch (ы░ФыбЬ ьЛЬьЮС)</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.GoHome" xml:space="preserve">ыМАьЛЬы│┤ыУЬ ыкиыУЬ (ъ╕░ы│╕)</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.GoToChild" xml:space="preserve">ьДаэГЭэХЬ ь╗ды░ЛьЭШ ьЮРьЛЭьЬ╝ыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.GoToParent" xml:space="preserve">ьДаэГЭэХЬ ь╗ды░ЛьЭШ ы╢АыкиыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.OpenCommandPalette" xml:space="preserve">ыкЕыа╣ эМФыаИэК╕ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.OpenSearchCommits" xml:space="preserve">ь╗ды░Л ъ▓АьГЙ ыкиыУЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.Pull" xml:space="preserve">Pull (ы░ФыбЬ ьЛЬьЮС)</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.Push" xml:space="preserve">эС╕ьЛЬ (ы░ФыбЬ ьЛЬьЮС)</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.Refresh" xml:space="preserve">ьЭ┤ ьаАьЮеьЖМ ъ░ХьаЬ ьГИыбЬъ│аь╣и</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.ToggleHistoriesDetailPanel" xml:space="preserve">эЮИьКдэЖаыжмьЧРьДЬ ьД╕ы╢А ьаХы│┤ эМиыДР эО╝ь╣Шъ╕░/ьаСъ╕░</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.ViewChanges" xml:space="preserve">'ы│Аъ▓╜ ьВмэХн'ьЬ╝ыбЬ ьаДэЩШ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.ViewHistories" xml:space="preserve">'эЮИьКдэЖаыжм'ыбЬ ьаДэЩШ</x:String>
+  <x:String x:Key="Text.Hotkeys.Repo.ViewStashes" xml:space="preserve">'ьКдэГЬьЛЬ'ыбЬ ьаДэЩШ</x:String>
+  <x:String x:Key="Text.Hunk.Discard" xml:space="preserve">эПРъ╕░</x:String>
+  <x:String x:Key="Text.Hunk.Stage" xml:space="preserve">ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.Hunk.Unstage" xml:space="preserve">ьЦ╕ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.Init" xml:space="preserve">ьаАьЮеьЖМ ь┤Иъ╕░эЩФ</x:String>
+  <x:String x:Key="Text.Init.CommandTip" xml:space="preserve">ьЭ┤ ъ▓╜ыбЬьЧРьДЬ `git init` ыкЕыа╣ьЭД ьЛдэЦЙэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.Init.ErrorMessageTip" xml:space="preserve">ьаАьЮеьЖМые╝ ьЧ┤ьзА ык╗эЦИьК╡ыЛИыЛд. ьЫРьЭ╕:  </x:String>
+  <x:String x:Key="Text.Init.Path" xml:space="preserve">ъ▓╜ыбЬ:</x:String>
+  <x:String x:Key="Text.InProgress.CherryPick" xml:space="preserve">ь▓┤ыжмэФ╜ ьзДэЦЙ ьдС.</x:String>
+  <x:String x:Key="Text.InProgress.CherryPick.Head" xml:space="preserve">ь╗ды░Л ь▓Шыжм ьдС</x:String>
+  <x:String x:Key="Text.InProgress.Merge" xml:space="preserve">ы│СэХй ьзДэЦЙ ьдС.</x:String>
+  <x:String x:Key="Text.InProgress.Merge.Operating" xml:space="preserve">ы│СэХй ьдС</x:String>
+  <x:String x:Key="Text.InProgress.Rebase" xml:space="preserve">ыжмы▓аьЭ┤ьКд ьзДэЦЙ ьдС.</x:String>
+  <x:String x:Key="Text.InProgress.Rebase.StoppedAt" xml:space="preserve">ьдСыЛи ьзАьаР</x:String>
+  <x:String x:Key="Text.InProgress.Revert" xml:space="preserve">ыРШыПМыжмъ╕░ ьзДэЦЙ ьдС.</x:String>
+  <x:String x:Key="Text.InProgress.Revert.Head" xml:space="preserve">ь╗ды░Л ыРШыПМыжмыКФ ьдС</x:String>
+  <x:String x:Key="Text.InteractiveRebase" xml:space="preserve">ыМАэЩФэШХ ыжмы▓аьЭ┤ьКд</x:String>
+  <x:String x:Key="Text.InteractiveRebase.AutoStash" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн ьКдэГЬьЛЬ &amp; ьЮмьаБьЪй</x:String>
+  <x:String x:Key="Text.InteractiveRebase.NoVerify" xml:space="preserve">pre-rebase эЫЕ ъ▒┤ыДИыЫ░ъ╕░</x:String>
+  <x:String x:Key="Text.InteractiveRebase.On" xml:space="preserve">ъ╕░ьдА:</x:String>
+  <x:String x:Key="Text.InteractiveRebase.ReorderTip" xml:space="preserve">ыУЬыЮШъ╖╕ ьХд ыУЬыбньЬ╝ыбЬ ь╗ды░Л ьИЬьДЬ ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.InteractiveRebase.Target" xml:space="preserve">ыМАьГБ ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.IssueLinkCM.CopyLink" xml:space="preserve">ызБэБм ы│╡ьВм</x:String>
+  <x:String x:Key="Text.IssueLinkCM.OpenInBrowser" xml:space="preserve">ы╕МыЭ╝ьЪ░ьаАьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Launcher.Commands" xml:space="preserve">ыкЕыа╣</x:String>
+  <x:String x:Key="Text.Launcher.Error" xml:space="preserve">ьШдыеШ</x:String>
+  <x:String x:Key="Text.Launcher.Info" xml:space="preserve">ьХМыж╝</x:String>
+  <x:String x:Key="Text.Launcher.OpenRepository" xml:space="preserve">ьаАьЮеьЖМ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Launcher.Pages" xml:space="preserve">эГн</x:String>
+  <x:String x:Key="Text.Launcher.Workspaces" xml:space="preserve">ьЮСьЧЕ ъ│╡ъ░Д</x:String>
+  <x:String x:Key="Text.Merge" xml:space="preserve">ы╕МыЮЬь╣Ш ы│СэХй</x:String>
+  <x:String x:Key="Text.Merge.Edit" xml:space="preserve">ы│СэХй ыйФьЛЬьзА ьИШьаХ</x:String>
+  <x:String x:Key="Text.Merge.Into" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.Merge.Mode" xml:space="preserve">ы│СэХй ьШ╡ьЕШ:</x:String>
+  <x:String x:Key="Text.Merge.Source" xml:space="preserve">ьЖМьКд:</x:String>
+  <x:String x:Key="Text.Merge.Test" xml:space="preserve">ы│СэХй ъ░АыКе ьЧмы╢А эЩХьЭ╕ ьдС...</x:String>
+  <x:String x:Key="Text.Merge.Test.NoConflicts" xml:space="preserve">ь╢йыПМ ьЧЖьЭ┤ ы│СэХйэХа ьИШ ьЮИьК╡ыЛИыЛд</x:String>
+  <x:String x:Key="Text.Merge.Test.UnknownError" xml:space="preserve">ы│СэХй эЕМьКдэК╕ ьдС ьХМ ьИШ ьЧЖыКФ ьШдыеШъ░А ы░ЬьГЭэЦИьК╡ыЛИыЛд</x:String>
+  <x:String x:Key="Text.Merge.Test.WillCauseConflicts" xml:space="preserve">ы│СэХй ьЛЬ ь╢йыПМьЭ┤ ы░ЬьГЭэХйыЛИыЛд</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.AcceptBoth.MineFirst" xml:space="preserve">ыВ┤ ы│Аъ▓╜ ыи╝ьаА, ьГБыМА ы│Аъ▓╜ ыВШьдС</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.AcceptBoth.TheirsFirst" xml:space="preserve">ьГБыМА ы│Аъ▓╜ ыи╝ьаА, ыВ┤ ы│Аъ▓╜ ыВШьдС</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.UseBoth" xml:space="preserve">ыСШ ыЛд ьВмьЪй</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.AllResolved" xml:space="preserve">ыкиыУа ь╢йыПМ эХ┤ъ▓░ыРи</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.ConflictsRemaining" xml:space="preserve">ыВиьЭА ь╢йыПМ {0}ъ░Ь</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.Mine" xml:space="preserve">ыВ┤ ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.NextConflict" xml:space="preserve">ыЛдьЭМ ь╢йыПМ</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.PrevConflict" xml:space="preserve">ьЭ┤ьаД ь╢йыПМ</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.Result" xml:space="preserve">ъ▓░ъ│╝</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.SaveAndStage" xml:space="preserve">ьаАьЮе эЫД ьКдэЕМьЭ┤ьзХ</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.Theirs" xml:space="preserve">ьГБыМА ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.Title" xml:space="preserve">ы│СэХй ь╢йыПМ</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.UnsavedChanges" xml:space="preserve">ьаАьЮеэХШьзА ьХКьЭА ы│Аъ▓╜ьВмэХньЭД ы▓ДыжмьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.UseMine" xml:space="preserve">ыВ┤ ы│Аъ▓╜ ьВмьЪй</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.UseTheirs" xml:space="preserve">ьГБыМА ы│Аъ▓╜ ьВмьЪй</x:String>
+  <x:String x:Key="Text.MergeConflictEditor.Undo" xml:space="preserve">ьЛдэЦЙ ь╖иьЖМ</x:String>
+  <x:String x:Key="Text.MergeMultiple" xml:space="preserve">ы│СэХй (ыЛдьдС)</x:String>
+  <x:String x:Key="Text.MergeMultiple.CommitChanges" xml:space="preserve">ыкиыУа ы│Аъ▓╜ ьВмэХн ь╗ды░Л</x:String>
+  <x:String x:Key="Text.MergeMultiple.Strategy" xml:space="preserve">ьаДыЮ╡:</x:String>
+  <x:String x:Key="Text.MergeMultiple.Targets" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.MoveSubmodule" xml:space="preserve">ьДЬы╕МыкиыУИ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.MoveSubmodule.MoveTo" xml:space="preserve">ьЭ┤ыПЩ ьЬДь╣Ш:</x:String>
+  <x:String x:Key="Text.MoveSubmodule.Submodule" xml:space="preserve">ьДЬы╕МыкиыУИ:</x:String>
+  <x:String x:Key="Text.MoveRepositoryNode" xml:space="preserve">ьаАьЮеьЖМ ыЕ╕ыУЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.MoveRepositoryNode.Target" xml:space="preserve">ьГБьЬД ыЕ╕ыУЬ ьДаэГЭ:</x:String>
+  <x:String x:Key="Text.Name" xml:space="preserve">ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.No" xml:space="preserve">ьХДыЛИьЪФ</x:String>
+  <x:String x:Key="Text.NotConfigured" xml:space="preserve">GitьЭ┤ ъ╡мьД▒ыРШьзА ьХКьХШьК╡ыЛИыЛд. [эЩШъ▓╜ьДдьаХ]ьЬ╝ыбЬ ьЭ┤ыПЩэХШьЧм ыи╝ьаА ъ╡мьД▒эХШьД╕ьЪФ.</x:String>
+  <x:String x:Key="Text.Open" xml:space="preserve">ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Open.SystemDefaultEditor" xml:space="preserve">ьЛЬьКдэЕЬ ъ╕░ы│╕ эО╕ьзСъ╕░</x:String>
+  <x:String x:Key="Text.OpenAppDataDir" xml:space="preserve">ыН░ьЭ┤эД░ ьаАьЮе ыФФыаЙэД░ыжм ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.OpenFile" xml:space="preserve">эММьЭ╝ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.OpenInExternalMergeTool" xml:space="preserve">ы│СэХй ыПДъ╡мьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.OpenLocalRepository" xml:space="preserve">ыбЬь╗м ьаАьЮеьЖМ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.OpenLocalRepository.Bookmark" xml:space="preserve">ы╢БызИэБм:</x:String>
+  <x:String x:Key="Text.OpenLocalRepository.Group" xml:space="preserve">ъ╖╕ыг╣:</x:String>
+  <x:String x:Key="Text.OpenLocalRepository.Path" xml:space="preserve">эП┤ыНФ:</x:String>
+  <x:String x:Key="Text.Optional" xml:space="preserve">ьДаэГЭ ьВмэХн.</x:String>
+  <x:String x:Key="Text.PageTabBar.New" xml:space="preserve">ьГИ эГн ызМыУдъ╕░</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.Close" xml:space="preserve">эГн ыЛлъ╕░</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.CloseOther" xml:space="preserve">ыЛдые╕ эГн ыЛлъ╕░</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.CloseRight" xml:space="preserve">ьШдые╕ьк╜ эГн ыЛлъ╕░</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.CopyPath" xml:space="preserve">ьаАьЮеьЖМ ъ▓╜ыбЬ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.Edit" xml:space="preserve">эО╕ьзС</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.MoveToWorkspace" xml:space="preserve">ьЮСьЧЕ ъ│╡ъ░ДьЬ╝ыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.PageTabBar.Tab.Refresh" xml:space="preserve">ьГИыбЬ ъ│аь╣и</x:String>
+  <x:String x:Key="Text.PageTabBar.Welcome.Title" xml:space="preserve">ьаАьЮеьЖМ</x:String>
+  <x:String x:Key="Text.Paste" xml:space="preserve">ы╢ЩьЧмыДгъ╕░</x:String>
+  <x:String x:Key="Text.Period.DaysAgo" xml:space="preserve">{0}ьЭ╝ ьаД</x:String>
+  <x:String x:Key="Text.Period.HourAgo" xml:space="preserve">1ьЛЬъ░Д ьаД</x:String>
+  <x:String x:Key="Text.Period.HoursAgo" xml:space="preserve">{0}ьЛЬъ░Д ьаД</x:String>
+  <x:String x:Key="Text.Period.JustNow" xml:space="preserve">ы░йъ╕И ьаД</x:String>
+  <x:String x:Key="Text.Period.LastMonth" xml:space="preserve">ьзАыВЬ ыЛм</x:String>
+  <x:String x:Key="Text.Period.LastYear" xml:space="preserve">ьЮСыЕД</x:String>
+  <x:String x:Key="Text.Period.MinutesAgo" xml:space="preserve">{0}ы╢Д ьаД</x:String>
+  <x:String x:Key="Text.Period.MonthsAgo" xml:space="preserve">{0}ъ░ЬьЫФ ьаД</x:String>
+  <x:String x:Key="Text.Period.YearsAgo" xml:space="preserve">{0}ыЕД ьаД</x:String>
+  <x:String x:Key="Text.Period.Yesterday" xml:space="preserve">ьЦ┤ьаЬ</x:String>
+  <x:String x:Key="Text.Preferences" xml:space="preserve">эЩШъ▓╜ьДдьаХ</x:String>
   <x:String x:Key="Text.Preferences.AI" xml:space="preserve">AI</x:String>
-  <x:String x:Key="Text.Preferences.AI.ApiKey" xml:space="preserve">API 키</x:String>
-  <x:String x:Key="Text.Preferences.AI.Name" xml:space="preserve">이름</x:String>
-  <x:String x:Key="Text.Preferences.AI.ReadApiKeyFromEnv" xml:space="preserve">입력된 값은 환경변수(ENV)에서 API 키를 불러올 이름입니다</x:String>
-  <x:String x:Key="Text.Preferences.AI.Server" xml:space="preserve">서버</x:String>
-  <x:String x:Key="Text.Preferences.Appearance" xml:space="preserve">모양</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.DefaultFont" xml:space="preserve">기본 글꼴</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.EditorTabWidth" xml:space="preserve">에디터 탭 너비</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.FontSize" xml:space="preserve">글꼴 크기</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.FontSize.Default" xml:space="preserve">기본</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.FontSize.Editor" xml:space="preserve">에디터</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.MonospaceFont" xml:space="preserve">고정폭 글꼴</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.Theme" xml:space="preserve">테마</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.ThemeOverrides" xml:space="preserve">테마 재정의</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.UseAutoHideScrollBars" xml:space="preserve">스크롤바 자동 숨기기 사용</x:String>
-  <x:String x:Key="Text.Preferences.Appearance.UseNativeWindowFrame" xml:space="preserve">네이티브 윈도우 프레임 사용</x:String>
-  <x:String x:Key="Text.Preferences.DiffMerge" xml:space="preserve">DIFF/MERGE 도구</x:String>
-  <x:String x:Key="Text.Preferences.DiffMerge.Path" xml:space="preserve">설치 경로</x:String>
-  <x:String x:Key="Text.Preferences.DiffMerge.Path.Placeholder" xml:space="preserve">diff/merge 도구 경로 입력</x:String>
-  <x:String x:Key="Text.Preferences.DiffMerge.Type" xml:space="preserve">도구</x:String>
-  <x:String x:Key="Text.Preferences.General" xml:space="preserve">일반</x:String>
-  <x:String x:Key="Text.Preferences.General.Check4UpdatesOnStartup" xml:space="preserve">시작 시 업데이트 확인</x:String>
-  <x:String x:Key="Text.Preferences.General.DateFormat" xml:space="preserve">날짜 형식</x:String>
-  <x:String x:Key="Text.Preferences.General.EnableCompactFolders" xml:space="preserve">변경 사항 트리에서 폴더 압축 활성화</x:String>
-  <x:String x:Key="Text.Preferences.General.Locale" xml:space="preserve">언어</x:String>
-  <x:String x:Key="Text.Preferences.General.MaxHistoryCommits" xml:space="preserve">히스토리 커밋 수</x:String>
-  <x:String x:Key="Text.Preferences.General.ShowAuthorTime" xml:space="preserve">그래프에 커밋 시간 대신 작성자 시간 표시</x:String>
-  <x:String x:Key="Text.Preferences.General.ShowChangesPageByDefault" xml:space="preserve">기본으로 `로컬 변경 사항` 페이지 표시</x:String>
-  <x:String x:Key="Text.Preferences.General.ShowChangesTabInCommitDetailByDefault" xml:space="preserve">커밋 세부 정보에서 기본으로 `변경 사항` 탭 표시</x:String>
-  <x:String x:Key="Text.Preferences.General.ShowChildren" xml:space="preserve">커밋 세부 정보에 자식 커밋 표시</x:String>
-  <x:String x:Key="Text.Preferences.General.ShowTagsInGraph" xml:space="preserve">커밋 그래프에 태그 표시</x:String>
-  <x:String x:Key="Text.Preferences.General.SubjectGuideLength" xml:space="preserve">제목 가이드 길이</x:String>
-  <x:String x:Key="Text.Preferences.General.UseGitHubStyleAvatar" xml:space="preserve">GitHub 스타일 기본 아바타 생성</x:String>
+  <x:String x:Key="Text.Preferences.AI.AdditionalPrompt" xml:space="preserve">ь╢Фъ░А эФДыбмэФДэК╕(`-`ыбЬ ьЪФъ╡м ьВмэХн ыВШьЧ┤)</x:String>
+  <x:String x:Key="Text.Preferences.AI.ApiKey" xml:space="preserve">API эВд</x:String>
+  <x:String x:Key="Text.Preferences.AI.Model" xml:space="preserve">ыкиыН╕</x:String>
+  <x:String x:Key="Text.Preferences.AI.Model.AutoFetchAvailableModels" xml:space="preserve">ьВмьЪй ъ░АыКеэХЬ ыкиыН╕ ID ьЮРыПЩ ъ░Аьа╕ьШдъ╕░</x:String>
+  <x:String x:Key="Text.Preferences.AI.Name" xml:space="preserve">ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.Preferences.AI.ReadApiKeyFromEnv" xml:space="preserve">ьЮЕыаеыРЬ ъ░ТьЭА эЩШъ▓╜ы│АьИШ(ENV)ьЧРьДЬ API эВдые╝ ы╢ИыЯмьШм ьЭ┤ыжДьЮЕыЛИыЛд</x:String>
+  <x:String x:Key="Text.Preferences.AI.Server" xml:space="preserve">ьДЬы▓Д</x:String>
+  <x:String x:Key="Text.Preferences.Appearance" xml:space="preserve">ыкиьЦС</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.DefaultFont" xml:space="preserve">ъ╕░ы│╕ ъ╕Аъ╝┤</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.EditorTabWidth" xml:space="preserve">ьЧРыФФэД░ эГн ыДИы╣Д</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.FontSize" xml:space="preserve">ъ╕Аъ╝┤ эБмъ╕░</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.FontSize.Default" xml:space="preserve">ъ╕░ы│╕</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.FontSize.Editor" xml:space="preserve">ьЧРыФФэД░</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.MonospaceFont" xml:space="preserve">ъ│аьаХэПн ъ╕Аъ╝┤</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.Theme" xml:space="preserve">эЕМызИ</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.ThemeOverrides" xml:space="preserve">эЕМызИ ьЮмьаХьЭШ</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.UseAutoHideScrollBars" xml:space="preserve">ьКдэБмыбды░Ф ьЮРыПЩ ьИиъ╕░ъ╕░ ьВмьЪй</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.UseFixedTabWidth" xml:space="preserve">ьаЬыкй эСЬьЛЬьдДьЧРьДЬ ъ│аьаХ эГн ыДИы╣Д ьВмьЪй</x:String>
+  <x:String x:Key="Text.Preferences.Appearance.UseNativeWindowFrame" xml:space="preserve">ыДдьЭ┤эЛ░ы╕М ьЬИыПДьЪ░ эФДыаИьЮД ьВмьЪй</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge" xml:space="preserve">DIFF/MERGE ыПДъ╡м</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.DiffArgs" xml:space="preserve">ы╣Дъ╡Р ьЭ╕ьИШ</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.DiffArgs.Tip" xml:space="preserve">ьВмьЪй ъ░АыКеэХЬ ы│АьИШ: $LOCAL, $REMOTE</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.MergeArgs" xml:space="preserve">ы│СэХй ьЭ╕ьИШ</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.MergeArgs.Tip" xml:space="preserve">ьВмьЪй ъ░АыКеэХЬ ы│АьИШ: $BASE, $LOCAL, $REMOTE, $MERGED</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.Path" xml:space="preserve">ьДдь╣Ш ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.Path.Placeholder" xml:space="preserve">diff/merge ыПДъ╡м ъ▓╜ыбЬ ьЮЕыае</x:String>
+  <x:String x:Key="Text.Preferences.DiffMerge.Type" xml:space="preserve">ыПДъ╡м</x:String>
+  <x:String x:Key="Text.Preferences.General" xml:space="preserve">ьЭ╝ы░Ш</x:String>
+  <x:String x:Key="Text.Preferences.General.Check4UpdatesOnStartup" xml:space="preserve">ьЛЬьЮС ьЛЬ ьЧЕыН░ьЭ┤эК╕ эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.Preferences.General.DateFormat" xml:space="preserve">ыВаьзЬ эШХьЛЭ</x:String>
+  <x:String x:Key="Text.Preferences.General.EnableCompactFolders" xml:space="preserve">ы│Аъ▓╜ ьВмэХн эК╕ыжмьЧРьДЬ эП┤ыНФ ьХХь╢Х эЩЬьД▒эЩФ</x:String>
+  <x:String x:Key="Text.Preferences.General.Locale" xml:space="preserve">ьЦ╕ьЦ┤</x:String>
+  <x:String x:Key="Text.Preferences.General.MaxHistoryCommits" xml:space="preserve">эЮИьКдэЖаыжм ь╗ды░Л ьИШ</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowChangesPageByDefault" xml:space="preserve">ъ╕░ы│╕ьЬ╝ыбЬ `ыбЬь╗м ы│Аъ▓╜ ьВмэХн` эОШьЭ┤ьзА эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowChangesTabInCommitDetailByDefault" xml:space="preserve">ь╗ды░Л ьД╕ы╢А ьаХы│┤ьЧРьДЬ ъ╕░ы│╕ьЬ╝ыбЬ `ы│Аъ▓╜ ьВмэХн` эГн эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowChildren" xml:space="preserve">ь╗ды░Л ьД╕ы╢А ьаХы│┤ьЧР ьЮРьЛЭ ь╗ды░Л эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowRelativeTimeInGraph" xml:space="preserve">ь╗ды░Л ъ╖╕ыЮШэФДьЧР ьГБыМА ьЛЬъ░Д эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Preferences.General.ShowTagsInGraph" xml:space="preserve">ь╗ды░Л ъ╖╕ыЮШэФДьЧР эГЬъ╖╕ эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Preferences.General.SubjectGuideLength" xml:space="preserve">ьаЬыкй ъ░АьЭ┤ыУЬ ъ╕╕ьЭ┤</x:String>
+  <x:String x:Key="Text.Preferences.General.Use24Hours" xml:space="preserve">24ьЛЬъ░Д эШХьЛЭ</x:String>
+  <x:String x:Key="Text.Preferences.General.UseCompactBranchNames" xml:space="preserve">ь╗ды░Л ъ╖╕ыЮШэФДьЧРьДЬ ь╢ХьХ╜ ы╕МыЮЬь╣Ш ьЭ┤ыжД ьВмьЪй</x:String>
+  <x:String x:Key="Text.Preferences.General.UseGitHubStyleAvatar" xml:space="preserve">GitHub ьКдэГАьЭ╝ ъ╕░ы│╕ ьХДы░ФэГА ьГЭьД▒</x:String>
   <x:String x:Key="Text.Preferences.Git" xml:space="preserve">GIT</x:String>
-  <x:String x:Key="Text.Preferences.Git.CRLF" xml:space="preserve">자동 CRLF 활성화</x:String>
-  <x:String x:Key="Text.Preferences.Git.DefaultCloneDir" xml:space="preserve">기본 복제 디렉터리</x:String>
-  <x:String x:Key="Text.Preferences.Git.Email" xml:space="preserve">사용자 이메일</x:String>
-  <x:String x:Key="Text.Preferences.Git.Email.Placeholder" xml:space="preserve">전역 git 사용자 이메일</x:String>
-  <x:String x:Key="Text.Preferences.Git.EnablePruneOnFetch" xml:space="preserve">Fetch 시 --prune 활성화</x:String>
-  <x:String x:Key="Text.Preferences.Git.IgnoreCRAtEOLInDiff" xml:space="preserve">diff 시 --ignore-cr-at-eol 활성화</x:String>
-  <x:String x:Key="Text.Preferences.Git.Invalid" xml:space="preserve">이 앱은 Git (&gt;= 2.25.1)을(를) 필요로 합니다</x:String>
-  <x:String x:Key="Text.Preferences.Git.Path" xml:space="preserve">설치 경로</x:String>
-  <x:String x:Key="Text.Preferences.Git.SSLVerify" xml:space="preserve">HTTP SSL 검증 활성화</x:String>
-  <x:String x:Key="Text.Preferences.Git.UseLibsecret" xml:space="preserve">git-credential-manager 대신 git-credential-libsecret 사용</x:String>
-  <x:String x:Key="Text.Preferences.Git.User" xml:space="preserve">사용자 이름</x:String>
-  <x:String x:Key="Text.Preferences.Git.User.Placeholder" xml:space="preserve">전역 git 사용자 이름</x:String>
-  <x:String x:Key="Text.Preferences.Git.Version" xml:space="preserve">Git 버전</x:String>
-  <x:String x:Key="Text.Preferences.GPG" xml:space="preserve">GPG 서명</x:String>
-  <x:String x:Key="Text.Preferences.GPG.CommitEnabled" xml:space="preserve">커밋 GPG 서명</x:String>
-  <x:String x:Key="Text.Preferences.GPG.Format" xml:space="preserve">GPG 형식</x:String>
-  <x:String x:Key="Text.Preferences.GPG.Path" xml:space="preserve">프로그램 설치 경로</x:String>
-  <x:String x:Key="Text.Preferences.GPG.Path.Placeholder" xml:space="preserve">설치된 gpg 프로그램 경로 입력</x:String>
-  <x:String x:Key="Text.Preferences.GPG.TagEnabled" xml:space="preserve">태그 GPG 서명</x:String>
-  <x:String x:Key="Text.Preferences.GPG.UserKey" xml:space="preserve">사용자 서명 키</x:String>
-  <x:String x:Key="Text.Preferences.GPG.UserKey.Placeholder" xml:space="preserve">사용자의 gpg 서명 키</x:String>
-  <x:String x:Key="Text.Preferences.Integration" xml:space="preserve">연동</x:String>
-  <x:String x:Key="Text.Preferences.Shell" xml:space="preserve">셸/터미널</x:String>
-  <x:String x:Key="Text.Preferences.Shell.Path" xml:space="preserve">경로</x:String>
-  <x:String x:Key="Text.Preferences.Shell.Type" xml:space="preserve">셸/터미널</x:String>
-  <x:String x:Key="Text.PruneRemote" xml:space="preserve">원격 정리</x:String>
-  <x:String x:Key="Text.PruneRemote.Target" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.PruneWorktrees" xml:space="preserve">워크트리 정리</x:String>
-  <x:String x:Key="Text.PruneWorktrees.Tip" xml:space="preserve">`$GIT_COMMON_DIR/worktrees`의 워크트리 정보 정리</x:String>
+  <x:String x:Key="Text.Preferences.Git.CRLF" xml:space="preserve">ьЮРыПЩ CRLF эЩЬьД▒эЩФ</x:String>
+  <x:String x:Key="Text.Preferences.Git.DefaultCloneDir" xml:space="preserve">ъ╕░ы│╕ ы│╡ьаЬ ыФФыаЙэД░ыжм</x:String>
+  <x:String x:Key="Text.Preferences.Git.Email" xml:space="preserve">ьВмьЪйьЮР ьЭ┤ыйФьЭ╝</x:String>
+  <x:String x:Key="Text.Preferences.Git.Email.Placeholder" xml:space="preserve">ьаДьЧн git ьВмьЪйьЮР ьЭ┤ыйФьЭ╝</x:String>
+  <x:String x:Key="Text.Preferences.Git.EnablePruneOnFetch" xml:space="preserve">Fetch ьЛЬ --prune эЩЬьД▒эЩФ</x:String>
+  <x:String x:Key="Text.Preferences.Git.IgnoreCRAtEOLInDiff" xml:space="preserve">diff ьЛЬ --ignore-cr-at-eol эЩЬьД▒эЩФ</x:String>
+  <x:String x:Key="Text.Preferences.Git.Invalid" xml:space="preserve">ьЭ┤ ьХ▒ьЭА Git (&gt;= 2.25.1)ьЭД(ые╝) эХДьЪФыбЬ эХйыЛИыЛд</x:String>
+  <x:String x:Key="Text.Preferences.Git.Path" xml:space="preserve">ьДдь╣Ш ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Preferences.Git.SSLVerify" xml:space="preserve">HTTP SSL ъ▓АьжЭ эЩЬьД▒эЩФ</x:String>
+  <x:String x:Key="Text.Preferences.Git.UseLibsecret" xml:space="preserve">git-credential-manager ыМАьЛа git-credential-libsecret ьВмьЪй</x:String>
+  <x:String x:Key="Text.Preferences.Git.User" xml:space="preserve">ьВмьЪйьЮР ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.Preferences.Git.User.Placeholder" xml:space="preserve">ьаДьЧн git ьВмьЪйьЮР ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.Preferences.Git.UseStashAndReapplyByDefault" xml:space="preserve">ы╕МыЮЬь╣Ш ь▓┤эБмьХДьЫГ ыШРыКФ ы│СэХй ьЛЬ ъ╕░ы│╕ьаБьЬ╝ыбЬ ы│Аъ▓╜ ьВмэХньЭД ьКдэГЬьЛЬэХЬ ыТд ыЛдьЛЬ ьаБьЪй</x:String>
+  <x:String x:Key="Text.Preferences.Git.Version" xml:space="preserve">Git ы▓ДьаД</x:String>
+  <x:String x:Key="Text.Preferences.GPG" xml:space="preserve">GPG ьДЬыкЕ</x:String>
+  <x:String x:Key="Text.Preferences.GPG.CommitEnabled" xml:space="preserve">ь╗ды░Л GPG ьДЬыкЕ</x:String>
+  <x:String x:Key="Text.Preferences.GPG.Format" xml:space="preserve">GPG эШХьЛЭ</x:String>
+  <x:String x:Key="Text.Preferences.GPG.Path" xml:space="preserve">эФДыбЬъ╖╕ыЮи ьДдь╣Ш ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Preferences.GPG.Path.Placeholder" xml:space="preserve">ьДдь╣ШыРЬ gpg эФДыбЬъ╖╕ыЮи ъ▓╜ыбЬ ьЮЕыае</x:String>
+  <x:String x:Key="Text.Preferences.GPG.TagEnabled" xml:space="preserve">эГЬъ╖╕ GPG ьДЬыкЕ</x:String>
+  <x:String x:Key="Text.Preferences.GPG.UserKey" xml:space="preserve">ьВмьЪйьЮР ьДЬыкЕ эВд</x:String>
+  <x:String x:Key="Text.Preferences.GPG.UserKey.Placeholder" xml:space="preserve">ьВмьЪйьЮРьЭШ gpg ьДЬыкЕ эВд</x:String>
+  <x:String x:Key="Text.Preferences.Integration" xml:space="preserve">ьЧ░ыПЩ</x:String>
+  <x:String x:Key="Text.Preferences.Shell" xml:space="preserve">ьЕ╕/эД░ып╕ыДР</x:String>
+  <x:String x:Key="Text.Preferences.Shell.Args" xml:space="preserve">ьЭ╕ьИШ</x:String>
+  <x:String x:Key="Text.Preferences.Shell.Args.Tip" xml:space="preserve">ьЮСьЧЕ ыФФыаЙэД░ыжмыКФ `.`ьЬ╝ыбЬ эСЬьЛЬэХШьД╕ьЪФ</x:String>
+  <x:String x:Key="Text.Preferences.Shell.Path" xml:space="preserve">ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Preferences.Shell.Type" xml:space="preserve">ьЕ╕/эД░ып╕ыДР</x:String>
+  <x:String x:Key="Text.PruneRemote" xml:space="preserve">ьЫРъ▓й ьаХыжм</x:String>
+  <x:String x:Key="Text.PruneRemote.Target" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.PruneWorktrees" xml:space="preserve">ьЫМэБмэК╕ыжм ьаХыжм</x:String>
+  <x:String x:Key="Text.PruneWorktrees.Tip" xml:space="preserve">`$GIT_COMMON_DIR/worktrees`ьЭШ ьЫМэБмэК╕ыжм ьаХы│┤ ьаХыжм</x:String>
   <x:String x:Key="Text.Pull" xml:space="preserve">Pull</x:String>
-  <x:String x:Key="Text.Pull.Branch" xml:space="preserve">원격 브랜치:</x:String>
-  <x:String x:Key="Text.Pull.Into" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.Pull.LocalChanges" xml:space="preserve">로컬 변경 사항:</x:String>
-  <x:String x:Key="Text.Pull.Remote" xml:space="preserve">원격:</x:String>
-  <x:String x:Key="Text.Pull.Title" xml:space="preserve">Pull (Fetch &amp; 병합)</x:String>
-  <x:String x:Key="Text.Pull.UseRebase" xml:space="preserve">병합 대신 리베이스 사용</x:String>
-  <x:String x:Key="Text.Push" xml:space="preserve">푸시</x:String>
-  <x:String x:Key="Text.Push.CheckSubmodules" xml:space="preserve">서브모듈이 푸시되었는지 확인</x:String>
-  <x:String x:Key="Text.Push.Force" xml:space="preserve">강제 푸시</x:String>
-  <x:String x:Key="Text.Push.Local" xml:space="preserve">로컬 브랜치:</x:String>
-  <x:String x:Key="Text.Push.New" xml:space="preserve">신규</x:String>
-  <x:String x:Key="Text.Push.Remote" xml:space="preserve">원격:</x:String>
-  <x:String x:Key="Text.Push.Revision" xml:space="preserve">리비전:</x:String>
-  <x:String x:Key="Text.Push.Revision.Title" xml:space="preserve">리비전을 원격에 푸시</x:String>
-  <x:String x:Key="Text.Push.Title" xml:space="preserve">변경 사항을 원격에 푸시</x:String>
-  <x:String x:Key="Text.Push.To" xml:space="preserve">원격 브랜치:</x:String>
-  <x:String x:Key="Text.Push.Tracking" xml:space="preserve">추적 브랜치로 설정</x:String>
-  <x:String x:Key="Text.Push.WithAllTags" xml:space="preserve">모든 태그 푸시</x:String>
-  <x:String x:Key="Text.PushTag" xml:space="preserve">태그를 원격에 푸시</x:String>
-  <x:String x:Key="Text.PushTag.PushAllRemotes" xml:space="preserve">모든 원격에 푸시</x:String>
-  <x:String x:Key="Text.PushTag.Remote" xml:space="preserve">원격:</x:String>
-  <x:String x:Key="Text.PushTag.Tag" xml:space="preserve">태그:</x:String>
-  <x:String x:Key="Text.Quit" xml:space="preserve">종료</x:String>
-  <x:String x:Key="Text.Rebase" xml:space="preserve">현재 브랜치 리베이스</x:String>
-  <x:String x:Key="Text.Rebase.AutoStash" xml:space="preserve">로컬 변경 사항 스태시 &amp; 재적용</x:String>
-  <x:String x:Key="Text.Rebase.On" xml:space="preserve">기준:</x:String>
-  <x:String x:Key="Text.Remote.AddTitle" xml:space="preserve">원격 추가</x:String>
-  <x:String x:Key="Text.Remote.EditTitle" xml:space="preserve">원격 편집</x:String>
-  <x:String x:Key="Text.Remote.Name" xml:space="preserve">이름:</x:String>
-  <x:String x:Key="Text.Remote.Name.Placeholder" xml:space="preserve">원격 이름</x:String>
-  <x:String x:Key="Text.Remote.URL" xml:space="preserve">저장소 URL:</x:String>
-  <x:String x:Key="Text.Remote.URL.Placeholder" xml:space="preserve">원격 git 저장소 URL</x:String>
-  <x:String x:Key="Text.RemoteCM.CopyURL" xml:space="preserve">URL 복사</x:String>
-  <x:String x:Key="Text.RemoteCM.CustomAction" xml:space="preserve">사용자 지정 작업</x:String>
-  <x:String x:Key="Text.RemoteCM.Delete" xml:space="preserve">삭제...</x:String>
-  <x:String x:Key="Text.RemoteCM.Edit" xml:space="preserve">편집...</x:String>
+  <x:String x:Key="Text.Pull.Branch" xml:space="preserve">ьЫРъ▓й ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.Pull.Into" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.Pull.LocalChanges" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн:</x:String>
+  <x:String x:Key="Text.Pull.Remote" xml:space="preserve">ьЫРъ▓й:</x:String>
+  <x:String x:Key="Text.Pull.Title" xml:space="preserve">Pull (Fetch &amp; ы│СэХй)</x:String>
+  <x:String x:Key="Text.Pull.UseRebase" xml:space="preserve">ы│СэХй ыМАьЛа ыжмы▓аьЭ┤ьКд ьВмьЪй</x:String>
+  <x:String x:Key="Text.Push" xml:space="preserve">эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.Push.CheckSubmodules" xml:space="preserve">ьДЬы╕МыкиыУИьЭ┤ эС╕ьЛЬыРШьЧИыКФьзА эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.Push.Force" xml:space="preserve">ъ░ХьаЬ эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.Push.Local" xml:space="preserve">ыбЬь╗м ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.Push.New" xml:space="preserve">ьЛаъ╖Ь</x:String>
+  <x:String x:Key="Text.Push.Remote" xml:space="preserve">ьЫРъ▓й:</x:String>
+  <x:String x:Key="Text.Push.Revision" xml:space="preserve">ыжмы╣ДьаД:</x:String>
+  <x:String x:Key="Text.Push.Revision.Title" xml:space="preserve">ыжмы╣ДьаДьЭД ьЫРъ▓йьЧР эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.Push.Title" xml:space="preserve">ы│Аъ▓╜ ьВмэХньЭД ьЫРъ▓йьЧР эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.Push.To" xml:space="preserve">ьЫРъ▓й ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.Push.Tracking" xml:space="preserve">ь╢ФьаБ ы╕МыЮЬь╣ШыбЬ ьДдьаХ</x:String>
+  <x:String x:Key="Text.Push.WithAllTags" xml:space="preserve">ыкиыУа эГЬъ╖╕ эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.PushTag" xml:space="preserve">эГЬъ╖╕ые╝ ьЫРъ▓йьЧР эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.PushTag.PushAllRemotes" xml:space="preserve">ыкиыУа ьЫРъ▓йьЧР эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.PushTag.Remote" xml:space="preserve">ьЫРъ▓й:</x:String>
+  <x:String x:Key="Text.PushTag.Tag" xml:space="preserve">эГЬъ╖╕:</x:String>
+  <x:String x:Key="Text.PushToNewBranch" xml:space="preserve">ьГИ ы╕МыЮЬь╣ШыбЬ эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.PushToNewBranch.Title" xml:space="preserve">ьГИ ьЫРъ▓й ы╕МыЮЬь╣Ш ьЭ┤ыжДьЭД ьЮЕыаеэХШьД╕ьЪФ:</x:String>
+  <x:String x:Key="Text.Quit" xml:space="preserve">ьвЕыгМ</x:String>
+  <x:String x:Key="Text.Rebase" xml:space="preserve">эШДьЮм ы╕МыЮЬь╣Ш ыжмы▓аьЭ┤ьКд</x:String>
+  <x:String x:Key="Text.Rebase.AutoStash" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн ьКдэГЬьЛЬ &amp; ьЮмьаБьЪй</x:String>
+  <x:String x:Key="Text.Rebase.NoVerify" xml:space="preserve">pre-rebase эЫЕ ъ▒┤ыДИыЫ░ъ╕░</x:String>
+  <x:String x:Key="Text.Rebase.On" xml:space="preserve">ъ╕░ьдА:</x:String>
+  <x:String x:Key="Text.Rebase.Test" xml:space="preserve">ыжмы▓аьЭ┤ьКд ъ░АыКе ьЧмы╢А эЩХьЭ╕ ьдС...</x:String>
+  <x:String x:Key="Text.Rebase.Test.OK" xml:space="preserve">ь╢йыПМ ьЧЖьЭ┤ ыжмы▓аьЭ┤ьКдэХа ьИШ ьЮИьК╡ыЛИыЛд</x:String>
+  <x:String x:Key="Text.Rebase.Test.UnknownError" xml:space="preserve">ыжмы▓аьЭ┤ьКд эЕМьКдэК╕ ьдС ьХМ ьИШ ьЧЖыКФ ьШдыеШъ░А ы░ЬьГЭэЦИьК╡ыЛИыЛд</x:String>
+  <x:String x:Key="Text.Rebase.Test.WillCauseConflicts" xml:space="preserve">ыжмы▓аьЭ┤ьКд ьЛЬ ь╢йыПМьЭ┤ ы░ЬьГЭэХйыЛИыЛд</x:String>
+  <x:String x:Key="Text.Remote.AddTitle" xml:space="preserve">ьЫРъ▓й ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Remote.EditTitle" xml:space="preserve">ьЫРъ▓й эО╕ьзС</x:String>
+  <x:String x:Key="Text.Remote.Name" xml:space="preserve">ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.Remote.Name.Placeholder" xml:space="preserve">ьЫРъ▓й ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.Remote.URL" xml:space="preserve">ьаАьЮеьЖМ URL:</x:String>
+  <x:String x:Key="Text.Remote.URL.Placeholder" xml:space="preserve">ьЫРъ▓й git ьаАьЮеьЖМ URL</x:String>
+  <x:String x:Key="Text.RemoteCM.CopyURL" xml:space="preserve">URL ы│╡ьВм</x:String>
+  <x:String x:Key="Text.RemoteCM.CustomAction" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.RemoteCM.Delete" xml:space="preserve">ьВньаЬ...</x:String>
+  <x:String x:Key="Text.RemoteCM.Edit" xml:space="preserve">эО╕ьзС...</x:String>
+  <x:String x:Key="Text.RemoteCM.EnableAutoFetch" xml:space="preserve">ьЮРыПЩ Fetch ьВмьЪй</x:String>
   <x:String x:Key="Text.RemoteCM.Fetch" xml:space="preserve">Fetch</x:String>
-  <x:String x:Key="Text.RemoteCM.OpenInBrowser" xml:space="preserve">브라우저에서 열기</x:String>
-  <x:String x:Key="Text.RemoteCM.Prune" xml:space="preserve">정리</x:String>
-  <x:String x:Key="Text.RemoveWorktree" xml:space="preserve">워크트리 제거 확인</x:String>
-  <x:String x:Key="Text.RemoveWorktree.Force" xml:space="preserve">`--force` 옵션 활성화</x:String>
-  <x:String x:Key="Text.RemoveWorktree.Target" xml:space="preserve">대상:</x:String>
-  <x:String x:Key="Text.RenameBranch" xml:space="preserve">브랜치 이름 변경</x:String>
-  <x:String x:Key="Text.RenameBranch.Name" xml:space="preserve">새 이름:</x:String>
-  <x:String x:Key="Text.RenameBranch.Name.Placeholder" xml:space="preserve">이 브랜치의 고유한 이름</x:String>
-  <x:String x:Key="Text.RenameBranch.Target" xml:space="preserve">브랜치:</x:String>
-  <x:String x:Key="Text.Repository.Abort" xml:space="preserve">중단</x:String>
-  <x:String x:Key="Text.Repository.AutoFetching" xml:space="preserve">원격에서 변경 사항 자동 Fetch 중...</x:String>
-  <x:String x:Key="Text.Repository.BranchSort" xml:space="preserve">정렬</x:String>
-  <x:String x:Key="Text.Repository.BranchSort.ByCommitterDate" xml:space="preserve">커밋 날짜 순</x:String>
-  <x:String x:Key="Text.Repository.BranchSort.ByName" xml:space="preserve">이름 순</x:String>
-  <x:String x:Key="Text.Repository.Clean" xml:space="preserve">정리 (GC &amp; Prune)</x:String>
-  <x:String x:Key="Text.Repository.CleanTips" xml:space="preserve">이 저장소에 대해 `git gc` 명령을 실행합니다.</x:String>
-  <x:String x:Key="Text.Repository.ClearAllCommitsFilter" xml:space="preserve">모두 지우기</x:String>
-  <x:String x:Key="Text.Repository.ClearStashes" xml:space="preserve">지우기</x:String>
-  <x:String x:Key="Text.Repository.Configure" xml:space="preserve">이 저장소 설정</x:String>
-  <x:String x:Key="Text.Repository.Continue" xml:space="preserve">계속</x:String>
-  <x:String x:Key="Text.Repository.CustomActions" xml:space="preserve">사용자 지정 작업</x:String>
-  <x:String x:Key="Text.Repository.CustomActions.Empty" xml:space="preserve">사용자 지정 작업 없음</x:String>
-  <x:String x:Key="Text.Repository.Dashboard" xml:space="preserve">대시보드</x:String>
-  <x:String x:Key="Text.Repository.DiscardAll" xml:space="preserve">모든 변경 사항 폐기</x:String>
-  <x:String x:Key="Text.Repository.Explore" xml:space="preserve">파일 탐색기에서 열기</x:String>
-  <x:String x:Key="Text.Repository.Filter" xml:space="preserve">브랜치/태그/서브모듈 검색</x:String>
-  <x:String x:Key="Text.Repository.FilterCommits" xml:space="preserve">그래프에 표시 여부</x:String>
-  <x:String x:Key="Text.Repository.FilterCommits.Default" xml:space="preserve">설정 안 함</x:String>
-  <x:String x:Key="Text.Repository.FilterCommits.Exclude" xml:space="preserve">커밋 그래프에서 숨기기</x:String>
-  <x:String x:Key="Text.Repository.FilterCommits.Include" xml:space="preserve">커밋 그래프에서 필터링</x:String>
-  <x:String x:Key="Text.Repository.HistoriesLayout" xml:space="preserve">레이아웃</x:String>
-  <x:String x:Key="Text.Repository.HistoriesLayout.Horizontal" xml:space="preserve">수평</x:String>
-  <x:String x:Key="Text.Repository.HistoriesLayout.Vertical" xml:space="preserve">수직</x:String>
-  <x:String x:Key="Text.Repository.HistoriesOrder" xml:space="preserve">커밋 순서</x:String>
-  <x:String x:Key="Text.Repository.HistoriesOrder.ByDate" xml:space="preserve">커밋 날짜</x:String>
-  <x:String x:Key="Text.Repository.HistoriesOrder.Topo" xml:space="preserve">위상 정렬</x:String>
-  <x:String x:Key="Text.Repository.LocalBranches" xml:space="preserve">로컬 브랜치</x:String>
-  <x:String x:Key="Text.Repository.MoreOptions" xml:space="preserve">추가 옵션...</x:String>
-  <x:String x:Key="Text.Repository.NavigateToCurrentHead" xml:space="preserve">HEAD로 이동</x:String>
-  <x:String x:Key="Text.Repository.NewBranch" xml:space="preserve">브랜치 생성</x:String>
-  <x:String x:Key="Text.Repository.Notifications.Clear" xml:space="preserve">알림 지우기</x:String>
-  <x:String x:Key="Text.Repository.OpenIn" xml:space="preserve">{0}에서 열기</x:String>
-  <x:String x:Key="Text.Repository.OpenWithExternalTools" xml:space="preserve">외부 도구에서 열기</x:String>
-  <x:String x:Key="Text.Repository.Remotes" xml:space="preserve">원격</x:String>
-  <x:String x:Key="Text.Repository.Remotes.Add" xml:space="preserve">원격 추가</x:String>
-  <x:String x:Key="Text.Repository.Search" xml:space="preserve">커밋 검색</x:String>
-  <x:String x:Key="Text.Repository.Search.ByAuthor" xml:space="preserve">작성자</x:String>
-  <x:String x:Key="Text.Repository.Search.ByCommitter" xml:space="preserve">커밋터</x:String>
-  <x:String x:Key="Text.Repository.Search.ByContent" xml:space="preserve">내용</x:String>
-  <x:String x:Key="Text.Repository.Search.ByMessage" xml:space="preserve">메시지</x:String>
-  <x:String x:Key="Text.Repository.Search.ByPath" xml:space="preserve">경로</x:String>
+  <x:String x:Key="Text.RemoteCM.OpenInBrowser" xml:space="preserve">ы╕МыЭ╝ьЪ░ьаАьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.RemoteCM.Prune" xml:space="preserve">ьаХыжм</x:String>
+  <x:String x:Key="Text.RemoveWorktree" xml:space="preserve">ьЫМэБмэК╕ыжм ьаЬъ▒░ эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.RemoveWorktree.Force" xml:space="preserve">`--force` ьШ╡ьЕШ эЩЬьД▒эЩФ</x:String>
+  <x:String x:Key="Text.RemoveWorktree.Target" xml:space="preserve">ыМАьГБ:</x:String>
+  <x:String x:Key="Text.RenameBranch" xml:space="preserve">ы╕МыЮЬь╣Ш ьЭ┤ыжД ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.RenameBranch.Name" xml:space="preserve">ьГИ ьЭ┤ыжД:</x:String>
+  <x:String x:Key="Text.RenameBranch.Name.Placeholder" xml:space="preserve">ьЭ┤ ы╕МыЮЬь╣ШьЭШ ъ│аьЬаэХЬ ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.RenameBranch.Target" xml:space="preserve">ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.Repository.Abort" xml:space="preserve">ьдСыЛи</x:String>
+  <x:String x:Key="Text.Repository.AutoFetching" xml:space="preserve">ьЫРъ▓йьЧРьДЬ ы│Аъ▓╜ ьВмэХн ьЮРыПЩ Fetch ьдС...</x:String>
+  <x:String x:Key="Text.Repository.BranchSort" xml:space="preserve">ьаХыам</x:String>
+  <x:String x:Key="Text.Repository.BranchSort.ByCommitterDate" xml:space="preserve">ь╗ды░Л ыВаьзЬ ьИЬ</x:String>
+  <x:String x:Key="Text.Repository.BranchSort.ByName" xml:space="preserve">ьЭ┤ыжД ьИЬ</x:String>
+  <x:String x:Key="Text.Repository.Clean" xml:space="preserve">ьаХыжм (GC &amp; Prune)</x:String>
+  <x:String x:Key="Text.Repository.CleanTips" xml:space="preserve">ьЭ┤ ьаАьЮеьЖМьЧР ыМАэХ┤ `git gc` ыкЕыа╣ьЭД ьЛдэЦЙэХйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.Repository.ClearAllCommitsFilter" xml:space="preserve">ыкиыСР ьзАьЪ░ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.ClearStashes" xml:space="preserve">ьзАьЪ░ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.Configure" xml:space="preserve">ьЭ┤ ьаАьЮеьЖМ ьДдьаХ</x:String>
+  <x:String x:Key="Text.Repository.Continue" xml:space="preserve">ъ│ДьЖН</x:String>
+  <x:String x:Key="Text.Repository.CustomActions" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.Repository.CustomActions.Empty" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ ьЧЖьЭМ</x:String>
+  <x:String x:Key="Text.Repository.Dashboard" xml:space="preserve">ыМАьЛЬы│┤ыУЬ</x:String>
+  <x:String x:Key="Text.Repository.DiscardAll" xml:space="preserve">ыкиыУа ы│Аъ▓╜ ьВмэХн эПРъ╕░</x:String>
+  <x:String x:Key="Text.Repository.Explore" xml:space="preserve">эММьЭ╝ эГРьГЙъ╕░ьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.Filter" xml:space="preserve">ы╕МыЮЬь╣Ш/эГЬъ╖╕/ьДЬы╕МыкиыУИ ъ▓АьГЙ</x:String>
+  <x:String x:Key="Text.Repository.FilterCommits" xml:space="preserve">ъ╖╕ыЮШэФДьЧР эСЬьЛЬ ьЧмы╢А</x:String>
+  <x:String x:Key="Text.Repository.FilterCommits.Default" xml:space="preserve">ьДдьаХ ьХИ эХи</x:String>
+  <x:String x:Key="Text.Repository.FilterCommits.Exclude" xml:space="preserve">ь╗ды░Л ъ╖╕ыЮШэФДьЧРьДЬ ьИиъ╕░ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.FilterCommits.Include" xml:space="preserve">ь╗ды░Л ъ╖╕ыЮШэФДьЧРьДЬ эХДэД░ызБ</x:String>
+  <x:String x:Key="Text.Repository.HistoriesLayout" xml:space="preserve">ыаИьЭ┤ьХДьЫГ</x:String>
+  <x:String x:Key="Text.Repository.HistoriesLayout.Horizontal" xml:space="preserve">ьИШэПЙ</x:String>
+  <x:String x:Key="Text.Repository.HistoriesLayout.Vertical" xml:space="preserve">ьИШьзБ</x:String>
+  <x:String x:Key="Text.Repository.HistoriesOrder" xml:space="preserve">ь╗ды░Л ьИЬьДЬ</x:String>
+  <x:String x:Key="Text.Repository.HistoriesOrder.ByDate" xml:space="preserve">ь╗ды░Л ыВаьзЬ</x:String>
+  <x:String x:Key="Text.Repository.HistoriesOrder.Topo" xml:space="preserve">ьЬДьГБ ьаХыам</x:String>
+  <x:String x:Key="Text.Repository.LocalBranches" xml:space="preserve">ыбЬь╗м ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.Repository.MoreOptions" xml:space="preserve">ь╢Фъ░А ьШ╡ьЕШ...</x:String>
+  <x:String x:Key="Text.Repository.NavigateToCurrentHead" xml:space="preserve">HEADыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Repository.NewBranch" xml:space="preserve">ы╕МыЮЬь╣Ш ьГЭьД▒</x:String>
+  <x:String x:Key="Text.Repository.Notifications.Clear" xml:space="preserve">ьХМыж╝ ьзАьЪ░ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.OpenAsFolder" xml:space="preserve">эП┤ыНФыбЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.OpenIn" xml:space="preserve">{0}ьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.OpenWithExternalTools" xml:space="preserve">ьЩ╕ы╢А ыПДъ╡мьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.Remotes" xml:space="preserve">ьЫРъ▓й</x:String>
+  <x:String x:Key="Text.Repository.Remotes.Add" xml:space="preserve">ьЫРъ▓й ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Repository.Resolve" xml:space="preserve">эХ┤ъ▓░</x:String>
+  <x:String x:Key="Text.Repository.Search" xml:space="preserve">ь╗ды░Л ъ▓АьГЙ</x:String>
+  <x:String x:Key="Text.Repository.Search.ByAuthor" xml:space="preserve">ьЮСьД▒ьЮР</x:String>
+  <x:String x:Key="Text.Repository.Search.ByCommitter" xml:space="preserve">ь╗ды░ЛэД░</x:String>
+  <x:String x:Key="Text.Repository.Search.ByContent" xml:space="preserve">ыВ┤ьЪй</x:String>
+  <x:String x:Key="Text.Repository.Search.ByMessage" xml:space="preserve">ыйФьЛЬьзА</x:String>
+  <x:String x:Key="Text.Repository.Search.ByPath" xml:space="preserve">ъ▓╜ыбЬ</x:String>
   <x:String x:Key="Text.Repository.Search.BySHA" xml:space="preserve">SHA</x:String>
-  <x:String x:Key="Text.Repository.Search.InCurrentBranch" xml:space="preserve">현재 브랜치</x:String>
-  <x:String x:Key="Text.Repository.ShowDecoratedCommitsOnly" xml:space="preserve">장식된(Decorated) 커밋만</x:String>
-  <x:String x:Key="Text.Repository.ShowFirstParentOnly" xml:space="preserve">첫 번째 부모만</x:String>
-  <x:String x:Key="Text.Repository.ShowFlags" xml:space="preserve">플래그 표시</x:String>
-  <x:String x:Key="Text.Repository.ShowLostCommits" xml:space="preserve">유실된(Lost) 커밋 표시</x:String>
-  <x:String x:Key="Text.Repository.ShowSubmodulesAsTree" xml:space="preserve">서브모듈을 트리로 표시</x:String>
-  <x:String x:Key="Text.Repository.ShowTagsAsTree" xml:space="preserve">태그를 트리로 표시</x:String>
-  <x:String x:Key="Text.Repository.Skip" xml:space="preserve">건너뛰기</x:String>
-  <x:String x:Key="Text.Repository.Statistics" xml:space="preserve">통계</x:String>
-  <x:String x:Key="Text.Repository.Submodules" xml:space="preserve">서브모듈</x:String>
-  <x:String x:Key="Text.Repository.Submodules.Add" xml:space="preserve">서브모듈 추가</x:String>
-  <x:String x:Key="Text.Repository.Submodules.Update" xml:space="preserve">서브모듈 업데이트</x:String>
-  <x:String x:Key="Text.Repository.Tags" xml:space="preserve">태그</x:String>
-  <x:String x:Key="Text.Repository.Tags.Add" xml:space="preserve">새 태그</x:String>
-  <x:String x:Key="Text.Repository.Tags.OrderByCreatorDate" xml:space="preserve">생성 날짜 순</x:String>
-  <x:String x:Key="Text.Repository.Tags.OrderByName" xml:space="preserve">이름 순</x:String>
-  <x:String x:Key="Text.Repository.Tags.Sort" xml:space="preserve">정렬</x:String>
-  <x:String x:Key="Text.Repository.Terminal" xml:space="preserve">터미널에서 열기</x:String>
-  <x:String x:Key="Text.Repository.ViewLogs" xml:space="preserve">로그 보기</x:String>
-  <x:String x:Key="Text.Repository.Visit" xml:space="preserve">브라우저에서 '{0}' 방문</x:String>
-  <x:String x:Key="Text.Repository.Worktrees" xml:space="preserve">워크트리</x:String>
-  <x:String x:Key="Text.Repository.Worktrees.Add" xml:space="preserve">워크트리 추가</x:String>
-  <x:String x:Key="Text.Repository.Worktrees.Prune" xml:space="preserve">정리</x:String>
-  <x:String x:Key="Text.RepositoryURL" xml:space="preserve">Git 저장소 URL</x:String>
-  <x:String x:Key="Text.Reset" xml:space="preserve">현재 브랜치를 리비전으로 리셋</x:String>
-  <x:String x:Key="Text.Reset.Mode" xml:space="preserve">리셋 모드:</x:String>
-  <x:String x:Key="Text.Reset.MoveTo" xml:space="preserve">이동 대상:</x:String>
-  <x:String x:Key="Text.Reset.Target" xml:space="preserve">현재 브랜치:</x:String>
-  <x:String x:Key="Text.ResetWithoutCheckout" xml:space="preserve">브랜치 리셋 (체크아웃 없음)</x:String>
-  <x:String x:Key="Text.ResetWithoutCheckout.MoveTo" xml:space="preserve">이동 대상:</x:String>
-  <x:String x:Key="Text.ResetWithoutCheckout.Target" xml:space="preserve">브랜치:</x:String>
-  <x:String x:Key="Text.RevealFile" xml:space="preserve">파일 탐색기에서 보기</x:String>
-  <x:String x:Key="Text.Revert" xml:space="preserve">커밋 되돌리기</x:String>
-  <x:String x:Key="Text.Revert.Commit" xml:space="preserve">커밋:</x:String>
-  <x:String x:Key="Text.Revert.CommitChanges" xml:space="preserve">되돌린 변경 사항 커밋</x:String>
-  <x:String x:Key="Text.Running" xml:space="preserve">실행 중. 잠시만 기다려주세요...</x:String>
-  <x:String x:Key="Text.Save" xml:space="preserve">저장</x:String>
-  <x:String x:Key="Text.SaveAs" xml:space="preserve">다른 이름으로 저장...</x:String>
-  <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">패치가 성공적으로 저장되었습니다!</x:String>
-  <x:String x:Key="Text.ScanRepositories" xml:space="preserve">저장소 스캔</x:String>
-  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">루트 디렉터리:</x:String>
-  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">다른 사용자 정의 디렉터리 스캔</x:String>
-  <x:String x:Key="Text.SelfUpdate" xml:space="preserve">업데이트 확인...</x:String>
-  <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">이 소프트웨어의 새 버전을 사용할 수 있습니다: </x:String>
-  <x:String x:Key="Text.SelfUpdate.Error" xml:space="preserve">업데이트 확인 실패!</x:String>
-  <x:String x:Key="Text.SelfUpdate.GotoDownload" xml:space="preserve">다운로드</x:String>
-  <x:String x:Key="Text.SelfUpdate.IgnoreThisVersion" xml:space="preserve">이 버전 건너뛰기</x:String>
-  <x:String x:Key="Text.SelfUpdate.Title" xml:space="preserve">소프트웨어 업데이트</x:String>
-  <x:String x:Key="Text.SelfUpdate.UpToDate" xml:space="preserve">현재 사용 가능한 업데이트가 없습니다.</x:String>
-  <x:String x:Key="Text.SetSubmoduleBranch" xml:space="preserve">서브모듈 브랜치 설정</x:String>
-  <x:String x:Key="Text.SetSubmoduleBranch.Submodule" xml:space="preserve">서브모듈:</x:String>
-  <x:String x:Key="Text.SetSubmoduleBranch.Current" xml:space="preserve">현재:</x:String>
-  <x:String x:Key="Text.SetSubmoduleBranch.New" xml:space="preserve">변경:</x:String>
-  <x:String x:Key="Text.SetSubmoduleBranch.New.Tip" xml:space="preserve">선택 사항. 비어 있으면 기본값으로 설정됩니다.</x:String>
-  <x:String x:Key="Text.SetUpstream" xml:space="preserve">추적 브랜치 설정</x:String>
-  <x:String x:Key="Text.SetUpstream.Local" xml:space="preserve">브랜치:</x:String>
-  <x:String x:Key="Text.SetUpstream.Unset" xml:space="preserve">업스트림 설정 해제</x:String>
-  <x:String x:Key="Text.SetUpstream.Upstream" xml:space="preserve">업스트림:</x:String>
-  <x:String x:Key="Text.SHALinkCM.CopySHA" xml:space="preserve">SHA 복사</x:String>
-  <x:String x:Key="Text.SHALinkCM.NavigateTo" xml:space="preserve">이동</x:String>
-  <x:String x:Key="Text.SSHKey" xml:space="preserve">SSH 개인 키:</x:String>
-  <x:String x:Key="Text.SSHKey.Placeholder" xml:space="preserve">개인 SSH 키 저장 경로</x:String>
-  <x:String x:Key="Text.Start" xml:space="preserve">시작</x:String>
-  <x:String x:Key="Text.Stash" xml:space="preserve">스태시</x:String>
-  <x:String x:Key="Text.Stash.IncludeUntracked" xml:space="preserve">추적하지 않는 파일 포함</x:String>
-  <x:String x:Key="Text.Stash.Message" xml:space="preserve">메시지:</x:String>
-  <x:String x:Key="Text.Stash.Message.Placeholder" xml:space="preserve">선택 사항. 이 스태시의 메시지</x:String>
-  <x:String x:Key="Text.Stash.Mode" xml:space="preserve">모드:</x:String>
-  <x:String x:Key="Text.Stash.OnlyStagedChanges" xml:space="preserve">스테이징된 변경 사항만</x:String>
-  <x:String x:Key="Text.Stash.TipForSelectedFiles" xml:space="preserve">선택한 파일의 스테이징된 변경 사항과 스테이징되지 않은 변경 사항이 모두 스태시됩니다!!!</x:String>
-  <x:String x:Key="Text.Stash.Title" xml:space="preserve">로컬 변경 사항 스태시</x:String>
-  <x:String x:Key="Text.StashCM.Apply" xml:space="preserve">적용</x:String>
-  <x:String x:Key="Text.StashCM.CopyMessage" xml:space="preserve">메시지 복사</x:String>
-  <x:String x:Key="Text.StashCM.Drop" xml:space="preserve">삭제</x:String>
-  <x:String x:Key="Text.StashCM.SaveAsPatch" xml:space="preserve">패치로 저장...</x:String>
-  <x:String x:Key="Text.StashDropConfirm" xml:space="preserve">스태시 삭제</x:String>
-  <x:String x:Key="Text.StashDropConfirm.Label" xml:space="preserve">삭제:</x:String>
-  <x:String x:Key="Text.Stashes" xml:space="preserve">스태시</x:String>
-  <x:String x:Key="Text.Stashes.Changes" xml:space="preserve">변경 사항</x:String>
-  <x:String x:Key="Text.Stashes.Stashes" xml:space="preserve">스태시</x:String>
-  <x:String x:Key="Text.Statistics" xml:space="preserve">통계</x:String>
-  <x:String x:Key="Text.Statistics.Overview" xml:space="preserve">개요</x:String>
-  <x:String x:Key="Text.Statistics.ThisMonth" xml:space="preserve">이번 달</x:String>
-  <x:String x:Key="Text.Statistics.ThisWeek" xml:space="preserve">이번 주</x:String>
-  <x:String x:Key="Text.Statistics.TotalAuthors" xml:space="preserve">작성자: </x:String>
-  <x:String x:Key="Text.Statistics.TotalCommits" xml:space="preserve">커밋: </x:String>
-  <x:String x:Key="Text.Submodule" xml:space="preserve">서브모듈</x:String>
-  <x:String x:Key="Text.Submodule.Add" xml:space="preserve">서브모듈 추가</x:String>
-  <x:String x:Key="Text.Submodule.Branch" xml:space="preserve">브랜치</x:String>
-  <x:String x:Key="Text.Submodule.CopyBranch" xml:space="preserve">브랜치</x:String>
-  <x:String x:Key="Text.Submodule.CopyPath" xml:space="preserve">상대 경로</x:String>
-  <x:String x:Key="Text.Submodule.Deinit" xml:space="preserve">초기화 해제</x:String>
-  <x:String x:Key="Text.Submodule.FetchNested" xml:space="preserve">중첩된 서브모듈 Fetch</x:String>
-  <x:String x:Key="Text.Submodule.Histories" xml:space="preserve">히스토리</x:String>
-  <x:String x:Key="Text.Submodule.Move" xml:space="preserve">이동</x:String>
-  <x:String x:Key="Text.Submodule.Open" xml:space="preserve">저장소 열기</x:String>
-  <x:String x:Key="Text.Submodule.RelativePath" xml:space="preserve">상대 경로:</x:String>
-  <x:String x:Key="Text.Submodule.RelativePath.Placeholder" xml:space="preserve">이 모듈을 저장할 상대 폴더입니다.</x:String>
-  <x:String x:Key="Text.Submodule.Remove" xml:space="preserve">삭제</x:String>
-  <x:String x:Key="Text.Submodule.SetBranch" xml:space="preserve">브랜치 설정</x:String>
-  <x:String x:Key="Text.Submodule.SetURL" xml:space="preserve">URL 변경</x:String>
-  <x:String x:Key="Text.Submodule.Status" xml:space="preserve">상태</x:String>
-  <x:String x:Key="Text.Submodule.Status.Modified" xml:space="preserve">수정됨</x:String>
-  <x:String x:Key="Text.Submodule.Status.NotInited" xml:space="preserve">초기화 안 됨</x:String>
-  <x:String x:Key="Text.Submodule.Status.RevisionChanged" xml:space="preserve">리비전 변경됨</x:String>
-  <x:String x:Key="Text.Submodule.Update" xml:space="preserve">업데이트</x:String>
+  <x:String x:Key="Text.Repository.Search.InCurrentBranch" xml:space="preserve">эШДьЮм ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.Repository.ShowDecoratedCommitsOnly" xml:space="preserve">ьЮеьЛЭыРЬ(Decorated) ь╗ды░ЛызМ</x:String>
+  <x:String x:Key="Text.Repository.ShowFirstParentOnly" xml:space="preserve">ь▓л ы▓Иьз╕ ы╢АыкиызМ</x:String>
+  <x:String x:Key="Text.Repository.ShowFlags" xml:space="preserve">эФМыЮШъ╖╕ эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Repository.ShowLostCommits" xml:space="preserve">ьЬаьЛдыРЬ(Lost) ь╗ды░Л эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Repository.ShowSubmodulesAsTree" xml:space="preserve">ьДЬы╕МыкиыУИьЭД эК╕ыжмыбЬ эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Repository.ShowTagsAsTree" xml:space="preserve">эГЬъ╖╕ые╝ эК╕ыжмыбЬ эСЬьЛЬ</x:String>
+  <x:String x:Key="Text.Repository.Skip" xml:space="preserve">ъ▒┤ыДИыЫ░ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.Statistics" xml:space="preserve">эЖ╡ъ│Д</x:String>
+  <x:String x:Key="Text.Repository.Submodules" xml:space="preserve">ьДЬы╕МыкиыУИ</x:String>
+  <x:String x:Key="Text.Repository.Submodules.Add" xml:space="preserve">ьДЬы╕МыкиыУИ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Repository.Submodules.Update" xml:space="preserve">ьДЬы╕МыкиыУИ ьЧЕыН░ьЭ┤эК╕</x:String>
+  <x:String x:Key="Text.Repository.Tags" xml:space="preserve">эГЬъ╖╕</x:String>
+  <x:String x:Key="Text.Repository.Tags.Add" xml:space="preserve">ьГИ эГЬъ╖╕</x:String>
+  <x:String x:Key="Text.Repository.Tags.OrderByCreatorDate" xml:space="preserve">ьГЭьД▒ ыВаьзЬ ьИЬ</x:String>
+  <x:String x:Key="Text.Repository.Tags.OrderByName" xml:space="preserve">ьЭ┤ыжД ьИЬ</x:String>
+  <x:String x:Key="Text.Repository.Tags.Sort" xml:space="preserve">ьаХыам</x:String>
+  <x:String x:Key="Text.Repository.Terminal" xml:space="preserve">эД░ып╕ыДРьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.ViewLogs" xml:space="preserve">ыбЬъ╖╕ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.Repository.Visit" xml:space="preserve">ы╕МыЭ╝ьЪ░ьаАьЧРьДЬ '{0}' ы░йым╕</x:String>
+  <x:String x:Key="Text.Repository.Worktrees" xml:space="preserve">ьЫМэБмэК╕ыжм</x:String>
+  <x:String x:Key="Text.Repository.Worktrees.Add" xml:space="preserve">ьЫМэБмэК╕ыжм ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Repository.Worktrees.Prune" xml:space="preserve">ьаХыжм</x:String>
+  <x:String x:Key="Text.RepositoryURL" xml:space="preserve">Git ьаАьЮеьЖМ URL</x:String>
+  <x:String x:Key="Text.Reset" xml:space="preserve">эШДьЮм ы╕МыЮЬь╣Шые╝ ыжмы╣ДьаДьЬ╝ыбЬ ыжмьЕЛ</x:String>
+  <x:String x:Key="Text.Reset.Mode" xml:space="preserve">ыжмьЕЛ ыкиыУЬ:</x:String>
+  <x:String x:Key="Text.Reset.MoveTo" xml:space="preserve">ьЭ┤ыПЩ ыМАьГБ:</x:String>
+  <x:String x:Key="Text.Reset.Target" xml:space="preserve">эШДьЮм ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.ResetWithoutCheckout" xml:space="preserve">ы╕МыЮЬь╣Ш ыжмьЕЛ (ь▓┤эБмьХДьЫГ ьЧЖьЭМ)</x:String>
+  <x:String x:Key="Text.ResetWithoutCheckout.MoveTo" xml:space="preserve">ьЭ┤ыПЩ ыМАьГБ:</x:String>
+  <x:String x:Key="Text.ResetWithoutCheckout.Target" xml:space="preserve">ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.RevealFile" xml:space="preserve">эММьЭ╝ эГРьГЙъ╕░ьЧРьДЬ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.Revert" xml:space="preserve">ь╗ды░Л ыРШыПМыжмъ╕░</x:String>
+  <x:String x:Key="Text.Revert.Commit" xml:space="preserve">ь╗ды░Л:</x:String>
+  <x:String x:Key="Text.Revert.CommitChanges" xml:space="preserve">ыРШыПМыж░ ы│Аъ▓╜ ьВмэХн ь╗ды░Л</x:String>
+  <x:String x:Key="Text.Running" xml:space="preserve">ьЛдэЦЙ ьдС. ьЮаьЛЬызМ ъ╕░ыЛдыадьг╝ьД╕ьЪФ...</x:String>
+  <x:String x:Key="Text.Save" xml:space="preserve">ьаАьЮе</x:String>
+  <x:String x:Key="Text.SaveAs" xml:space="preserve">ыЛдые╕ ьЭ┤ыжДьЬ╝ыбЬ ьаАьЮе...</x:String>
+  <x:String x:Key="Text.SaveAsPatchSuccess" xml:space="preserve">эМиь╣Шъ░А ьД▒ъ│╡ьаБьЬ╝ыбЬ ьаАьЮеыРШьЧИьК╡ыЛИыЛд!</x:String>
+  <x:String x:Key="Text.ScanRepositories" xml:space="preserve">ьаАьЮеьЖМ ьКдь║Ф</x:String>
+  <x:String x:Key="Text.ScanRepositories.RootDir" xml:space="preserve">ыгиэК╕ ыФФыаЙэД░ыжм:</x:String>
+  <x:String x:Key="Text.ScanRepositories.UseCustomDir" xml:space="preserve">ыЛдые╕ ьВмьЪйьЮР ьаХьЭШ ыФФыаЙэД░ыжм ьКдь║Ф</x:String>
+  <x:String x:Key="Text.SelfUpdate" xml:space="preserve">ьЧЕыН░ьЭ┤эК╕ эЩХьЭ╕...</x:String>
+  <x:String x:Key="Text.SelfUpdate.Available" xml:space="preserve">ьЭ┤ ьЖМэФДэК╕ьЫиьЦ┤ьЭШ ьГИ ы▓ДьаДьЭД ьВмьЪйэХа ьИШ ьЮИьК╡ыЛИыЛд: </x:String>
+  <x:String x:Key="Text.SelfUpdate.CurrentVersion" xml:space="preserve">эШДьЮм ы▓ДьаД:</x:String>
+  <x:String x:Key="Text.SelfUpdate.Error" xml:space="preserve">ьЧЕыН░ьЭ┤эК╕ эЩХьЭ╕ ьЛдэМи!</x:String>
+  <x:String x:Key="Text.SelfUpdate.GotoDownload" xml:space="preserve">ыЛдьЪ┤ыбЬыУЬ</x:String>
+  <x:String x:Key="Text.SelfUpdate.IgnoreThisVersion" xml:space="preserve">ьЭ┤ ы▓ДьаД ъ▒┤ыДИыЫ░ъ╕░</x:String>
+  <x:String x:Key="Text.SelfUpdate.ReleaseDate" xml:space="preserve">ьГИ ы▓ДьаД ыж┤ыжмьКд ыВаьзЬ:</x:String>
+  <x:String x:Key="Text.SelfUpdate.Title" xml:space="preserve">ьЖМэФДэК╕ьЫиьЦ┤ ьЧЕыН░ьЭ┤эК╕</x:String>
+  <x:String x:Key="Text.SelfUpdate.UpToDate" xml:space="preserve">эШДьЮм ьВмьЪй ъ░АыКеэХЬ ьЧЕыН░ьЭ┤эК╕ъ░А ьЧЖьК╡ыЛИыЛд.</x:String>
+  <x:String x:Key="Text.SetSubmoduleBranch" xml:space="preserve">ьДЬы╕МыкиыУИ ы╕МыЮЬь╣Ш ьДдьаХ</x:String>
+  <x:String x:Key="Text.SetSubmoduleBranch.Submodule" xml:space="preserve">ьДЬы╕МыкиыУИ:</x:String>
+  <x:String x:Key="Text.SetSubmoduleBranch.Current" xml:space="preserve">эШДьЮм:</x:String>
+  <x:String x:Key="Text.SetSubmoduleBranch.New" xml:space="preserve">ы│Аъ▓╜:</x:String>
+  <x:String x:Key="Text.SetSubmoduleBranch.New.Tip" xml:space="preserve">ьДаэГЭ ьВмэХн. ы╣ДьЦ┤ ьЮИьЬ╝ый┤ ъ╕░ы│╕ъ░ТьЬ╝ыбЬ ьДдьаХыРйыЛИыЛд.</x:String>
+  <x:String x:Key="Text.SetUpstream" xml:space="preserve">ь╢ФьаБ ы╕МыЮЬь╣Ш ьДдьаХ</x:String>
+  <x:String x:Key="Text.SetUpstream.Local" xml:space="preserve">ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.SetUpstream.Unset" xml:space="preserve">ьЧЕьКдэК╕ыж╝ ьДдьаХ эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.SetUpstream.Upstream" xml:space="preserve">ьЧЕьКдэК╕ыж╝:</x:String>
+  <x:String x:Key="Text.SHALinkCM.CopySHA" xml:space="preserve">SHA ы│╡ьВм</x:String>
+  <x:String x:Key="Text.SHALinkCM.NavigateTo" xml:space="preserve">ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.SSHKey" xml:space="preserve">SSH ъ░ЬьЭ╕ эВд:</x:String>
+  <x:String x:Key="Text.SSHKey.Placeholder" xml:space="preserve">ъ░ЬьЭ╕ SSH эВд ьаАьЮе ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Start" xml:space="preserve">ьЛЬьЮС</x:String>
+  <x:String x:Key="Text.Stash" xml:space="preserve">ьКдэГЬьЛЬ</x:String>
+  <x:String x:Key="Text.Stash.IncludeUntracked" xml:space="preserve">ь╢ФьаБэХШьзА ьХКыКФ эММьЭ╝ эПмэХи</x:String>
+  <x:String x:Key="Text.Stash.Message" xml:space="preserve">ыйФьЛЬьзА:</x:String>
+  <x:String x:Key="Text.Stash.Message.Placeholder" xml:space="preserve">ьДаэГЭ ьВмэХн. ьЭ┤ ьКдэГЬьЛЬьЭШ ыйФьЛЬьзА</x:String>
+  <x:String x:Key="Text.Stash.Mode" xml:space="preserve">ыкиыУЬ:</x:String>
+  <x:String x:Key="Text.Stash.OnlyStagedChanges" xml:space="preserve">ьКдэЕМьЭ┤ьзХыРЬ ы│Аъ▓╜ ьВмэХнызМ</x:String>
+  <x:String x:Key="Text.Stash.TipForSelectedFiles" xml:space="preserve">ьДаэГЭэХЬ эММьЭ╝ьЭШ ьКдэЕМьЭ┤ьзХыРЬ ы│Аъ▓╜ ьВмэХнъ│╝ ьКдэЕМьЭ┤ьзХыРШьзА ьХКьЭА ы│Аъ▓╜ ьВмэХньЭ┤ ыкиыСР ьКдэГЬьЛЬыРйыЛИыЛд!!!</x:String>
+  <x:String x:Key="Text.Stash.Title" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн ьКдэГЬьЛЬ</x:String>
+  <x:String x:Key="Text.StashCM.Apply" xml:space="preserve">ьаБьЪй</x:String>
+  <x:String x:Key="Text.StashCM.ApplyFileChanges" xml:space="preserve">ы│Аъ▓╜ ьВмэХн ьаБьЪй</x:String>
+  <x:String x:Key="Text.StashCM.Branch" xml:space="preserve">ьГИ ы╕МыЮЬь╣Ш ь▓┤эБмьХДьЫГ</x:String>
+  <x:String x:Key="Text.StashCM.CopyMessage" xml:space="preserve">ыйФьЛЬьзА ы│╡ьВм</x:String>
+  <x:String x:Key="Text.StashCM.Drop" xml:space="preserve">ьВньаЬ</x:String>
+  <x:String x:Key="Text.StashCM.SaveAsPatch" xml:space="preserve">эМиь╣ШыбЬ ьаАьЮе...</x:String>
+  <x:String x:Key="Text.StashDropConfirm" xml:space="preserve">ьКдэГЬьЛЬ ьВньаЬ</x:String>
+  <x:String x:Key="Text.StashDropConfirm.Label" xml:space="preserve">ьВньаЬ:</x:String>
+  <x:String x:Key="Text.Stashes" xml:space="preserve">ьКдэГЬьЛЬ</x:String>
+  <x:String x:Key="Text.Stashes.Changes" xml:space="preserve">ы│Аъ▓╜ ьВмэХн</x:String>
+  <x:String x:Key="Text.Stashes.Stashes" xml:space="preserve">ьКдэГЬьЛЬ</x:String>
+  <x:String x:Key="Text.Statistics" xml:space="preserve">эЖ╡ъ│Д</x:String>
+  <x:String x:Key="Text.Statistics.Overview" xml:space="preserve">ъ░ЬьЪФ</x:String>
+  <x:String x:Key="Text.Statistics.ThisMonth" xml:space="preserve">ьЭ┤ы▓И ыЛм</x:String>
+  <x:String x:Key="Text.Statistics.ThisWeek" xml:space="preserve">ьЭ┤ы▓И ьг╝</x:String>
+  <x:String x:Key="Text.Statistics.TotalAuthors" xml:space="preserve">ьЮСьД▒ьЮР: </x:String>
+  <x:String x:Key="Text.Statistics.TotalCommits" xml:space="preserve">ь╗ды░Л: </x:String>
+  <x:String x:Key="Text.Submodule" xml:space="preserve">ьДЬы╕МыкиыУИ</x:String>
+  <x:String x:Key="Text.Submodule.Add" xml:space="preserve">ьДЬы╕МыкиыУИ ь╢Фъ░А</x:String>
+  <x:String x:Key="Text.Submodule.Branch" xml:space="preserve">ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.Submodule.CopyBranch" xml:space="preserve">ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.Submodule.CopyPath" xml:space="preserve">ьГБыМА ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Submodule.Deinit" xml:space="preserve">ь┤Иъ╕░эЩФ эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.Submodule.FetchNested" xml:space="preserve">ьдСь▓йыРЬ ьДЬы╕МыкиыУИ Fetch</x:String>
+  <x:String x:Key="Text.Submodule.Histories" xml:space="preserve">эЮИьКдэЖаыжм</x:String>
+  <x:String x:Key="Text.Submodule.Move" xml:space="preserve">ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Submodule.Open" xml:space="preserve">ьаАьЮеьЖМ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Submodule.RelativePath" xml:space="preserve">ьГБыМА ъ▓╜ыбЬ:</x:String>
+  <x:String x:Key="Text.Submodule.RelativePath.Placeholder" xml:space="preserve">ьЭ┤ ыкиыУИьЭД ьаАьЮеэХа ьГБыМА эП┤ыНФьЮЕыЛИыЛд.</x:String>
+  <x:String x:Key="Text.Submodule.Remove" xml:space="preserve">ьВньаЬ</x:String>
+  <x:String x:Key="Text.Submodule.SetBranch" xml:space="preserve">ы╕МыЮЬь╣Ш ьДдьаХ</x:String>
+  <x:String x:Key="Text.Submodule.SetURL" xml:space="preserve">URL ы│Аъ▓╜</x:String>
+  <x:String x:Key="Text.Submodule.Status" xml:space="preserve">ьГБэГЬ</x:String>
+  <x:String x:Key="Text.Submodule.Status.Modified" xml:space="preserve">ьИШьаХыРи</x:String>
+  <x:String x:Key="Text.Submodule.Status.NotInited" xml:space="preserve">ь┤Иъ╕░эЩФ ьХИ ыРи</x:String>
+  <x:String x:Key="Text.Submodule.Status.RevisionChanged" xml:space="preserve">ыжмы╣ДьаД ы│Аъ▓╜ыРи</x:String>
+  <x:String x:Key="Text.Submodule.Status.Unmerged" xml:space="preserve">ы│СэХйыРШьзА ьХКьЭМ</x:String>
+  <x:String x:Key="Text.Submodule.Update" xml:space="preserve">ьЧЕыН░ьЭ┤эК╕</x:String>
   <x:String x:Key="Text.Submodule.URL" xml:space="preserve">URL</x:String>
-  <x:String x:Key="Text.Sure" xml:space="preserve">확인</x:String>
-  <x:String x:Key="Text.Tag.Tagger" xml:space="preserve">태그 생성자</x:String>
-  <x:String x:Key="Text.Tag.Time" xml:space="preserve">시간</x:String>
-  <x:String x:Key="Text.TagCM.Copy.Message" xml:space="preserve">메시지</x:String>
-  <x:String x:Key="Text.TagCM.Copy.Name" xml:space="preserve">이름</x:String>
-  <x:String x:Key="Text.TagCM.Copy.Tagger" xml:space="preserve">태그 생성자</x:String>
-  <x:String x:Key="Text.TagCM.CopyName" xml:space="preserve">태그 이름 복사</x:String>
-  <x:String x:Key="Text.TagCM.CustomAction" xml:space="preserve">사용자 지정 작업</x:String>
-  <x:String x:Key="Text.TagCM.Delete" xml:space="preserve">${0}$ 삭제...</x:String>
-  <x:String x:Key="Text.TagCM.DeleteMultiple" xml:space="preserve">선택한 {0}개의 태그 삭제...</x:String>
-  <x:String x:Key="Text.TagCM.Push" xml:space="preserve">${0}$ 푸시...</x:String>
-  <x:String x:Key="Text.UpdateSubmodules" xml:space="preserve">서브모듈 업데이트</x:String>
-  <x:String x:Key="Text.UpdateSubmodules.All" xml:space="preserve">모든 서브모듈</x:String>
-  <x:String x:Key="Text.UpdateSubmodules.Init" xml:space="preserve">필요시 초기화</x:String>
-  <x:String x:Key="Text.UpdateSubmodules.Target" xml:space="preserve">서브모듈:</x:String>
-  <x:String x:Key="Text.UpdateSubmodules.UpdateToRemoteTrackingBranch" xml:space="preserve">서브모듈의 원격 추적 브랜치로 업데이트</x:String>
+  <x:String x:Key="Text.SubmoduleRevisionCompare" xml:space="preserve">ьДЬы╕МыкиыУИ ы│Аъ▓╜ ьГБьД╕</x:String>
+  <x:String x:Key="Text.SubmoduleRevisionCompare.OpenDetails" xml:space="preserve">ьГБьД╕ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Sure" xml:space="preserve">эЩХьЭ╕</x:String>
+  <x:String x:Key="Text.Tag.Tagger" xml:space="preserve">эГЬъ╖╕ ьГЭьД▒ьЮР</x:String>
+  <x:String x:Key="Text.Tag.Time" xml:space="preserve">ьЛЬъ░Д</x:String>
+  <x:String x:Key="Text.TagCM.CompareTwo" xml:space="preserve">эГЬъ╖╕ 2ъ░Ь ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.TagCM.CompareWith" xml:space="preserve">ыЛдьЭМъ│╝ ы╣Дъ╡Р...</x:String>
+  <x:String x:Key="Text.TagCM.CompareWithHead" xml:space="preserve">HEADьЩА ы╣Дъ╡Р</x:String>
+  <x:String x:Key="Text.TagCM.Copy.Message" xml:space="preserve">ыйФьЛЬьзА</x:String>
+  <x:String x:Key="Text.TagCM.Copy.Name" xml:space="preserve">ьЭ┤ыжД</x:String>
+  <x:String x:Key="Text.TagCM.Copy.Tagger" xml:space="preserve">эГЬъ╖╕ ьГЭьД▒ьЮР</x:String>
+  <x:String x:Key="Text.TagCM.CopyName" xml:space="preserve">эГЬъ╖╕ ьЭ┤ыжД ы│╡ьВм</x:String>
+  <x:String x:Key="Text.TagCM.CustomAction" xml:space="preserve">ьВмьЪйьЮР ьзАьаХ ьЮСьЧЕ</x:String>
+  <x:String x:Key="Text.TagCM.Delete" xml:space="preserve">${0}$ ьВньаЬ...</x:String>
+  <x:String x:Key="Text.TagCM.DeleteMultiple" xml:space="preserve">ьДаэГЭэХЬ {0}ъ░ЬьЭШ эГЬъ╖╕ ьВньаЬ...</x:String>
+  <x:String x:Key="Text.TagCM.Push" xml:space="preserve">${0}$ эС╕ьЛЬ...</x:String>
+  <x:String x:Key="Text.UpdateSubmodules" xml:space="preserve">ьДЬы╕МыкиыУИ ьЧЕыН░ьЭ┤эК╕</x:String>
+  <x:String x:Key="Text.UpdateSubmodules.All" xml:space="preserve">ыкиыУа ьДЬы╕МыкиыУИ</x:String>
+  <x:String x:Key="Text.UpdateSubmodules.Init" xml:space="preserve">эХДьЪФьЛЬ ь┤Иъ╕░эЩФ</x:String>
+  <x:String x:Key="Text.UpdateSubmodules.Target" xml:space="preserve">ьДЬы╕МыкиыУИ:</x:String>
+  <x:String x:Key="Text.UpdateSubmodules.UpdateToRemoteTrackingBranch" xml:space="preserve">ьДЬы╕МыкиыУИьЭШ ьЫРъ▓й ь╢ФьаБ ы╕МыЮЬь╣ШыбЬ ьЧЕыН░ьЭ┤эК╕</x:String>
   <x:String x:Key="Text.URL" xml:space="preserve">URL:</x:String>
-  <x:String x:Key="Text.ViewLogs" xml:space="preserve">로그</x:String>
-  <x:String x:Key="Text.ViewLogs.Clear" xml:space="preserve">모두 지우기</x:String>
-  <x:String x:Key="Text.ViewLogs.CopyLog" xml:space="preserve">복사</x:String>
-  <x:String x:Key="Text.ViewLogs.Delete" xml:space="preserve">삭제</x:String>
-  <x:String x:Key="Text.Warn" xml:space="preserve">경고</x:String>
-  <x:String x:Key="Text.Welcome" xml:space="preserve">시작 페이지</x:String>
-  <x:String x:Key="Text.Welcome.AddRootFolder" xml:space="preserve">그룹 생성</x:String>
-  <x:String x:Key="Text.Welcome.AddSubFolder" xml:space="preserve">하위 그룹 생성</x:String>
-  <x:String x:Key="Text.Welcome.Clone" xml:space="preserve">저장소 복제</x:String>
-  <x:String x:Key="Text.Welcome.Delete" xml:space="preserve">삭제</x:String>
-  <x:String x:Key="Text.Welcome.DragDropTip" xml:space="preserve">폴더 끌어다 놓기 지원. 사용자 정의 그룹화 지원.</x:String>
-  <x:String x:Key="Text.Welcome.Edit" xml:space="preserve">편집</x:String>
-  <x:String x:Key="Text.Welcome.Move" xml:space="preserve">다른 그룹으로 이동</x:String>
-  <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">모든 저장소 열기</x:String>
-  <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">저장소 열기</x:String>
-  <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">터미널 열기</x:String>
-  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">기본 복제 디렉터리의 저장소 다시 스캔</x:String>
-  <x:String x:Key="Text.Welcome.Search" xml:space="preserve">저장소 검색...</x:String>
-  <x:String x:Key="Text.WorkingCopy" xml:space="preserve">로컬 변경 사항</x:String>
-  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git 무시</x:String>
-  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.Extension" xml:space="preserve">모든 *{0} 파일 무시</x:String>
-  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.ExtensionInSameFolder" xml:space="preserve">같은 폴더의 *{0} 파일 무시</x:String>
-  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.InFolder" xml:space="preserve">이 폴더의 추적하지 않는 파일 무시</x:String>
-  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.SingleFile" xml:space="preserve">이 파일만 무시</x:String>
-  <x:String x:Key="Text.WorkingCopy.Amend" xml:space="preserve">수정</x:String>
-  <x:String x:Key="Text.WorkingCopy.CanStageTip" xml:space="preserve">이제 이 파일을 스테이징할 수 있습니다.</x:String>
-  <x:String x:Key="Text.WorkingCopy.ClearCommitHistories" xml:space="preserve">히스토리 지우기</x:String>
-  <x:String x:Key="Text.WorkingCopy.ClearCommitHistories.Confirm" xml:space="preserve">모든 커밋 메시지 히스토리를 지우시겠습니까? 이 작업은 되돌릴 수 없습니다.</x:String>
-  <x:String x:Key="Text.WorkingCopy.Commit" xml:space="preserve">커밋</x:String>
-  <x:String x:Key="Text.WorkingCopy.CommitAndPush" xml:space="preserve">커밋 &amp; 푸시</x:String>
-  <x:String x:Key="Text.WorkingCopy.CommitMessageHelper" xml:space="preserve">템플릿/히스토리</x:String>
-  <x:String x:Key="Text.WorkingCopy.CommitTip" xml:space="preserve">클릭 이벤트 트리거</x:String>
-  <x:String x:Key="Text.WorkingCopy.CommitToEdit" xml:space="preserve">커밋 (수정)</x:String>
-  <x:String x:Key="Text.WorkingCopy.CommitWithAutoStage" xml:space="preserve">모든 변경 사항 스테이징 후 커밋</x:String>
-  <x:String x:Key="Text.WorkingCopy.ConfirmCommitWithDetachedHead">분리된(detached) HEAD에 커밋을 생성하고 있습니다. 계속하시겠습니까?</x:String>
-  <x:String x:Key="Text.WorkingCopy.ConfirmCommitWithFilter">{0}개의 파일을 스테이징했지만 {1}개의 파일만 표시됩니다 ({2}개의 파일은 필터링됨). 계속하시겠습니까?</x:String>
-  <x:String x:Key="Text.WorkingCopy.Conflicts" xml:space="preserve">충돌 감지됨</x:String>
-  <x:String x:Key="Text.WorkingCopy.Conflicts.OpenExternalMergeToolAllConflicts" xml:space="preserve">모든 충돌을 외부 병합 도구에서 열기</x:String>
-  <x:String x:Key="Text.WorkingCopy.Conflicts.Resolved" xml:space="preserve">파일 충돌 해결됨</x:String>
-  <x:String x:Key="Text.WorkingCopy.Conflicts.UseMine" xml:space="preserve">내 것 사용</x:String>
-  <x:String x:Key="Text.WorkingCopy.Conflicts.UseTheirs" xml:space="preserve">상대방 것 사용</x:String>
-  <x:String x:Key="Text.WorkingCopy.IncludeUntracked" xml:space="preserve">추적하지 않는 파일 포함</x:String>
-  <x:String x:Key="Text.WorkingCopy.NoCommitHistories" xml:space="preserve">최근 입력한 메시지 없음</x:String>
-  <x:String x:Key="Text.WorkingCopy.NoCommitTemplates" xml:space="preserve">커밋 템플릿 없음</x:String>
-  <x:String x:Key="Text.WorkingCopy.NoVerify" xml:space="preserve">검증 안 함</x:String>
-  <x:String x:Key="Text.WorkingCopy.ResetAuthor" xml:space="preserve">작성자 리셋</x:String>
-  <x:String x:Key="Text.WorkingCopy.SignOff" xml:space="preserve">서명(SignOff)</x:String>
-  <x:String x:Key="Text.WorkingCopy.Staged" xml:space="preserve">스테이징됨</x:String>
-  <x:String x:Key="Text.WorkingCopy.Staged.Unstage" xml:space="preserve">언스테이지</x:String>
-  <x:String x:Key="Text.WorkingCopy.Staged.UnstageAll" xml:space="preserve">모두 언스테이지</x:String>
-  <x:String x:Key="Text.WorkingCopy.Unstaged" xml:space="preserve">스테이징 안 됨</x:String>
-  <x:String x:Key="Text.WorkingCopy.Unstaged.Stage" xml:space="preserve">스테이지</x:String>
-  <x:String x:Key="Text.WorkingCopy.Unstaged.StageAll" xml:space="preserve">모두 스테이지</x:String>
-  <x:String x:Key="Text.WorkingCopy.Unstaged.ViewAssumeUnchanged" xml:space="preserve">변경되지 않음으로 간주된 파일 보기</x:String>
-  <x:String x:Key="Text.WorkingCopy.UseCommitTemplate" xml:space="preserve">템플릿: ${0}$</x:String>
-  <x:String x:Key="Text.Workspace" xml:space="preserve">작업 공간: </x:String>
-  <x:String x:Key="Text.Workspace.Configure" xml:space="preserve">작업 공간 설정...</x:String>
-  <x:String x:Key="Text.Worktree" xml:space="preserve">워크트리</x:String>
-  <x:String x:Key="Text.Worktree.CopyPath" xml:space="preserve">경로 복사</x:String>
-  <x:String x:Key="Text.Worktree.Lock" xml:space="preserve">잠금</x:String>
-  <x:String x:Key="Text.Worktree.Open" xml:space="preserve">열기</x:String>
-  <x:String x:Key="Text.Worktree.Remove" xml:space="preserve">제거</x:String>
-  <x:String x:Key="Text.Worktree.Unlock" xml:space="preserve">잠금 해제</x:String>
-  <x:String x:Key="Text.FileCM.Commit2Branch" xml:space="preserve">선택 항목을 다른 브랜치로 커밋...</x:String>
-  <x:String x:Key="Text.DirectCommit.Title" xml:space="preserve">다른 브랜치로 커밋</x:String>
-  <x:String x:Key="Text.DirectCommit.TargetBranch" xml:space="preserve">대상 브랜치:</x:String>
-  <x:String x:Key="Text.DirectCommit.Message" xml:space="preserve">커밋 메시지:</x:String>
-  <x:String x:Key="Text.DirectCommit.Message.Placeholder" xml:space="preserve">여기에 커밋 메시지를 입력하세요...</x:String>
-  <x:String x:Key="Text.DirectCommit.Discard" xml:space="preserve">커밋 후 현재 작업 복사본에서 삭제</x:String>
-  <x:String x:Key="Text.DirectCommit.ConflictsDetected" xml:space="preserve">경고: 충돌이 감지되었습니다. 일부 파일이 대상 브랜치에서 다른 변경 사항을 포함하고 있습니다!</x:String>
-  <x:String x:Key="Text.DirectCommit.ForceOverwrite" xml:space="preserve">대상 브랜치의 충돌을 강제로 덮어쓰기</x:String>
+  <x:String x:Key="Text.ViewLogs" xml:space="preserve">ыбЬъ╖╕</x:String>
+  <x:String x:Key="Text.ViewLogs.Clear" xml:space="preserve">ыкиыСР ьзАьЪ░ъ╕░</x:String>
+  <x:String x:Key="Text.ViewLogs.CopyLog" xml:space="preserve">ы│╡ьВм</x:String>
+  <x:String x:Key="Text.ViewLogs.Delete" xml:space="preserve">ьВньаЬ</x:String>
+  <x:String x:Key="Text.Warn" xml:space="preserve">ъ▓╜ъ│а</x:String>
+  <x:String x:Key="Text.Welcome" xml:space="preserve">ьЛЬьЮС эОШьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.Welcome.AddRootFolder" xml:space="preserve">ъ╖╕ыг╣ ьГЭьД▒</x:String>
+  <x:String x:Key="Text.Welcome.AddSubFolder" xml:space="preserve">эХШьЬД ъ╖╕ыг╣ ьГЭьД▒</x:String>
+  <x:String x:Key="Text.Welcome.Clone" xml:space="preserve">ьаАьЮеьЖМ ы│╡ьаЬ</x:String>
+  <x:String x:Key="Text.Welcome.Delete" xml:space="preserve">ьВньаЬ</x:String>
+  <x:String x:Key="Text.Welcome.DragDropTip" xml:space="preserve">эП┤ыНФ ыБМьЦ┤ыЛд ыЖУъ╕░ ьзАьЫР. ьВмьЪйьЮР ьаХьЭШ ъ╖╕ыг╣эЩФ ьзАьЫР.</x:String>
+  <x:String x:Key="Text.Welcome.Edit" xml:space="preserve">эО╕ьзС</x:String>
+  <x:String x:Key="Text.Welcome.Move" xml:space="preserve">ыЛдые╕ ъ╖╕ыг╣ьЬ╝ыбЬ ьЭ┤ыПЩ</x:String>
+  <x:String x:Key="Text.Welcome.OpenAllInNode" xml:space="preserve">ыкиыУа ьаАьЮеьЖМ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Welcome.OpenOrInit" xml:space="preserve">ьаАьЮеьЖМ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Welcome.OpenTerminal" xml:space="preserve">эД░ып╕ыДР ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Welcome.ScanDefaultCloneDir" xml:space="preserve">ъ╕░ы│╕ ы│╡ьаЬ ыФФыаЙэД░ыжмьЭШ ьаАьЮеьЖМ ыЛдьЛЬ ьКдь║Ф</x:String>
+  <x:String x:Key="Text.Welcome.Search" xml:space="preserve">ьаАьЮеьЖМ ъ▓АьГЙ...</x:String>
+  <x:String x:Key="Text.WorkingCopy" xml:space="preserve">ыбЬь╗м ы│Аъ▓╜ ьВмэХн</x:String>
+  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore" xml:space="preserve">Git ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.Extension" xml:space="preserve">ыкиыУа *{0} эММьЭ╝ ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.ExtensionInSameFolder" xml:space="preserve">ъ░ЩьЭА эП┤ыНФьЭШ *{0} эММьЭ╝ ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.InFolder" xml:space="preserve">ьЭ┤ эП┤ыНФьЭШ ь╢ФьаБэХШьзА ьХКыКФ эММьЭ╝ ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.WorkingCopy.AddToGitIgnore.SingleFile" xml:space="preserve">ьЭ┤ эММьЭ╝ызМ ым┤ьЛЬ</x:String>
+  <x:String x:Key="Text.WorkingCopy.Amend" xml:space="preserve">ьИШьаХ</x:String>
+  <x:String x:Key="Text.WorkingCopy.CanStageTip" xml:space="preserve">ьЭ┤ьаЬ ьЭ┤ эММьЭ╝ьЭД ьКдэЕМьЭ┤ьзХэХа ьИШ ьЮИьК╡ыЛИыЛд.</x:String>
+  <x:String x:Key="Text.WorkingCopy.ClearCommitHistories" xml:space="preserve">эЮИьКдэЖаыжм ьзАьЪ░ъ╕░</x:String>
+  <x:String x:Key="Text.WorkingCopy.ClearCommitHistories.Confirm" xml:space="preserve">ыкиыУа ь╗ды░Л ыйФьЛЬьзА эЮИьКдэЖаыжмые╝ ьзАьЪ░ьЛЬъ▓аьК╡ыЛИъ╣М? ьЭ┤ ьЮСьЧЕьЭА ыРШыПМыж┤ ьИШ ьЧЖьК╡ыЛИыЛд.</x:String>
+  <x:String x:Key="Text.WorkingCopy.Commit" xml:space="preserve">ь╗ды░Л</x:String>
+  <x:String x:Key="Text.WorkingCopy.CommitAndPush" xml:space="preserve">ь╗ды░Л &amp; эС╕ьЛЬ</x:String>
+  <x:String x:Key="Text.WorkingCopy.CommitMessageHelper" xml:space="preserve">эЕЬэФМыж┐/эЮИьКдэЖаыжм</x:String>
+  <x:String x:Key="Text.WorkingCopy.CommitTip" xml:space="preserve">эБ┤ыжн ьЭ┤ы▓дэК╕ эК╕ыжмъ▒░</x:String>
+  <x:String x:Key="Text.WorkingCopy.CommitToEdit" xml:space="preserve">ь╗ды░Л (ьИШьаХ)</x:String>
+  <x:String x:Key="Text.WorkingCopy.CommitWithAutoStage" xml:space="preserve">ыкиыУа ы│Аъ▓╜ ьВмэХн ьКдэЕМьЭ┤ьзХ эЫД ь╗ды░Л</x:String>
+  <x:String x:Key="Text.WorkingCopy.ConfirmCommitWithDetachedHead">ы╢ДыжмыРЬ(detached) HEADьЧР ь╗ды░ЛьЭД ьГЭьД▒эХШъ│а ьЮИьК╡ыЛИыЛд. ъ│ДьЖНэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.WorkingCopy.ConfirmCommitWithFilter">{0}ъ░ЬьЭШ эММьЭ╝ьЭД ьКдэЕМьЭ┤ьзХэЦИьзАызМ {1}ъ░ЬьЭШ эММьЭ╝ызМ эСЬьЛЬыРйыЛИыЛд ({2}ъ░ЬьЭШ эММьЭ╝ьЭА эХДэД░ызБыРи). ъ│ДьЖНэХШьЛЬъ▓аьК╡ыЛИъ╣М?</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts" xml:space="preserve">ь╢йыПМ ъ░РьзАыРи</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts.Merge" xml:space="preserve">ы│СэХй</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts.MergeExternal" xml:space="preserve">ьЩ╕ы╢А ыПДъ╡мыбЬ ы│СэХй</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts.OpenExternalMergeToolAllConflicts" xml:space="preserve">ыкиыУа ь╢йыПМьЭД ьЩ╕ы╢А ы│СэХй ыПДъ╡мьЧРьДЬ ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts.Resolved" xml:space="preserve">эММьЭ╝ ь╢йыПМ эХ┤ъ▓░ыРи</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts.UseMine" xml:space="preserve">ыВ┤ ъ▓Г ьВмьЪй</x:String>
+  <x:String x:Key="Text.WorkingCopy.Conflicts.UseTheirs" xml:space="preserve">ьГБыМАы░й ъ▓Г ьВмьЪй</x:String>
+  <x:String x:Key="Text.WorkingCopy.IncludeUntracked" xml:space="preserve">ь╢ФьаБэХШьзА ьХКыКФ эММьЭ╝ эПмэХи</x:String>
+  <x:String x:Key="Text.WorkingCopy.NoCommitHistories" xml:space="preserve">ь╡Ьъ╖╝ ьЮЕыаеэХЬ ыйФьЛЬьзА ьЧЖьЭМ</x:String>
+  <x:String x:Key="Text.WorkingCopy.NoCommitTemplates" xml:space="preserve">ь╗ды░Л эЕЬэФМыж┐ ьЧЖьЭМ</x:String>
+  <x:String x:Key="Text.WorkingCopy.NoVerify" xml:space="preserve">ъ▓АьжЭ ьХИ эХи</x:String>
+  <x:String x:Key="Text.WorkingCopy.ResetAuthor" xml:space="preserve">ьЮСьД▒ьЮР ыжмьЕЛ</x:String>
+  <x:String x:Key="Text.WorkingCopy.SignOff" xml:space="preserve">ьДЬыкЕ(SignOff)</x:String>
+  <x:String x:Key="Text.WorkingCopy.Staged" xml:space="preserve">ьКдэЕМьЭ┤ьзХыРи</x:String>
+  <x:String x:Key="Text.WorkingCopy.Staged.Unstage" xml:space="preserve">ьЦ╕ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.WorkingCopy.Staged.UnstageAll" xml:space="preserve">ыкиыСР ьЦ╕ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.WorkingCopy.Unstaged" xml:space="preserve">ьКдэЕМьЭ┤ьзХ ьХИ ыРи</x:String>
+  <x:String x:Key="Text.WorkingCopy.Unstaged.Stage" xml:space="preserve">ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.WorkingCopy.Unstaged.StageAll" xml:space="preserve">ыкиыСР ьКдэЕМьЭ┤ьзА</x:String>
+  <x:String x:Key="Text.WorkingCopy.Unstaged.ViewAssumeUnchanged" xml:space="preserve">ы│Аъ▓╜ыРШьзА ьХКьЭМьЬ╝ыбЬ ъ░Дьг╝ыРЬ эММьЭ╝ ы│┤ъ╕░</x:String>
+  <x:String x:Key="Text.WorkingCopy.UseCommitTemplate" xml:space="preserve">эЕЬэФМыж┐: ${0}$</x:String>
+  <x:String x:Key="Text.Workspace" xml:space="preserve">ьЮСьЧЕ ъ│╡ъ░Д: </x:String>
+  <x:String x:Key="Text.Workspace.Configure" xml:space="preserve">ьЮСьЧЕ ъ│╡ъ░Д ьДдьаХ...</x:String>
+  <x:String x:Key="Text.Worktree" xml:space="preserve">ьЫМэБмэК╕ыжм</x:String>
+  <x:String x:Key="Text.Worktree.Branch" xml:space="preserve">ы╕МыЮЬь╣Ш</x:String>
+  <x:String x:Key="Text.Worktree.CopyPath" xml:space="preserve">ъ▓╜ыбЬ ы│╡ьВм</x:String>
+  <x:String x:Key="Text.Worktree.Head" xml:space="preserve">HEAD</x:String>
+  <x:String x:Key="Text.Worktree.Lock" xml:space="preserve">ьЮаъ╕И</x:String>
+  <x:String x:Key="Text.Worktree.Open" xml:space="preserve">ьЧ┤ъ╕░</x:String>
+  <x:String x:Key="Text.Worktree.Path" xml:space="preserve">ъ▓╜ыбЬ</x:String>
+  <x:String x:Key="Text.Worktree.Remove" xml:space="preserve">ьаЬъ▒░</x:String>
+  <x:String x:Key="Text.Worktree.Unlock" xml:space="preserve">ьЮаъ╕И эХ┤ьаЬ</x:String>
+  <x:String x:Key="Text.Yes" xml:space="preserve">ьШИ</x:String>
+  <x:String x:Key="Text.FileCM.Commit2Branch" xml:space="preserve">ьДаэГЭ эХныкйьЭД ыЛдые╕ ы╕МыЮЬь╣ШыбЬ ь╗ды░Л...</x:String>
+  <x:String x:Key="Text.DirectCommit.Title" xml:space="preserve">ыЛдые╕ ы╕МыЮЬь╣ШыбЬ ь╗ды░Л</x:String>
+  <x:String x:Key="Text.DirectCommit.TargetBranch" xml:space="preserve">ыМАьГБ ы╕МыЮЬь╣Ш:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message" xml:space="preserve">ь╗ды░Л ыйФьЛЬьзА:</x:String>
+  <x:String x:Key="Text.DirectCommit.Message.Placeholder" xml:space="preserve">ьЧмъ╕░ьЧР ь╗ды░Л ыйФьЛЬьзАые╝ ьЮЕыаеэХШьД╕ьЪФ...</x:String>
+  <x:String x:Key="Text.DirectCommit.Discard" xml:space="preserve">ь╗ды░Л эЫД эШДьЮм ьЮСьЧЕ ы│╡ьВмы│╕ьЧРьДЬ ьВньаЬ</x:String>
+  <x:String x:Key="Text.DirectCommit.ConflictsDetected" xml:space="preserve">ъ▓╜ъ│а: ь╢йыПМьЭ┤ ъ░РьзАыРШьЧИьК╡ыЛИыЛд. ьЭ╝ы╢А эММьЭ╝ьЭ┤ ыМАьГБ ы╕МыЮЬь╣ШьЧРьДЬ ыЛдые╕ ы│Аъ▓╜ ьВмэХньЭД эПмэХиэХШъ│а ьЮИьК╡ыЛИыЛд!</x:String>
+  <x:String x:Key="Text.DirectCommit.ForceOverwrite" xml:space="preserve">ыМАьГБ ы╕МыЮЬь╣ШьЭШ ь╢йыПМьЭД ъ░ХьаЬыбЬ ыНоьЦ┤ьУ░ъ╕░</x:String>
 </ResourceDictionary>
