@@ -40,7 +40,7 @@
                TextWrapping="Wrap"
                VerticalContentAlignment="Top"
                Text="{Binding Message, Mode=TwoWay}"
-               Watermark="{DynamicResource Text.DirectCommit.Message.Placeholder}"/>
+               PlaceholderText="{DynamicResource Text.DirectCommit.Message.Placeholder}"/>
 
       <!-- Discard After Commit -->
       <CheckBox Grid.Row="2" Grid.Column="1"

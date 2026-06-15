@@ -514,6 +514,7 @@ namespace SourceGit.Views
 
         private bool _pressedRow = false;
         private Point _pressedRowPosition = new Point();
+        private PointerPressedEventArgs _pressedRowEvent = null;
         private bool _startDragRow = false;
         private List<Models.Change> _dragChanges = null;
         private Models.Change _pressedChangeForClick = null;
@@ -526,6 +527,7 @@ namespace SourceGit.Views
                 _pressedRow = true;
                 _startDragRow = false;
                 _pressedRowPosition = e.GetPosition(control);
+                _pressedRowEvent = e;
 
                 _dragChanges = new List<Models.Change>();
                 var dataContext = control.DataContext;
@@ -612,13 +614,14 @@ namespace SourceGit.Views
             _startDragRow = false;
             _dragChanges = null;
             _pressedChangeForClick = null;
+            _pressedRowEvent = null;
         }
 
         private async void OnRowPointerMoved(object sender, PointerEventArgs e)
         {
             if (_pressedRow && !_startDragRow && _dragChanges != null && _dragChanges.Count > 0 && sender is Control control)
             {
-                var delta = e.GetPosition(control) - _pressedRowPosition;
+                var delta = e.GetPosition(control) - _pressedRowEvent.GetPosition(control);
                 var sizeSquired = delta.X * delta.X + delta.Y * delta.Y;
                 if (sizeSquired < 64)
                     return;
@@ -638,7 +641,7 @@ namespace SourceGit.Views
                 var data = new DataTransfer();
                 data.Add(DataTransferItem.Create(_dndFormat, builder.ToString()));
 
-                await DragDrop.DoDragDropAsync(e, data, DragDropEffects.Move);
+                await DragDrop.DoDragDropAsync(_pressedRowEvent, data, DragDropEffects.Move);
             }
         }
 
@@ -666,6 +669,7 @@ namespace SourceGit.Views
         {
             _pressedRow = false;
             _startDragRow = false;
+            _pressedRowEvent = null;
 
             if (e.DataTransfer.Contains(_dndFormat))
             {
