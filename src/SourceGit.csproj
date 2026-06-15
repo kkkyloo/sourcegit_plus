@@ -9,13 +9,13 @@
     <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
     <InvariantGlobalization>false</InvariantGlobalization>
 
-    <Product>SourceGit</Product>
-    <Description>OpenSource GIT client</Description>
-    <Company>sourcegit-scm</Company>
-    <Copyright>Copyright © $([System.DateTime]::Now.Year) sourcegit-scm.</Copyright>
+    <Product>SourceGit Plus</Product>
+    <Description>OpenSource GIT client (kkkyloo fork with extra features)</Description>
+    <Company>kkkyloo</Company>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) kkkyloo. Based on SourceGit by sourcegit-scm.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/sourcegit-scm/sourcegit.git</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/sourcegit-scm/sourcegit.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/kkkyloo/sourcegit_plus.git</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kkkyloo/sourcegit_plus.git</RepositoryUrl>
     <RepositoryType>Public</RepositoryType>
   </PropertyGroup>
 

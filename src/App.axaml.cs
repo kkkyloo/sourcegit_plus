@@ -527,7 +527,7 @@ namespace SourceGit
                     using var client = new HttpClient();
                     client.Timeout = TimeSpan.FromSeconds(5);
 
-                    var data = await client.GetStringAsync("https://sourcegit-scm.github.io/data/version.json");
+                    var data = await client.GetStringAsync("https://raw.githubusercontent.com/kkkyloo/sourcegit_plus/master/data/version.json");
                     var ver = JsonSerializer.Deserialize(data, JsonCodeGen.Default.Version);
                     if (ver == null)
                         return;

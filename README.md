@@ -7,11 +7,11 @@ This is a custom fork of SourceGit with extra features and UX improvements:
 * **Direct Commit**: Commit selected files directly to any local branch without switching to it, with automatic conflict validation and option to discard changes from the working copy.
 
 
-[![stars](https://img.shields.io/github/stars/sourcegit-scm/sourcegit.svg)](https://github.com/sourcegit-scm/sourcegit/stargazers)
-[![forks](https://img.shields.io/github/forks/sourcegit-scm/sourcegit.svg)](https://github.com/sourcegit-scm/sourcegit/forks)
-[![license](https://img.shields.io/github/license/sourcegit-scm/sourcegit.svg)](LICENSE)
-[![latest](https://img.shields.io/github/v/release/sourcegit-scm/sourcegit.svg)](https://github.com/sourcegit-scm/sourcegit/releases/latest)
-[![downloads](https://img.shields.io/github/downloads/sourcegit-scm/sourcegit/total)](https://github.com/sourcegit-scm/sourcegit/releases)
+[![stars](https://img.shields.io/github/stars/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/stargazers)
+[![forks](https://img.shields.io/github/forks/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/forks)
+[![license](https://img.shields.io/github/license/kkkyloo/sourcegit_plus.svg)](LICENSE)
+[![latest](https://img.shields.io/github/v/release/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/releases/latest)
+[![downloads](https://img.shields.io/github/downloads/kkkyloo/sourcegit_plus/total)](https://github.com/kkkyloo/sourcegit_plus/releases)
 
 ## Screenshots
 
@@ -75,7 +75,7 @@ This is a custom fork of SourceGit with extra features and UX improvements:
 
 **To use this tool, you need to install Git(>=2.25.1) first.**
 
-You can download the latest stable from [Releases](https://github.com/sourcegit-scm/sourcegit/releases/latest) or download workflow artifacts from [GitHub Actions](https://github.com/sourcegit-scm/sourcegit/actions) to try this app based on latest commits.
+You can download the latest stable from [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest) or download workflow artifacts from [GitHub Actions](https://github.com/kkkyloo/sourcegit_plus/actions) to try this app based on latest commits.
 
 This software creates a folder, which is platform-dependent, to store user settings, downloaded avatars and crash logs.
 
@@ -97,7 +97,7 @@ For **Windows** users:
   scoop bucket add extras
   scoop install sourcegit
   ```
-* Pre-built binaries can be found in [Releases](https://github.com/sourcegit-scm/sourcegit/releases/latest)
+* Pre-built binaries can be found in [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest)
 
 > [!NOTE]
 > `git-flow` is no longer shipped with **Git for Windows** since `2.51.1`. You can use it by following these steps:
@@ -272,11 +272,11 @@ dotnet run --project src/SourceGit.csproj
 
 Thanks to all the people who contribute.
 
-[![Contributors](https://contrib.rocks/image?repo=sourcegit-scm/sourcegit&columns=20)](https://github.com/sourcegit-scm/sourcegit/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=kkkyloo/sourcegit_plus&columns=20)](https://github.com/kkkyloo/sourcegit_plus/graphs/contributors)
 
 ## Translation Status
 
-You can find the current translation status in [TRANSLATION.md](https://github.com/sourcegit-scm/sourcegit/blob/develop/TRANSLATION.md)
+You can find the current translation status in [TRANSLATION.md](https://github.com/kkkyloo/sourcegit_plus/blob/develop/TRANSLATION.md)
 
 ### Translate Utility Script
 

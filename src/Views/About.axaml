@@ -61,11 +61,11 @@
         </Border>
 
         <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
-          <Button Width="18" Height="18" Classes="icon_button" Click="OnVisitWebsite" ToolTip.Tip="https://sourcegit-scm.github.io/">
+          <Button Width="18" Height="18" Classes="icon_button" Click="OnVisitWebsite" ToolTip.Tip="https://github.com/kkkyloo/sourcegit_plus">
             <Path Width="16" Height="16" Data="{StaticResource Icons.Remotes}"/>
           </Button>
 
-          <Button Width="18" Height="18" Margin="8,0,0,0" Classes="icon_button" Click="OnVisitSourceCode" ToolTip.Tip="https://github.com/sourcegit-scm/sourcegit">
+          <Button Width="18" Height="18" Margin="8,0,0,0" Classes="icon_button" Click="OnVisitSourceCode" ToolTip.Tip="https://github.com/kkkyloo/sourcegit_plus">
             <Path Width="16" Height="16" Data="{StaticResource Icons.GitHub}"/>
           </Button>
         </StackPanel>
