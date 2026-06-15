@@ -1,6 +1,6 @@
 {
-  "tag_name": "v2026.13",
-  "name": "2026.13",
+  "tag_name": "v2026.13.1",
+  "name": "2026.13.1 (Plus 1)",
   "published_at": "2026-06-15T02:31:11Z",
   "body": "## SourceGit Plus v2026.13\n\nFork of SourceGit with extra features and UX improvements.\n\n### Plus-specific features\n* **Drag-and-Drop Local Changes** — drag files/folders between UNSTAGED and STAGED panels to stage/unstage. Multi-drag supported.\n* **Ahead/Behind counters** on the Pull/Push buttons.\n* **Direct Commit to Branch** — commit selected changes directly to any local branch without checkout (via git plumbing + temp index).\n\n### Synced with upstream v2026.13\n* All upstream features and fixes from v2026.13.\n\n---\nUpstream changelog: https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13"
 }
