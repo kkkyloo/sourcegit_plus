@@ -6,6 +6,29 @@ This is a custom fork of SourceGit with extra features and UX improvements:
 * **Multi-Drag Support**: Multiple selected files remain visually highlighted during drag-and-drop and are moved together.
 * **Direct Commit**: Commit selected files directly to any local branch without switching to it, with automatic conflict validation and option to discard changes from the working copy.
 
+## What's New in v2026.13.plus.1
+
+This is the first **Plus** release built on top of upstream **v2026.13** (now on **Avalonia 12**).
+
+### Plus-specific additions
+* **Ahead/Behind counters** - the Pull and Push toolbar buttons now display how many commits the current branch is ahead/behind its upstream.
+* **Rebranded to SourceGit Plus** - app metadata, About dialog, and update notifications now point at this fork instead of the upstream project.
+* **Fork-owned update checks** - the app now fetches release info from ``data/version.json`` in this repository, so you only get notified about *Plus* releases (not upstream ones).
+
+### Synced with upstream v2026.13
+Highlights pulled in from upstream (full list in the upstream release notes):
+* Upgrade to **Avalonia 12.0.4**; replaced the ``LiveChartsCore`` chart with a custom ``Chart`` control.
+* **Recursive submodule updates** - new ``Update nested submodules`` option and a per-repository ``--recursive`` setting.
+* Save ignore-file patterns to ``.gitignore`` in a **sub-directory**.
+* Standalone **Commit Details** / **Revision Compare** windows now detach from the main window.
+* Show ``EMPTY FILE`` instead of ``NO CHANGES...`` for added/deleted empty files.
+* Improved **bisect** workflow (skipped-commit indicator, better tooltips).
+* Many fixes: text diff editor crash on click, lost expand state of remote branches, extra newline when resolving conflicts, ignore-whitespace toggle.
+
+### Plus internals
+* Adapted the drag-and-drop feature and the Direct Commit dialog to **Avalonia 12** API changes.
+
+Upstream changelog: https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13
 
 [![stars](https://img.shields.io/github/stars/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/stargazers)
 [![forks](https://img.shields.io/github/forks/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/forks)
