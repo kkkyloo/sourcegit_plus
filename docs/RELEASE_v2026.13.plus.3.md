@@ -9,11 +9,11 @@ Based on upstream **v2026.13** (Avalonia 12).
 
 ### Download
 
-| Platform | File (from [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/tag/v2026.13.plus.3)) |
-|----------|--------------------------------------------------------------------------------------------------|
-| Windows  | `SourceGit-2026.13.3-win-x64.zip` or `.setup.exe` |
-| Linux    | `SourceGit-2026.13.3-linux-x64.AppImage`, `.deb`, or `.rpm` |
-| macOS    | `SourceGit-2026.13.3-osx-arm64.dmg` / `osx-x64.dmg` |
+| Platform | Typical files on [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/tag/v2026.13.plus.3) |
+|----------|-----------------------------------------------------------------------------------------------------|
+| Windows  | `sourcegit_2026.13.plus.3.win-x64.zip`, `sourcegit_2026.13.plus.3.win-arm64.zip` |
+| Linux    | `sourcegit_2026.13.plus.3.linux.amd64.AppImage`, `sourcegit_2026.13.plus.3-1_amd64.deb`, `.rpm` |
+| macOS    | `sourcegit_2026.13.plus.3.osx-arm64.zip`, `sourcegit_2026.13.plus.3.osx-x64.zip` |
 
 Latest build: https://github.com/kkkyloo/sourcegit_plus/releases/latest
 
@@ -47,11 +47,11 @@ Latest build: https://github.com/kkkyloo/sourcegit_plus/releases/latest
 
 ### Скачать
 
-| Платформа | Файл ([Releases](https://github.com/kkkyloo/sourcegit_plus/releases/tag/v2026.13.plus.3)) |
+| Платформа | Файлы на [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/tag/v2026.13.plus.3) |
 |-----------|-------------------------------------------------------------------------------------------|
-| Windows   | `SourceGit-2026.13.3-win-x64.zip` или `.setup.exe` |
-| Linux     | `SourceGit-2026.13.3-linux-x64.AppImage`, `.deb` или `.rpm` |
-| macOS     | `SourceGit-2026.13.3-osx-arm64.dmg` / `osx-x64.dmg` |
+| Windows   | `sourcegit_2026.13.plus.3.win-x64.zip`, `sourcegit_2026.13.plus.3.win-arm64.zip` |
+| Linux     | `sourcegit_2026.13.plus.3.linux.amd64.AppImage`, `sourcegit_2026.13.plus.3-1_amd64.deb`, `.rpm` |
+| macOS     | `sourcegit_2026.13.plus.3.osx-arm64.zip`, `sourcegit_2026.13.plus.3.osx-x64.zip` |
 
 Актуальная сборка: https://github.com/kkkyloo/sourcegit_plus/releases/latest
 

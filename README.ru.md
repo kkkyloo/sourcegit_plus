@@ -41,9 +41,9 @@
 
 | Платформа | Где взять |
 |-----------|-----------|
-| Windows   | [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest) — `.zip` или `.setup.exe`. Используйте [Git for Windows](https://git-scm.com/download/win) (MSYS Git не поддерживается). |
-| Linux     | AppImage / `.deb` / `.rpm` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). |
-| macOS     | `.dmg` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). После ручной установки: `sudo xattr -cr /Applications/SourceGit.app` |
+| Windows   | [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest) — `sourcegit_2026.13.plus.3.win-x64.zip`. Используйте [Git for Windows](https://git-scm.com/download/win) (MSYS Git не поддерживается). |
+| Linux     | AppImage / `.deb` / `.rpm` — см. `sourcegit_2026.13.plus.3.*` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). |
+| macOS     | `sourcegit_2026.13.plus.3.osx-*.zip` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). После распаковки: `sudo xattr -cr /Applications/SourceGit.app` |
 
 Сборки из CI (последние коммиты): [GitHub Actions](https://github.com/kkkyloo/sourcegit_plus/actions).
 
