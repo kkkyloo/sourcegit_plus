@@ -22,15 +22,24 @@ namespace SourceGit.Views
 
         protected override async void OnPointerPressed(PointerPressedEventArgs e)
         {
+            if (e.Handled)
+            {
+                base.OnPointerPressed(e);
+                return;
+            }
+
             if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed &&
                 DataContext is ViewModels.RevisionFileTreeNode { IsFolder: true } node)
             {
                 var tree = this.FindAncestorOfType<RevisionFileTreeView>();
                 if (tree != null)
                     await tree.ToggleNodeIsExpandedAsync(node);
+
+                e.Handled = true;
+                return;
             }
 
-            e.Handled = true;
+            base.OnPointerPressed(e);
         }
     }
 

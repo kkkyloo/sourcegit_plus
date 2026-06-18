@@ -16,7 +16,7 @@
 
   <UserControl.DataTemplates>
     <DataTemplate DataType="vm:TagCollectionAsTree">
-      <ListBox Classes="repo_left_content_list"
+      <v:ListBoxEx Classes="repo_left_content_list"
                ItemsSource="{Binding Rows}"
                SelectionMode="Multiple"
                Padding="0,0,2,0"
@@ -58,11 +58,11 @@
             </Border>
           </DataTemplate>
         </ListBox.ItemTemplate>
-      </ListBox>
+      </v:ListBoxEx>
     </DataTemplate>
 
     <DataTemplate DataType="vm:TagCollectionAsList">
-      <ListBox Classes="repo_left_content_list"
+      <v:ListBoxEx Classes="repo_left_content_list"
                Padding="0,0,2,0"
                ItemsSource="{Binding TagItems}"
                SelectionMode="Multiple"
@@ -106,7 +106,7 @@
             </Border>
           </DataTemplate>
         </ListBox.ItemTemplate>
-      </ListBox>
+      </v:ListBoxEx>
     </DataTemplate>
 
     <DataTemplate DataType="vm:TagToolTip">

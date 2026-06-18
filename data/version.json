@@ -1,6 +1,6 @@
 {
-  "tag_name": "v2026.13.2",
-  "name": "2026.13.2 (Plus 2)",
-  "published_at": "2026-06-18T12:00:00Z",
-  "body": "## SourceGit Plus v2026.13.2 (Plus 2)\n\n### Fixes\n* **Caption buttons** — minimize, maximize, and close buttons are now clickable across their full height (top edge no longer misses clicks on Windows with Avalonia 12).\n* **Update check** — VERSION is synced with ``data/version.json`` so the app no longer prompts for an update when you are already on the latest Plus build.\n* **Title bar hit-test** — ``ExtendClientAreaTitleBarHeightHint`` and title-bar roles adjusted for Avalonia 12 on Windows.\n\n### Plus features (unchanged)\n* Drag-and-Drop Local Changes\n* Ahead/Behind counters on Pull/Push\n* Direct Commit to Branch\n\n---\nUpstream base: v2026.13 — https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13"
+  "tag_name": "v2026.13.3",
+  "name": "2026.13.3 (Plus 3)",
+  "published_at": "2026-06-18T18:00:00Z",
+  "body": "## SourceGit Plus v2026.13.3 (Plus 3)\n\n### Fixes\n* **Tree/list selection** — clicking another row (or a parent folder in file-tree mode) now reliably changes the selection instead of ignoring the click.\n* **Expander buttons** — chevrons in branch/file/change trees only consume the click when expanding/collapsing, not on every pointer press.\n\n### Also in Plus 2\n* Caption buttons clickable across full title bar height on Windows (Avalonia 12).\n* Update check synced with VERSION / ``data/version.json``.\n\n---\nUpstream base: v2026.13 — https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13"
 }

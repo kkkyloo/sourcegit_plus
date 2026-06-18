@@ -15,11 +15,21 @@ namespace SourceGit.Views
 
         protected override void OnPointerPressed(PointerPressedEventArgs e)
         {
+            if (e.Handled)
+            {
+                base.OnPointerPressed(e);
+                return;
+            }
+
             if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed &&
                 DataContext is ViewModels.RepositoryNode { IsRepository: false } node)
+            {
                 ViewModels.Welcome.Instance.ToggleNodeIsExpanded(node);
+                e.Handled = true;
+                return;
+            }
 
-            e.Handled = true;
+            base.OnPointerPressed(e);
         }
     }
 

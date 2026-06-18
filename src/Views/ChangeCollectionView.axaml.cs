@@ -18,14 +18,22 @@ namespace SourceGit.Views
 
         protected override void OnPointerPressed(PointerPressedEventArgs e)
         {
+            if (e.Handled)
+            {
+                base.OnPointerPressed(e);
+                return;
+            }
+
             if (e.GetCurrentPoint(this).Properties.IsLeftButtonPressed &&
                 DataContext is ViewModels.ChangeTreeNode { IsFolder: true } node)
             {
                 var tree = this.FindAncestorOfType<ChangeCollectionView>();
                 tree?.ToggleNodeIsExpanded(node);
+                e.Handled = true;
+                return;
             }
 
-            e.Handled = true;
+            base.OnPointerPressed(e);
         }
     }
 
