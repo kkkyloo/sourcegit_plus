@@ -1,35 +1,39 @@
-# SourceGit Plus - Opensource Git GUI client.
+# SourceGit Plus — Opensource Git GUI client
 
-## SourceGit Plus Features
-This is a custom fork of SourceGit with extra features and UX improvements:
-* **Drag-and-Drop Local Changes**: Drag and drop modified files and folders between **UNSTAGED** and **STAGED** panels to stage or unstage changes.
-* **Multi-Drag Support**: Multiple selected files remain visually highlighted during drag-and-drop and are moved together.
-* **Direct Commit**: Commit selected files directly to any local branch without switching to it, with automatic conflict validation and option to discard changes from the working copy.
+**English** | [Русский (README.ru.md)](README.ru.md)
 
-## What's New in v2026.13.plus.1
+> Custom fork of [SourceGit](https://github.com/sourcegit-scm/sourcegit) with extra features and UX fixes.  
+> Download: **[Latest release](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Release notes: [v2026.13.plus.3](docs/RELEASE_v2026.13.plus.3.md)
 
-This is the first **Plus** release built on top of upstream **v2026.13** (now on **Avalonia 12**).
+## Plus-only features
 
-### Plus-specific additions
-* **Ahead/Behind counters** - the Pull and Push toolbar buttons now display how many commits the current branch is ahead/behind its upstream.
-* **Rebranded to SourceGit Plus** - app metadata, About dialog, and update notifications now point at this fork instead of the upstream project.
-* **Fork-owned update checks** - the app now fetches release info from ``data/version.json`` in this repository, so you only get notified about *Plus* releases (not upstream ones).
+* **Drag-and-Drop Local Changes** — drag files and folders between **UNSTAGED** and **STAGED** to stage or unstage; multi-select drag supported.
+* **Ahead / Behind counters** — Pull and Push toolbar buttons show how many commits the branch is ahead/behind upstream.
+* **Direct Commit to Branch** — commit selected changes to any local branch without checking it out (conflict checks + optional discard from working copy).
+* **Fork-owned updates** — the app checks `data/version.json` in **this** repository; you are not notified about upstream SourceGit releases.
 
-### Synced with upstream v2026.13
-Highlights pulled in from upstream (full list in the upstream release notes):
-* Upgrade to **Avalonia 12.0.4**; replaced the ``LiveChartsCore`` chart with a custom ``Chart`` control.
-* **Recursive submodule updates** - new ``Update nested submodules`` option and a per-repository ``--recursive`` setting.
-* Save ignore-file patterns to ``.gitignore`` in a **sub-directory**.
-* Standalone **Commit Details** / **Revision Compare** windows now detach from the main window.
-* Show ``EMPTY FILE`` instead of ``NO CHANGES...`` for added/deleted empty files.
-* Improved **bisect** workflow (skipped-commit indicator, better tooltips).
-* Many fixes: text diff editor crash on click, lost expand state of remote branches, extra newline when resolving conflicts, ignore-whitespace toggle.
+## Changelog (Plus releases)
 
-### Plus internals
-* Adapted the drag-and-drop feature and the Direct Commit dialog to **Avalonia 12** API changes.
+### v2026.13.plus.3 — latest
 
-Upstream changelog: https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13
+* **Tree / list selection** — clicking another row or a parent folder in file-tree mode reliably changes selection (no “stuck” highlight).
+* **Expander chevrons** — in branch, tag, submodule, and local-changes trees, only the expand/collapse action consumes the click.
 
+### v2026.13.plus.2
+
+* **Caption buttons (Windows)** — Minimize, Maximize, and Close are clickable across the full title-bar button area (Avalonia 12).
+* **Update check** — `VERSION` synced with `data/version.json`; no false update prompt on the latest Plus build.
+
+### v2026.13.plus.1
+
+First Plus release on upstream **v2026.13** (Avalonia 12):
+
+* Ahead/Behind counters, rebrand to SourceGit Plus, fork update URL.
+* Drag-and-drop and Direct Commit adapted to Avalonia 12 API.
+
+Upstream highlights in v2026.13: Avalonia 12.0.4, custom commit chart, recursive submodule updates, detached Commit Details / Revision Compare windows, bisect improvements, and more — see [upstream release notes](https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13).
+
+---
 [![stars](https://img.shields.io/github/stars/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/stargazers)
 [![forks](https://img.shields.io/github/forks/kkkyloo/sourcegit_plus.svg)](https://github.com/kkkyloo/sourcegit_plus/forks)
 [![license](https://img.shields.io/github/license/kkkyloo/sourcegit_plus.svg)](LICENSE)
