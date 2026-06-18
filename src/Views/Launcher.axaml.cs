@@ -55,6 +55,9 @@ namespace SourceGit.Views
                 CaptionHeight = new GridLength(38);
             }
 
+            if (OperatingSystem.IsWindows())
+                ExtendClientAreaTitleBarHeightHint = CaptionHeight.Value;
+
             InitializeComponent();
             PositionChanged += OnPositionChanged;
 
@@ -111,7 +114,11 @@ namespace SourceGit.Views
                 if (OperatingSystem.IsMacOS())
                     HasLeftCaptionButton = state != WindowState.FullScreen;
                 else if (!UseSystemWindowFrame)
+                {
                     CaptionHeight = new GridLength(state == WindowState.Maximized ? 30 : 38);
+                    if (OperatingSystem.IsWindows())
+                        ExtendClientAreaTitleBarHeightHint = CaptionHeight.Value;
+                }
 
                 ViewModels.Preferences.Instance.Layout.LauncherWindowState = state;
             }

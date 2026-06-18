@@ -48,6 +48,11 @@
     </Setter>
   </Style>
 
+  <!-- Hide system title text when client area extends into the title bar (Avalonia 12 / Win32). -->
+  <Style Selector="WindowDrawnDecorations /template/ Panel#PART_TitleTextPanel">
+    <Setter Property="IsVisible" Value="False"/>
+  </Style>
+
   <Style Selector="Window.custom_window_frame">
     <Setter Property="Background" Value="Transparent"/>
     <Setter Property="BorderThickness" Value="0"/>
@@ -607,8 +612,11 @@
 
   <Style Selector="Button.caption_button">
     <Setter Property="Width" Value="48"/>
+    <Setter Property="Padding" Value="0"/>
     <Setter Property="BorderThickness" Value="0"/>
     <Setter Property="VerticalAlignment" Value="Stretch"/>
+    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    <Setter Property="VerticalContentAlignment" Value="Center"/>
   </Style>
   <Style Selector="Button.caption_button > Path">
     <Setter Property="Fill" Value="{DynamicResource Brush.FG1}"/>

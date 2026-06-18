@@ -25,7 +25,8 @@
               BorderThickness="0,0,0,1" BorderBrush="{DynamicResource Brush.Border0}"
               Background="{DynamicResource Brush.TitleBar}"
               DoubleTapped="MaximizeOrRestoreWindow"
-              PointerPressed="BeginMoveWindow"/>
+              PointerPressed="BeginMoveWindow"
+              WindowDecorationProperties.ElementRole="TitleBar"/>
 
       <!-- Caption Buttons (macOS) -->
       <v:MacOSTrafficLightsSpacer Grid.Column="0"
@@ -112,7 +113,7 @@
 
       <!-- Caption Buttons (Windows/Linux) -->
       <Border Grid.Column="4" Margin="16,0,0,0" IsVisible="{Binding #ThisControl.HasRightCaptionButton}">
-        <v:CaptionButtons Height="30" VerticalAlignment="Top"/>
+        <v:CaptionButtons VerticalAlignment="Stretch"/>
       </Border>
     </Grid>
 

@@ -25,6 +25,9 @@ namespace SourceGit.Views
         {
             Focusable = true;
             Native.OS.SetupForWindow(this);
+
+            if (OperatingSystem.IsWindows())
+                ExtendClientAreaTitleBarHeightHint = 28;
         }
 
         public void BeginMoveWindow(object _, PointerPressedEventArgs e)
