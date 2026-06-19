@@ -3,7 +3,7 @@
 [English (README.md)](README.md) | **Русский**
 
 > Форк [SourceGit](https://github.com/sourcegit-scm/sourcegit) с дополнительными функциями и исправлениями интерфейса.  
-> Скачать: **[Последний релиз](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Заметки к релизу: [v2026.13.plus.3](docs/RELEASE_v2026.13.plus.3.md)
+> Скачать: **[Последний релиз](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Заметки к релизу: [v2026.13.plus.4](docs/RELEASE_v2026.13.plus.4.md)
 
 ## Только в Plus
 
@@ -14,7 +14,11 @@
 
 ## История релизов Plus
 
-### v2026.13.plus.3 — актуальный
+### v2026.13.plus.4 — актуальный
+
+* **Кнопки заголовка окна (Windows)** — область перетаскивания titlebar больше не перекрывает «Свернуть / Развернуть / Закрыть», поэтому самый верхний край кнопок в развернутом окне нажимается.
+
+### v2026.13.plus.3
 
 * **Выделение в деревьях и списках** — клик по другой строке или родительской папке в режиме file tree нормально переключает выделение (без «залипания»).
 * **Стрелки раскрытия папок** — в деревьях веток, тегов, submodules и local changes клик перехватывается только при expand/collapse.
@@ -41,9 +45,9 @@
 
 | Платформа | Где взять |
 |-----------|-----------|
-| Windows   | [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest) — `sourcegit_2026.13.plus.3.win-x64.zip`. Используйте [Git for Windows](https://git-scm.com/download/win) (MSYS Git не поддерживается). |
-| Linux     | AppImage / `.deb` / `.rpm` — см. `sourcegit_2026.13.plus.3.*` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). |
-| macOS     | `sourcegit_2026.13.plus.3.osx-*.zip` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). После распаковки: `sudo xattr -cr /Applications/SourceGit.app` |
+| Windows   | [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest) — `sourcegit_2026.13.plus.4.win-x64.zip`. Используйте [Git for Windows](https://git-scm.com/download/win) (MSYS Git не поддерживается). |
+| Linux     | AppImage / `.deb` / `.rpm` — см. `sourcegit_2026.13.plus.4.*` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). |
+| macOS     | `sourcegit_2026.13.plus.4.osx-*.zip` в [Releases](https://github.com/kkkyloo/sourcegit_plus/releases/latest). После распаковки: `sudo xattr -cr /Applications/SourceGit.app` |
 
 Сборки из CI (последние коммиты): [GitHub Actions](https://github.com/kkkyloo/sourcegit_plus/actions).
 

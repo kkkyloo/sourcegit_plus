@@ -5,8 +5,9 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SourceGit.Views.CaptionButtons"
              x:Name="ThisControl"
-             VerticalAlignment="Stretch">
-  <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
+             VerticalAlignment="Stretch"
+             Background="Transparent">
+  <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Background="Transparent">
     <Button Classes="caption_button" Click="MinimizeWindow" WindowDecorationProperties.ElementRole="MinimizeButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
       <Path Width="11" Height="11" Data="{StaticResource Icons.Window.Minimize}"/>
     </Button>

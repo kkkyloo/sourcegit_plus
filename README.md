@@ -3,7 +3,7 @@
 **English** | [Русский (README.ru.md)](README.ru.md)
 
 > Custom fork of [SourceGit](https://github.com/sourcegit-scm/sourcegit) with extra features and UX fixes.  
-> Download: **[Latest release](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Release notes: [v2026.13.plus.3](docs/RELEASE_v2026.13.plus.3.md)
+> Download: **[Latest release](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Release notes: [v2026.13.plus.4](docs/RELEASE_v2026.13.plus.4.md)
 
 ## Plus-only features
 
@@ -14,7 +14,11 @@
 
 ## Changelog (Plus releases)
 
-### v2026.13.plus.3 — latest
+### v2026.13.plus.4 — latest
+
+* **Caption buttons (Windows)** — the draggable titlebar area no longer overlaps Minimize, Maximize, and Close, so the very top edge of maximized caption buttons remains clickable.
+
+### v2026.13.plus.3
 
 * **Tree / list selection** — clicking another row or a parent folder in file-tree mode reliably changes selection (no “stuck” highlight).
 * **Expander chevrons** — in branch, tag, submodule, and local-changes trees, only the expand/collapse action consumes the click.

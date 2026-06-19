@@ -19,11 +19,15 @@
     </Grid.RowDefinitions>
 
     <!-- Custom TitleBar -->
-    <Grid Grid.Row="0" ColumnDefinitions="Auto,32,32,*,Auto">
+    <Grid Grid.Row="0" ColumnDefinitions="Auto,32,32,*,Auto" Background="{DynamicResource Brush.TitleBar}">
       <!-- Bottom border -->
       <Border Grid.Column="0" Grid.ColumnSpan="5"
               BorderThickness="0,0,0,1" BorderBrush="{DynamicResource Brush.Border0}"
-              Background="{DynamicResource Brush.TitleBar}"
+              IsHitTestVisible="False"/>
+
+      <!-- Draggable titlebar area. Keep it out of the caption button column so the top edge belongs to the buttons. -->
+      <Border Grid.Column="0" Grid.ColumnSpan="4"
+              Background="Transparent"
               DoubleTapped="MaximizeOrRestoreWindow"
               PointerPressed="BeginMoveWindow"
               WindowDecorationProperties.ElementRole="TitleBar"/>
