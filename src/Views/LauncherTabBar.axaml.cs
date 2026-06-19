@@ -167,23 +167,30 @@ namespace SourceGit.Views
             if (!e.KeyModifiers.HasFlag(KeyModifiers.Shift))
             {
                 if (e.Delta.Y < 0)
-                    LauncherTabsScroller.LineRight();
+                    ScrollTabsBy(TabsScrollStep);
                 else if (e.Delta.Y > 0)
-                    LauncherTabsScroller.LineLeft();
+                    ScrollTabsBy(-TabsScrollStep);
                 e.Handled = true;
             }
         }
 
         private void ScrollTabsLeft(object _, RoutedEventArgs e)
         {
-            LauncherTabsScroller.LineLeft();
+            ScrollTabsBy(-TabsScrollStep);
             e.Handled = true;
         }
 
         private void ScrollTabsRight(object _, RoutedEventArgs e)
         {
-            LauncherTabsScroller.LineRight();
+            ScrollTabsBy(TabsScrollStep);
             e.Handled = true;
+        }
+
+        private void ScrollTabsBy(double delta)
+        {
+            var maxOffset = Math.Max(0, LauncherTabsScroller.Extent.Width - LauncherTabsScroller.Viewport.Width);
+            var next = Math.Clamp(LauncherTabsScroller.Offset.X + delta, 0, maxOffset);
+            LauncherTabsScroller.Offset = new Vector(next, LauncherTabsScroller.Offset.Y);
         }
 
         private void OnTabsLayoutUpdated(object _1, EventArgs _2)
@@ -394,6 +401,7 @@ namespace SourceGit.Views
 
         private PointerPressedEventArgs _pressedTabEvent = null;
         private bool _startDragTab = false;
+        private const double TabsScrollStep = 320.0;
         private readonly DataFormat<string> _dndMainTabFormat = DataFormat.CreateStringApplicationFormat("sourcegit-dnd-main-tab");
     }
 }

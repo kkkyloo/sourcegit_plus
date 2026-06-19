@@ -15,6 +15,8 @@
                   Classes="icon_button"
                   Width="18" Height="28"
                   Margin="0,2,0,0"
+                  Delay="180"
+                  Interval="35"
                   Click="ScrollTabsLeft"
                   IsVisible="{Binding #ThisControl.IsScrollerVisible}">
       <Path Width="8" Height="14" Stretch="Fill" Data="{StaticResource Icons.TriangleLeft}"/>
@@ -149,7 +151,7 @@
     </ScrollViewer>
 
     <StackPanel Grid.Column="2" Orientation="Horizontal" IsVisible="{Binding #ThisControl.IsScrollerVisible}">
-      <RepeatButton Classes="icon_button" Width="18" Height="28" Margin="0,2,0,0" Click="ScrollTabsRight">
+      <RepeatButton Classes="icon_button" Width="18" Height="28" Margin="0,2,0,0" Delay="180" Interval="35" Click="ScrollTabsRight">
         <Path Width="8" Height="14" Stretch="Fill" Data="{StaticResource Icons.TriangleRight}"/>
       </RepeatButton>
 
