@@ -3,7 +3,7 @@
 **English** | [Русский (README.ru.md)](README.ru.md)
 
 > Custom fork of [SourceGit](https://github.com/sourcegit-scm/sourcegit) with extra features and UX fixes.  
-> Download: **[Latest release](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Release notes: [v2026.13.plus.4](docs/RELEASE_v2026.13.plus.4.md)
+> Download: **[Latest release](https://github.com/kkkyloo/sourcegit_plus/releases/latest)** · Release notes: [v2026.13.plus.5](docs/RELEASE_v2026.13.plus.5.md)
 
 ## Plus-only features
 
@@ -14,7 +14,11 @@
 
 ## Changelog (Plus releases)
 
-### v2026.13.plus.4 — latest
+### v2026.13.plus.5 — latest
+
+* **Caption buttons (Windows)** — buttons now use Avalonia's interactive `User` chrome role, so hovering/clicking at the very top screen edge in a maximized window stays on the button.
+
+### v2026.13.plus.4
 
 * **Caption buttons (Windows)** — the draggable titlebar area no longer overlaps Minimize, Maximize, and Close, so the very top edge of maximized caption buttons remains clickable.
 
