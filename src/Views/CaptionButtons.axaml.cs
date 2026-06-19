@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Input;
 using Avalonia.Interactivity;
 
 namespace SourceGit.Views
@@ -18,10 +19,18 @@ namespace SourceGit.Views
         public CaptionButtons()
         {
             InitializeComponent();
+
+            var routes = RoutingStrategies.Bubble;
+            BtnMinimize.AddHandler(InputElement.PointerPressedEvent, MinimizeWindow, routes, true);
+            BtnMaximizeOrRestore.AddHandler(InputElement.PointerPressedEvent, MaximizeOrRestoreWindow, routes, true);
+            BtnClose.AddHandler(InputElement.PointerPressedEvent, CloseWindow, routes, true);
         }
 
-        private void MinimizeWindow(object _, RoutedEventArgs e)
+        private void MinimizeWindow(object _, PointerPressedEventArgs e)
         {
+            if (!e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+                return;
+
             var window = TopLevel.GetTopLevel(this) as Window;
             if (window != null)
                 window.WindowState = WindowState.Minimized;
@@ -29,8 +38,11 @@ namespace SourceGit.Views
             e.Handled = true;
         }
 
-        private void MaximizeOrRestoreWindow(object _, RoutedEventArgs e)
+        private void MaximizeOrRestoreWindow(object _, PointerPressedEventArgs e)
         {
+            if (!e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+                return;
+
             var window = TopLevel.GetTopLevel(this) as Window;
             if (window != null)
                 window.WindowState = window.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
@@ -38,8 +50,11 @@ namespace SourceGit.Views
             e.Handled = true;
         }
 
-        private void CloseWindow(object _, RoutedEventArgs e)
+        private void CloseWindow(object _, PointerPressedEventArgs e)
         {
+            if (!e.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
+                return;
+
             var window = TopLevel.GetTopLevel(this) as Window;
             window?.Close();
 
