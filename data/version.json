@@ -1,6 +1,6 @@
 {
-  "tag_name": "v2026.13.10",
-  "name": "2026.13.10 (Plus 10)",
-  "published_at": "2026-06-19T17:45:32Z",
-  "body": "## SourceGit Plus v2026.13.10 (Plus 10)\n\n**Fixes**\n* Removed the duplicated native title bar overlay from the previous Windows decoration change.\n* Windows caption buttons now use native Win32 caption roles for normal release behavior and shell animations.\n\nDownload: https://github.com/kkkyloo/sourcegit_plus/releases/latest\n\n---\nUpstream: https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13"
+  "tag_name": "v2026.13.11",
+  "name": "2026.13.11 (Plus 11)",
+  "published_at": "2026-06-19T18:05:48Z",
+  "body": "## SourceGit Plus v2026.13.11 (Plus 11)\n\n**Fixes**\n* Reverted the native Windows caption-role experiment that broke caption button clicks.\n* Restored custom caption button release handling with the top-edge Windows fallback for maximized windows.\n\nDownload: https://github.com/kkkyloo/sourcegit_plus/releases/latest\n\n---\nUpstream: https://github.com/sourcegit-scm/sourcegit/releases/tag/v2026.13"
 }
