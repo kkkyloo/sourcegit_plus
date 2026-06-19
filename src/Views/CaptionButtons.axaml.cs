@@ -6,6 +6,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.Threading;
 
 namespace SourceGit.Views
 {
@@ -45,7 +46,11 @@ namespace SourceGit.Views
 
             _pressedButton = button;
             _pressedAction = action;
+            _pressedPointer = e.Pointer;
             e.Pointer.Capture(button);
+
+            if (OperatingSystem.IsWindows())
+                StartWindowsReleaseFallback();
 
             e.Handled = true;
         }
@@ -54,19 +59,14 @@ namespace SourceGit.Views
         {
             if (_pressedButton != button || _pressedAction != action)
             {
-                e.Pointer.Capture(null);
-                ResetPressedAction();
+                ResetPressedAction(true);
                 return;
             }
 
             var position = e.GetPosition(button);
-            var isInside = position.X >= 0 &&
-                position.Y >= 0 &&
-                position.X < button.Bounds.Width &&
-                position.Y < button.Bounds.Height;
+            var isInside = IsPointInsideButton(button, position);
 
-            e.Pointer.Capture(null);
-            ResetPressedAction();
+            ResetPressedAction(true);
 
             if (isInside)
                 ExecuteCaptionAction(action);
@@ -99,14 +99,63 @@ namespace SourceGit.Views
 
         private void OnPointerCaptureLost(object _, PointerCaptureLostEventArgs e)
         {
-            ResetPressedAction();
+            if (!OperatingSystem.IsWindows() || _releaseFallbackTimer == null)
+                ResetPressedAction(true);
+
             e.Handled = true;
         }
 
-        private void ResetPressedAction()
+        private static bool IsPointInsideButton(Button button, Point position)
         {
+            return position.X >= 0 &&
+                position.Y >= 0 &&
+                position.X < button.Bounds.Width &&
+                position.Y < button.Bounds.Height;
+        }
+
+        private void ResetPressedAction(bool stopFallbackTimer)
+        {
+            if (stopFallbackTimer)
+                StopWindowsReleaseFallback();
+
+            var pointer = _pressedPointer;
+            _pressedPointer = null;
+            pointer?.Capture(null);
+
             _pressedButton = null;
             _pressedAction = CaptionAction.None;
+        }
+
+        [SupportedOSPlatform("windows")]
+        private void StartWindowsReleaseFallback()
+        {
+            StopWindowsReleaseFallback();
+
+            _releaseFallbackTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(16) };
+            _releaseFallbackTimer.Tick += (_, _) =>
+            {
+                if (IsLeftMouseButtonPressed())
+                    return;
+
+                var button = _pressedButton;
+                var action = _pressedAction;
+                var isInside = button != null && IsCursorInsideButton(button);
+
+                ResetPressedAction(true);
+
+                if (isInside)
+                    ExecuteCaptionAction(action);
+            };
+            _releaseFallbackTimer.Start();
+        }
+
+        private void StopWindowsReleaseFallback()
+        {
+            if (_releaseFallbackTimer == null)
+                return;
+
+            _releaseFallbackTimer.Stop();
+            _releaseFallbackTimer = null;
         }
 
         [SupportedOSPlatform("windows")]
@@ -134,6 +183,40 @@ namespace SourceGit.Views
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
+        [SupportedOSPlatform("windows")]
+        private static bool IsLeftMouseButtonPressed()
+        {
+            return (GetAsyncKeyState(VK_LBUTTON) & 0x8000) != 0;
+        }
+
+        [SupportedOSPlatform("windows")]
+        private static bool IsCursorInsideButton(Button button)
+        {
+            if (!GetCursorPos(out var cursor))
+                return false;
+
+            var topLeft = button.PointToScreen(new Point(0, 0));
+            var bottomRight = button.PointToScreen(new Point(button.Bounds.Width, button.Bounds.Height));
+
+            return cursor.X >= topLeft.X &&
+                cursor.Y >= topLeft.Y &&
+                cursor.X < bottomRight.X &&
+                cursor.Y < bottomRight.Y;
+        }
+
+        [DllImport("user32.dll")]
+        private static extern short GetAsyncKeyState(int vKey);
+
+        [DllImport("user32.dll")]
+        private static extern bool GetCursorPos(out Win32Point point);
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct Win32Point
+        {
+            public int X;
+            public int Y;
+        }
+
         private enum CaptionAction
         {
             None,
@@ -147,8 +230,11 @@ namespace SourceGit.Views
         private const int SC_MAXIMIZE = 0xF030;
         private const int SC_MINIMIZE = 0xF020;
         private const int SC_RESTORE = 0xF120;
+        private const int VK_LBUTTON = 0x01;
 
         private Button _pressedButton = null;
+        private IPointer _pressedPointer = null;
         private CaptionAction _pressedAction = CaptionAction.None;
+        private DispatcherTimer _releaseFallbackTimer = null;
     }
 }

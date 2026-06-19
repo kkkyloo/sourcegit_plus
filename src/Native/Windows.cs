@@ -34,7 +34,7 @@ namespace SourceGit.Native
 
         public void SetupWindow(Window window)
         {
-            window.WindowDecorations = WindowDecorations.BorderOnly;
+            window.WindowDecorations = WindowDecorations.Full;
             window.ExtendClientAreaToDecorationsHint = true;
         }
 
