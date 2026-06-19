@@ -25,6 +25,9 @@ namespace SourceGit.Views
         {
             InitializeComponent();
 
+            if (OperatingSystem.IsWindows())
+                return;
+
             var routes = RoutingStrategies.Bubble;
             BtnMinimize.AddHandler(InputElement.PointerPressedEvent, (_, e) => BeginCaptionAction(BtnMinimize, CaptionAction.Minimize, e), routes, true);
             BtnMinimize.AddHandler(InputElement.PointerReleasedEvent, (_, e) => CompleteCaptionAction(BtnMinimize, CaptionAction.Minimize, e), routes, true);

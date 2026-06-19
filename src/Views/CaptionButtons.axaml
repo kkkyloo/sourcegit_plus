@@ -9,13 +9,13 @@
              Background="Transparent"
              WindowDecorationProperties.ElementRole="User">
   <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Background="Transparent" WindowDecorationProperties.ElementRole="User">
-    <Button x:Name="BtnMinimize" Classes="caption_button" WindowDecorationProperties.ElementRole="User" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
+    <Button x:Name="BtnMinimize" Classes="caption_button" WindowDecorationProperties.ElementRole="MinimizeButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
       <Path Width="11" Height="11" Data="{StaticResource Icons.Window.Minimize}"/>
     </Button>
-    <Button x:Name="BtnMaximizeOrRestore" Classes="caption_button max_or_restore_btn" WindowDecorationProperties.ElementRole="User" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
+    <Button x:Name="BtnMaximizeOrRestore" Classes="caption_button max_or_restore_btn" WindowDecorationProperties.ElementRole="MaximizeButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
       <Path Width="10" Height="10"/>
     </Button>
-    <Button x:Name="BtnClose" Classes="caption_button" WindowDecorationProperties.ElementRole="User">
+    <Button x:Name="BtnClose" Classes="caption_button" WindowDecorationProperties.ElementRole="CloseButton">
       <Path Width="9" Height="9" Margin="0,0,2,0" Data="{StaticResource Icons.Window.Close}"/>
     </Button>
   </StackPanel>
